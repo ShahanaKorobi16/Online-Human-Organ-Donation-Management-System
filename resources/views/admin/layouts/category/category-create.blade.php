@@ -11,11 +11,11 @@
        @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Organ_name</label>
-            <input name='Organ_name' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input required name='Organ_name' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
         </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Organ_details</label>
-            <input name='Organ_details' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input required name='Organ_details' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
         </div>
         

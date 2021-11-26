@@ -8,39 +8,28 @@
 <table class="table table-success table-striped">
                         <thead>
     <tr>
-      <th scope="col">Id</th>
+    
       <th scope="col">Name</th>
       <th scope="col">Age</th>
-      <th scope="col">Blood Group</th>
+      <th scope="col">Blood_group</th>
       <th scope="col">Gender</th>
-      <th scope="col">Organ</th>
+      <th scope="col">Organ_wants_to_donate</th>
+      <th scope="col">Details</th>
+
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mira</td>
-      <td>27</td>
-      <td>A+</td>
-      <td>Female</td>
-      <td>Cornea</td>
+  @foreach($donors as $donor)
+  <tr>
+      <th>{{$donor->Name}}</th>
+      <td>{{$donor->Age}}</td>
+      <td>{{$donor->Blood_group}}</td>
+      <td>{{$donor->Gender}}</td>
+      <td>{{$donor->Organ_wants_to_donate}}</td>
+      <td>{{$donor->Details}}</td>
+          
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Samia</td>
-      <td>34</td>
-      <td>AB+</td>
-      <td>Male</td>
-      <td>kindey</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Karim</td>
-      <td>24</td>
-      <td>A-</td>
-      <td>Male</td>
-      <td>Liver</td>
-    </tr>
+   @endforeach
     </tbody>
 </table>
 @endsection

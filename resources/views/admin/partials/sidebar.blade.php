@@ -33,7 +33,7 @@
                         </div>
                         <div class="nav">
                             <!-- <div class="sb-sidenav-menu-heading"></div> -->
-                            <a class="nav-link" href="{{url('/Admin/patient')}}">
+                            <a class="nav-link" href="{{route('admin.adminn')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-shield"></i></div>
                                Admin
                             </a>
@@ -50,7 +50,7 @@
                         
                         <div class="nav">
                             <!-- <div class="sb-sidenav-menu-heading"></div> -->
-                            <a class="nav-link" href="{{url('/Admin/patient')}}">
+                            <a class="nav-link" href="{{route('admin.patient')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-hospital-user"></i></div>
                                Patient
                             </a>

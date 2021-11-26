@@ -17,6 +17,13 @@ class PostController extends Controller
  
    public function store(Request $request)
    {
+    $request->validate([
+      'Patient_Name'=>'required',
+      'Patient_Age'=>'required',
+      'Patient_Blood_group'=>'required',
+      'Patient_issue'=>'required',
+
+    ]);
       Post::create([
         'Patient_Name'=>$request->Patient_Name,
         'Patient_Age'=>$request->Patient_Age,
@@ -24,14 +31,8 @@ class PostController extends Controller
         'Patient_issue'=>$request->Patient_issue,
  
       ]);
-      return redirect()->back();
+      return redirect()->back()->with('msg','Post created successfully.');
    }
    
 }
-
-
-
-// public function test(){
-//     $posts=Post::all();
-//     dd(@posts);
 

@@ -11,7 +11,7 @@
        @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Quantity</label>
-            <input required name='Quantity' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input required name='Quantity' type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
         <!-- </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Organ_Id</label>

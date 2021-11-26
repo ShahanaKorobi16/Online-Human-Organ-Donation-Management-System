@@ -22,14 +22,17 @@ public function addstock(){
 }
 public function add(Request $request){
     // dd($request->all());
-      
+      $request->validate([
+        'Quantity'=>'required',
+
+      ]);
        Stock::create([
            'Quantity'=> $request->Quantity,
            'organ_id'=> $request->organ_id
            
 
        ]);
-       return redirect()->back();
+       return redirect()->back()->with('msg','Added to stock successfully.');
     
 
   

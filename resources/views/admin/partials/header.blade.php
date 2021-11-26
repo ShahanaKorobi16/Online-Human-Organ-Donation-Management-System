@@ -28,18 +28,19 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
      
-
+    <div class="d-grid gap-2 d-md-block">
     
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="index3.html" class="btn btn-light">View Post</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="/Admin/contact" type='text' class="btn btn-primary">Contact</a>
       </li>
       <td>
       <li class="nav-item d-none d-sm-inline-block">
-      <a href="/Admin/create"  type='table' class="btn btn-light">create post</a>
+      <a href="/Admin/create"  type='table' class="btn btn-light">create New post</a>
       </li>
+      </div>
     </ul>
 
     </header>

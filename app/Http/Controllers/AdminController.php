@@ -9,6 +9,9 @@ class AdminController extends Controller
     public function demo(){
         return view('admin.index');
     }
+    public function adminn(){
+        return view('admin.layouts.admin');
+    }
     public function contact(){
         return view('admin.layouts.contact');
         }

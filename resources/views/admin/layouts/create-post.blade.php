@@ -15,12 +15,21 @@
 
         </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Patient_Age</label>
-            <input required name='Patient_Age' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input required name='Patient_Age' type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
         </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Patient_Blood_group</label>
             <input required name='Patient_Blood_group' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-
+            <select class="form-select" aria-label="Default select example">
+                <option value="1">A+</option>
+  <option value="2">B+</option>
+  <option value="2">O+</option>
+  <option value="2">AB+</option>
+  <option value="2">A-</option>
+  <option value="2">B-</option>
+  <option value="2">O-</option>
+  <option value="2">AB-</option>
+</select>
         </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Patient_issue</label>
             <input required name='Patient_issue' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
