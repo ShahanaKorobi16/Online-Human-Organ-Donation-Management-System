@@ -19,7 +19,7 @@ class DonorController extends Controller
          //dd($request->all());
         $request->validate([
           'Name'=>'required',
-          'Age'=>'required',
+          'Age'=>'required'|numeric,
           'Blood_group'=>'required',
           'Gender'=>'required',
           'Organ_wants_to_donate'=>'required',
@@ -37,6 +37,6 @@ class DonorController extends Controller
             'Details'=>$request->Details,
      
           ]);
-          return redirect()->route('admin.donor');
+          return redirect()->back()->with('msg','Registration successfull.');
        }
 }

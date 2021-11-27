@@ -23,7 +23,7 @@ public function addstock(){
 public function add(Request $request){
     // dd($request->all());
       $request->validate([
-        'Quantity'=>'required',
+        'Quantity'=>'required'|numeric,
 
       ]);
        Stock::create([

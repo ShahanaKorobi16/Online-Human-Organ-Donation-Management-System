@@ -20,7 +20,7 @@ class PatientController extends Controller
          //dd($request->all());
         $request->validate([
           'Name'=>'required',
-          'Age'=>'required',
+          'Age'=>'required'|numeric,
           'Blood_group'=>'required',
           'Gender'=>'required',
           'Case'=>'required',
@@ -38,6 +38,6 @@ class PatientController extends Controller
             'Organ_needed'=>$request->Organ_needed,
      
           ]);
-          return redirect()->route('admin.patient');
+          return redirect()->back()->with('msg','Registration successful.');
        }
 }

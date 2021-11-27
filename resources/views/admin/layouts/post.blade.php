@@ -12,8 +12,7 @@
       <th scope="col">Patient_Age</th>
       <th scope="col">Patient_Blood_group</th>
       <th scope="col">Patient_issue</th>
-      <th scope="col">Upload_Patient_Prescription</th>
-      
+      <th scope="col">Image</th>
     </tr>
   </thead>
  
@@ -25,8 +24,8 @@
       <td>{{$addpost->Patient_Age}}</td>
       <td>{{$addpost->Patient_Blood_group}}</td>
       <td>{{$addpost->Patient_issue}}</td>
-      <td>{{$addpost->Upload_Patient_Prescription}}</td>
       
+      <td><img src="{{url('/uploads/'.$addpost->image)}}" width="100px" alt="prescription image"></td>
     </tr>
    @endforeach
     </tbody>

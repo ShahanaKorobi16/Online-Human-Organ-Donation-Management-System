@@ -19,14 +19,16 @@ div {
     <tr>
         <tr>
 </div>
-        <div class="row">
+</html>   <div class="row">
+    
+
        
         <!-- <div class="d-grid gap-2 d-md-block"> -->
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">New Post</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <div class="card-body" style=" background-color: #1F618D ;"><h5>New Post</h5></div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between" style=" background-color: #5499C7">
+                                        <a class="small text-white stretched-link" href="http://127.0.0.1:8000/Admin/post" >View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -34,9 +36,9 @@ div {
 
         <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Patient List</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <div class="card-body" style=" background-color: #117A65;"><h5>Patient List</h5></div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between" style=" background-color: #17A589">
+                                        <a class="small text-white stretched-link" href="http://127.0.0.1:8000/Admin/patient">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -45,18 +47,18 @@ div {
                             <!-- <div class="row"> -->
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Donor List</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <div class="card-body" style=" background-color: #5B2C6F;"><h5>Donor List</h5></div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between" style=" background-color: #76448A;">
+                                        <a class="small text-white stretched-link" href="http://127.0.0.1:8000/Admin/Table">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Stock Details</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                    <div class="card-body" style=" background-color: #616A6B"><h5>Stock Details</h5></div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between" style=" background-color: #7F8C8D">
+                                        <a class="small text-white stretched-link" href="http://127.0.0.1:8000/Admin/stock">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>

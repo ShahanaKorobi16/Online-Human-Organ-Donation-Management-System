@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->integer('Patient_Age');
             $table->string('Patient_Blood_group');
             $table->string('Patient_issue');
+            $table->string('image');
             $table->timestamps();
         });
     }

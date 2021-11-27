@@ -6,7 +6,21 @@
 
 
     <h1 class="mt-4">Add to Organ</h1>
+
     
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <div>
+                <p class="alert alert-danger">{{$error}}</p>
+            </div>
+        @endforeach
+    @endif
+
+    @if(session()->has('msg'))
+        <p class="alert alert-success">{{session()->get('msg')}}</p>
+    @endif
+
+
      <form action ="{{route('category.add')}}" method='POST'>
        @csrf
         <div class="mb-3">

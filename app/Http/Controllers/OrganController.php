@@ -23,6 +23,6 @@ public function add(Request $request){
         'Organ_details'=>$request->Organ_details
     ]);
 
-    return redirect()->route('admin.category');
+    return redirect()->back()->with('msg','Organ added successful.');
 }
 }

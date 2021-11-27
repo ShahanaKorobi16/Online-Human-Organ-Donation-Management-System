@@ -7,7 +7,7 @@
 
     <h1 class="mt-4">Create New Post</h1>
     
-    <form action ="{{route('admin.store')}}" method='POST'>
+    <form action ="{{route('admin.store')}}" method='POST'enctype="multipart/form-data">
        @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Patient_Name</label>
@@ -19,8 +19,8 @@
 
         </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Patient_Blood_group</label>
-            <input required name='Patient_Blood_group' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <select class="form-select" aria-label="Default select example">
+            <select required name='Patient_Blood_group' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <!-- <select class="form-select" aria-label="Default select example"> -->
                 <option value="1">A+</option>
   <option value="2">B+</option>
   <option value="2">O+</option>
@@ -36,7 +36,7 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Upload_Patient_Prescription</label>
-            <input type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input name="image" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>

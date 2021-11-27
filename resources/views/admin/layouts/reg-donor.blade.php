@@ -6,7 +6,18 @@
 
 
     <h1 class="mt-4">Register as a Donor</h1>
-    
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <div>
+                <p class="alert alert-danger">{{$error}}</p>
+            </div>
+        @endforeach
+    @endif
+
+    @if(session()->has('msg'))
+        <p class="alert alert-success">{{session()->get('msg')}}</p>
+    @endif
+
     <form action ="{{route('donor.add')}}" method='POST'>
        @csrf
         <div class="mb-3">
@@ -19,8 +30,8 @@
 
         </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Blood_group</label>
-            <input required name='Blood_group' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <select class="form-select" aria-label="Default select example">
+            <select required name='Blood_group' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <!-- <select class="form-select" aria-label="Default select example"> -->
                 <option value="1">A+</option>
   <option value="2">B+</option>
   <option value="2">O+</option>
@@ -33,8 +44,8 @@
 
         </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Gender</label>
-            <input required name='Gender' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <select class="form-select" aria-label="Default select example">
+            <select required name='Gender' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <!-- <select class="form-select" aria-label="Default select example"> -->
   <!-- <option selected>Open this select menu</option> -->
   <option value="1">Male</option>
   <option value="2">Female</option>
@@ -44,8 +55,8 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Organ_wants_to_donate</label>
-            <input required name='Organ_wants_to_donate' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <select class="form-select" aria-label="Default select example">
+            <select required name='Organ_wants_to_donate' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <!-- <select class="form-select" aria-label="Default select example"> -->
                 <option value="1">Kidney</option>
   <option value="2">Cornea</option>
   <option value="2">Heart</option>
