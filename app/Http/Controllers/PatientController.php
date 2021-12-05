@@ -17,10 +17,20 @@ class PatientController extends Controller
     
     }
     public function add(Request $request) {
-         //dd($request->all());
+        //  dd($request->all());
+         $filename = '';
+         if ($request->hasFile('image')) {
+             $file = $request->file('image');
+             $filename = date('Ymdhms').'.'.$file->getclientOriginalExtension();
+             $file->storeAs('/uploads',$filename);
+         }
+
         $request->validate([
           'Name'=>'required',
-          'Age'=>'required'|numeric,
+          'Age'=>'required|numeric',
+          'address'=>'required',
+          'contact'=>'required|numeric',
+          'email'=>'required',
           'Blood_group'=>'required',
           'Gender'=>'required',
           'Case'=>'required',
@@ -32,11 +42,14 @@ class PatientController extends Controller
           Patient::create([
             'Name'=>$request->Name,
             'Age'=>$request->Age,
+            'Address'=>$request->address,
+            'Contact'=>$request->contact,
+            'Email'=>$request->email,
             'Blood_group'=>$request->Blood_group,
             'Gender'=>$request->Gender,
             'Case'=>$request->Case,
             'Organ_needed'=>$request->Organ_needed,
-     
+            'image'=>$filename
           ]);
           return redirect()->back()->with('msg','Registration successful.');
        }

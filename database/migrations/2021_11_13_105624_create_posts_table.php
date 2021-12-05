@@ -16,10 +16,13 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('Patient_Name');
-            $table->integer('Patient_Age');
-            $table->string('Patient_Blood_group');
-            $table->string('Patient_issue');
+            $table->date('Date_of_Birth');
+            $table->string('Blood_group');
+            $table->integer('Contact');
+            $table->string('Email');
+            $table->string('Case');
             $table->string('image');
+            $table->date('Post_Date');
             $table->timestamps();
         });
     }

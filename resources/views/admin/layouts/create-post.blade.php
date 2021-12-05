@@ -1,4 +1,4 @@
-@extends('admin.index')
+<!-- @extends('admin.index')
 
 
 @section('content')
@@ -20,7 +20,7 @@
         </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Patient_Blood_group</label>
             <select required name='Patient_Blood_group' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <!-- <select class="form-select" aria-label="Default select example"> -->
+           
                 <option value="1">A+</option>
   <option value="2">B+</option>
   <option value="2">O+</option>
@@ -42,4 +42,4 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
-@endsection
+@endsection -->

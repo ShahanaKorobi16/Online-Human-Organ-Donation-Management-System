@@ -17,10 +17,14 @@ class CreatePatientsTable extends Migration
             $table->id();
             $table->string('Name');
             $table->integer('Age');
+            $table->string('Address');
+            $table->integer('Contact');
+            $table->string('Email');
             $table->string('Blood_group');
             $table->string('Gender');
             $table->string('Case');
             $table->string('Organ_needed');
+            $table->string('image');
             $table->timestamps();
         });
     }

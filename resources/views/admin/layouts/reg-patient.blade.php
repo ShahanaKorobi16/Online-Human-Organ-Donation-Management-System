@@ -18,7 +18,7 @@
         <p class="alert alert-success">{{session()->get('msg')}}</p>
     @endif
 
-    <form action ="{{route('patient.add')}}" method='POST'>
+    <form action ="{{route('patient.add')}}" method='POST' enctype="multipart/form-data">
        @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Name</label>
@@ -28,18 +28,34 @@
             <label for="exampleInputEmail1" class="form-label">Age</label>
             <input required name='Age' type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
-        </div><div class="mb-3">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Address</label>
+            <input required name='address' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Contact</label>
+            <input required name='contact' type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input required name='email' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+        </div>
+        <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Blood_group</label>
             <Select required name='Blood_group' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             <!-- <select class="form-select" aria-label="Default select example"> -->
-                <option value="1">A+</option>
-  <option value="2">B+</option>
-  <option value="2">O+</option>
-  <option value="2">AB+</option>
-  <option value="2">A-</option>
-  <option value="2">B-</option>
-  <option value="2">O-</option>
-  <option value="2">AB-</option>
+                <option>A+</option>
+  <option>B+</option>
+  <option>O+</option>
+  <option>AB+</option>
+  <option>A-</option>
+  <option>B-</option>
+  <option>O-</option>
+  <option>AB-</option>
 </select>
 
         </div><div class="mb-3">
@@ -47,8 +63,8 @@
             <select required name='Gender' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             <!-- <select class="form-select" aria-label="Default select example"> -->
                 <option value="1">Male</option>
-  <option value="2">Female</option>
-  <option value="2">Others</option>
+  <option>Female</option>
+  <option>Others</option>
 </select>
         </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Case</label>
@@ -58,17 +74,18 @@
             <label for="exampleInputEmail1" class="form-label">Organ_needed</label>
             <select required name='Organ_needed' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             <!-- <select class="form-select" aria-label="Default select example"> -->
-                <option value="1">Kidney</option>
-  <option value="2">Cornea</option>
-  <option value="2">Heart</option>
-  <option value="2">Lung</option>
-  <option value="2">Liver</option>
+                <option>Kidney</option>
+  <option>Cornea</option>
+  <option>Heart</option>
+  <option>Lung</option>
+  <option>Liver</option>
 </select>
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Upload_Patient_Prescription</label>
-            <input type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1" class="form-label">Upload_Patient_Image</label>
+            <input required name='image' type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
+       
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

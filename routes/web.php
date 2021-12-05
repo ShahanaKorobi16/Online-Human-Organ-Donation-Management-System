@@ -8,6 +8,11 @@ use App\Http\Controllers\PatientController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\OrganController;
+use App\Http\Controllers\Website\WebsiteController;
+use App\Http\Controllers\Website\DonateController;
+use App\Http\Controllers\Website\RegistrationController;
+use App\Http\Controllers\Website\AddPostController;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,9 +26,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('Admin.index');
+// });
+
 Route::get('/', function () {
-    return view('Admin.index');
-});
+        return view('website.index');
+     });
+
+     
+Route::get('/',[WebsiteController::class,'home']);
+Route::get('/donate',[DonateController::class,'donate'])->name('website.donar-reg');
+Route::get('/reg',[RegistrationController::class,'reg'])->name('website.patient-reg');
+
+//website post
+Route::get('/create',[AddPostController::class,'create'])->name('website.create-post');
+Route::get('/post',[AddPostController::class,'post'])->name('website.post');
+Route::post('/store',[AddPostController::class,'store'])->name('website.store');
 
 Route::group(['prefix'=>'Admin'],function(){
     Route::get('/', function () {
@@ -47,10 +66,7 @@ Route::group(['prefix'=>'Admin'],function(){
     Route::get('/donor/reg',[DonorController::class,'reg'])->name('donor.reg-donor');
     Route::post('/donor/add',[DonorController::class,'add'])->name('donor.add');
 
-    //post
-    Route::get('/create',[AdminController::class,'postCreate'])->name('admin.postCreate');
-    Route::get('/post',[PostController::class,'post5'])->name('admin.post5');
-    Route::post('/store',[AdminController::class,'store'])->name('admin.store');
+ 
 
     //stock
     Route::get('/stock',[StockController::class,'stock'])->name('admin.stock');

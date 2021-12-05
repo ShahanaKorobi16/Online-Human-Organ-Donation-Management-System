@@ -1,10 +1,10 @@
-@extends('admin.index')
+<!-- @extends('admin.index')
 
 @section('content')
 
 
 <h1 class="mt-4">Post List</h1>
-<!-- <table class="table table-dark table-striped"> -->
+
 <table class="table table-success table-striped">
      <thead>
     <tr>
@@ -31,4 +31,4 @@
     </tbody>
 
 </table>
-@endsection
+@endsection -->

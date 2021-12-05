@@ -16,31 +16,31 @@ class AdminController extends Controller
         return view('admin.layouts.contact');
         }
     
-    public function postCreate(){
-        return view('admin.layouts.create-post');
-    }
+    // public function postCreate(){
+    //     return view('admin.layouts.create-post');
+    // }
     
 
-     public function store(Request $request){
-       //dd ($request->all());
+    //  public function store(Request $request){
+    //    //dd ($request->all());
        
-        //dd(date('Ymdhms'));
-        // dd($request->all());
-        $filename = '';
-        if ($request->hasFile('image')) {
-            $file = $request->file('image');
-            $filename = date('Ymdhms').'.'.$file->getclientOriginalExtension();
-            $file->storeAs('/uploads',$filename);
-        }
-       Post::create([
+    //     //dd(date('Ymdhms'));
+    //     // dd($request->all());
+    //     $filename = '';
+    //     if ($request->hasFile('image')) {
+    //         $file = $request->file('image');
+    //         $filename = date('Ymdhms').'.'.$file->getclientOriginalExtension();
+    //         $file->storeAs('/uploads',$filename);
+    //     }
+    //    Post::create([
 
-           'Patient_Name'=> $request->Patient_Name,
-           'Patient_Age'=> $request->Patient_Age,
-           'Patient_Blood_group'=> $request->Patient_Blood_group,
-           'Patient_issue'=> $request->Patient_issue,
-           'image'=>$filename
-       ]);
-       return redirect()->back()->with('msg','Post created successfully.');
-    }
+    //        'Patient_Name'=> $request->Patient_Name,
+    //        'Patient_Age'=> $request->Patient_Age,
+    //        'Patient_Blood_group'=> $request->Patient_Blood_group,
+    //        'Patient_issue'=> $request->Patient_issue,
+    //        'image'=>$filename
+    //    ]);
+    //    return redirect()->back()->with('msg','Post created successfully.');
+    // }
    
 }
