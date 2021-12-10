@@ -12,7 +12,9 @@ use App\Http\Controllers\Website\WebsiteController;
 use App\Http\Controllers\Website\DonateController;
 use App\Http\Controllers\Website\RegistrationController;
 use App\Http\Controllers\Website\AddPostController;
+use App\Http\Controllers\Website\DonorPostController;
 use App\Models\Post;
+use App\Models\Donorpost;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,6 +45,13 @@ Route::get('/reg',[RegistrationController::class,'reg'])->name('website.patient-
 Route::get('/create',[AddPostController::class,'create'])->name('website.create-post');
 Route::get('/post',[AddPostController::class,'post'])->name('website.post');
 Route::post('/store',[AddPostController::class,'store'])->name('website.store');
+
+//website donor post
+Route::get('/dcreate',[DonorPostController::class,'dcreate'])->name('website.donor-post-create');
+Route::get('/dpost',[DonorPostController::class,'dpost'])->name('website.donor-post');
+Route::post('/dstore',[DonorPostController::class,'dstore'])->name('website.dstore');
+
+
 
 Route::group(['prefix'=>'Admin'],function(){
     Route::get('/', function () {

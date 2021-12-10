@@ -11,9 +11,9 @@
 					<p align="center">
 						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
 							<ul class="sf-menu">
-								<li class="current"><a href="{{route('website.create-post')}}"  type='table' class="btn btn-primary">Create Post</a>
+								<li class="current"><a href="#"  type='table' class="btn btn-primary">Create Post</a>
 								
-								<li><a href="{{route('website.post')}}" type='table' class="btn btn-primary">View Post </a></li>
+								<li><a href="#" type='table' class="btn btn-primary">View Post </a></li>
 								<li><a href="{{route('website.patient-reg')}}" type='table' class="btn btn-primary">Register</a></li>
 				
 								<li><a href="/Admin/contact" type='table' class="btn btn-primary">Contacts</center></a></li>

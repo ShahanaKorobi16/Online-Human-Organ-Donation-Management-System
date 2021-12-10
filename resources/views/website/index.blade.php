@@ -100,7 +100,7 @@
 <div class="content"><div class="ic"></div>
 
 				<div class="container_12">
-					<div class="grid_8">
+					<div class="grid_13">
 						<div class="flexslider">
 							<ul class="slides">
 								<li>
@@ -129,32 +129,76 @@
 						</div>
 						<span id="responsiveFlag"></span>
 					</div>
-					<div class="grid_4">
-						<a href="{{route('website.donar-reg')}}" class="donate" style="background-color:#5499C7;">Donate</a>
+		
+
+
+
+					<body>
+				
+					<div class="clear"></div>
+					<div class="grid_12">
+						<a href="{{route('website.donar-reg')}}" class="Want To Donate, Register First" style="background-color:#5499C7;">Donate</a>
+						<div class="pad">
 						<div class="text1">You can change the life of those who have no hope</div>
 						<p>Etiam dui eros, laoreet sit amet est vel,modo venenatis eros. Fusce adipiscing quam id riss sagittis, non consequat lacus interdum. Proin  tincidunt nulla, eu sodales arcu.</p>
 						Quisquerra nulla nunc, eu ultrices libero ultricies eget. Phasellus accumsan justo vitae feugiat placerat. Praesent vel ultrices velit. Suspendisse risus justo, lacinia vitae eleifend
 					</div>
-					<body>
-					<center>
+				
+					</div>
+<div>
+		</div>
+					<div class="col-md-2"></div>
+					<div class="col-md-2">
+					
+
 					<div class="clear"></div>
-					<div class="grid_3">
+					<div class="grid_5">
+						<div class="block2 maxheight">
+							<div class="title" style="background-color:#76D7C4;">Organ Needed Post</div>
+							<div class="pad">
+								Faert sit amet est l,mmodo venenatis eros. Kusce ng quam id risus sagittisnel consequat lacusut tinn sodales arcuisqum.<div class="alright"><a href="{{route('website.create-post')}}" class="btn" style="background-color:#A9CCE3 ;">Create Post</a></div>
+	
+								<div class="alright"><a href="{{route('website.post')}}" class="btn" style="background-color:#A9CCE3 ;">View all Post</a></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="clear"></div>
+					<div class="grid_5">
+						<div class="block2 maxheight">
+							<div class="title" style="background-color:#76D7C4;">Donation Post</div>
+							<div class="pad">
+								Faert sit amet est l,mmodo venenatis eros. Kusce ng quam id risus sagittisnel consequat lacusut tinn sodales arcuisqum.<div class="alright"><a href="{{route('website.donor-post-create')}}" class="btn" style="background-color:#A9CCE3 ;">Create Post</a></div>
+								<div class="alright"><a href="{{route('website.donor-post')}}" class="btn" style="background-color:#A9CCE3 ;">View Post</a></div>
+							</div>
+						</div>
+					</div>
+		
+		</div>
+				
+
+					<!-- _________________________________________________________ -->
+
+					
+					<div class="clear"></div>
+					<div class="grid_4">
 						<div class="block2 maxheight">
 							<div class="title" style="background-color:#76D7C4;">our Mission</div>
 							<div class="pad">
-								Faert sit amet est l,mmodo venenatis eros. Kusce ng quam id risus sagittisnel consequat lacusut tinn sodales arcuisqum.<div class="alright"><a href="#" class="btn" style="background-color:#A9CCE3 ;">Read More</a></div>
+								Faert sit amet est l,mmodo venenatis eros. Kusce ng quam id risus sagittisnel consequat lacusut tinn sodales arcuisqum.<div class="alright"><a href="#" class="btn" style="background-color:#A9CCE3 ;">View More</a></div>
+								
 							</div>
 						</div>
 					</div>
 					
 				
-					<div class="grid_3">
+					<div class="grid_4">
 						<div class="block2 maxheight">
 							<div class="title" style="background-color:#D2B4DE;">Our Vission</div>
 							<div class="pad">Holot sit amet est el,mmodo venenatis eros. Jolosceng huam id risus sagittisnel consequat lacusut tinn sodales arcuisqmol.<div class="alright"><a href="#" class="btn" style="background-color:#A9CCE3 ;">Read More</a></div></div>
 						</div>
 					</div>
-					<div class="grid_3">
+					<div class="grid_4">
 						<div class="block2 maxheight">
 							<div class="title" style="background-color:#F5B7B1;">Our Vission</div>
 							<div class="pad">Holot sit amet est el,mmodo venenatis eros. Jolosceng huam id risus sagittisnel consequat lacusut tinn sodales arcuisqmol.<div class="alright"><a href="#" class="btn" style="background-color:#A9CCE3 ;">Read More</a></div></div>
@@ -163,13 +207,13 @@
 					</center>
 					</body>
 					
-					<div class="grid_4">
+					<div class="grid_6">
 						<h3 class="nowrap mb0">Successful stories</h3>
 						<time class="st1" datetime="2013-01-01">       </time>
 						Lorem ipsum dolor sit amet, consectetur iscing elit. Inllis eratattis neque facilisis, sit ameticies erat rutrum. Cras facilisis, nulla velrral auctor leo magna sodales felis, quis malesuada nib odio ut velitylok. Proin pharetra luctus.
 						<div class="alright"><a href="#" class="btn" style="background-color:#5DADE2;">Read More</a></div>
 					</div>
-					<div class="grid_7 prefix_1">
+					<div class="grid_6">
 						<h3>About Us</h3>
 						<!-- <img src="images/img5.jpg" alt="" class="img_inner fleft" height="60" width="40"> -->
 						<div class="extra_wrapper">

@@ -57,7 +57,7 @@
                         </div>
                         <div class="nav">
                             <!-- <div class="sb-sidenav-menu-heading"></div> -->
-                            <a class="nav-link" href="{{url('/Admin/post')}}">
+                            <a class="nav-link" href="{{route('website.post')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-paste"></i></div>
                                Post
                             </a>
