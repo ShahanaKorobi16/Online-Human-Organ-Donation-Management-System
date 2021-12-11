@@ -11,6 +11,7 @@ use App\Http\Controllers\OrganController;
 use App\Http\Controllers\Website\WebsiteController;
 use App\Http\Controllers\Website\DonateController;
 use App\Http\Controllers\Website\RegistrationController;
+use App\Http\Controllers\Website\LoginController;
 use App\Http\Controllers\Website\AddPostController;
 use App\Http\Controllers\Website\DonorPostController;
 use App\Models\Post;
@@ -37,7 +38,7 @@ Route::get('/', function () {
      });
 
      
-Route::get('/',[WebsiteController::class,'home']);
+Route::get('/home',[WebsiteController::class,'home'])->name('website.home');
 Route::get('/donate',[DonateController::class,'donate'])->name('website.donar-reg');
 Route::get('/reg',[RegistrationController::class,'reg'])->name('website.patient-reg');
 
@@ -50,6 +51,13 @@ Route::post('/store',[AddPostController::class,'store'])->name('website.store');
 Route::get('/dcreate',[DonorPostController::class,'dcreate'])->name('website.donor-post-create');
 Route::get('/dpost',[DonorPostController::class,'dpost'])->name('website.donor-post');
 Route::post('/dstore',[DonorPostController::class,'dstore'])->name('website.dstore');
+
+//website login
+Route::get('/user/registration',[LoginController::class,'registration'])->name('user.registration');
+Route::post('/user/registration/post',[LoginController::class,'registrationPost'])->name('user.registration.post');
+Route::get('/user/login',[LoginController::class,'login'])->name('user.login');
+Route::post('/user/do/login',[LoginController::class,'doLogin'])->name('user.do.login');
+Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
 
 
 

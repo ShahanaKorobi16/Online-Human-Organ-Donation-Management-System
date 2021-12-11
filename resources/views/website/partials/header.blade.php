@@ -14,10 +14,17 @@
 								<li class="current"><a href="#"  type='table' class="btn btn-primary">Create Post</a>
 								
 								<li><a href="#" type='table' class="btn btn-primary">View Post </a></li>
-								<li><a href="{{route('website.patient-reg')}}" type='table' class="btn btn-primary">Register</a></li>
-				
+							
+								<li>@if(auth()->user())
+								<a class="btn btn-primary" href="{{route('user.logout')}}">Logout</a>
+									@else
+									<li class="nav-item">
+										<a class="btn btn-primary" href="{{route('user.login')}}">Login/Registration</a>
+									</li>
+									@endif
 								<li><a href="/Admin/contact" type='table' class="btn btn-primary">Contacts</center></a></li>
-</p>
+								</p>
+				
 							</ul>
 						</nav>
 						<div class="clear"></div>
