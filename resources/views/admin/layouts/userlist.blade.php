@@ -1,12 +1,12 @@
-@extends('admin.master')
+@extends('admin.index')
 
 
 @section('content')
 
-<h1>Employee list</h1>
+<h1 class="mt-4">User list</h1>
 
 
-<table class="table">
+<table class="table table-success table-striped">
     <thead>
     <tr>
         <th scope="col">Username</th>

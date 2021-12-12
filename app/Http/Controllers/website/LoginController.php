@@ -14,17 +14,17 @@ class LoginController extends Controller
 public function registrationPost(Request $request){
     // dd($request->all());
     User::create([
-        'Username'=>$request->Username,
-        'Email'=>$request->Email,
-        'Password'=>bcrypt($request->Password),
-        'Date_of_birth'=>$request->Date_of_birth,
-        'Weight'=>$request->Weight,
-        'Blood_group'=>$request->Blood_group,
-        'Gender'=>$request->Gender,
-        'Organ_Needed'=>$request->Organ_Needed,
-        'Details'=>$request->Details, 
-        'Contact'=>$request->Contact,
-        'Address'=>$request->Address,
+        'username'=>$request->Username,
+        'email'=>$request->Email,
+        'password'=>bcrypt($request->Password),
+        'date_of_birth'=>$request->Date_of_birth,
+        'weight'=>$request->Weight,
+        'blood_group'=>$request->Blood_group,
+        'gender'=>$request->Gender,
+        'organ_Needed'=>$request->Organ_Needed,
+        'details'=>$request->Details, 
+        'contact'=>$request->Contact,
+        'address'=>$request->Address,
     ]);
     return redirect()->route('user.login');
 }
@@ -33,10 +33,15 @@ public function login(){
     return view('website.layouts.login');
 }
 public function doLogin(Request $request){
-    // dd($request->all());
-    $userpost=$request->except('_token');
-    // dd($userpost);
-    if(Auth::attempt($userpost))
+   
+    $userpost=[
+        'password' => $request->Password,
+        'email' => $request->Email,
+    ];
+// dd($userpost);
+     //dd(auth()->attempt($userpost));
+
+    if(auth()->attempt($userpost))
     {
         return redirect()->route('website.home');
     }

@@ -78,6 +78,14 @@
                             </a>
                         </div>
 
+                        <div class="nav">
+                             <!-- <div class="sb-sidenav-menu-heading"></div> -->
+                            <a class="nav-link" href="{{route('admin.user.list')}}"> 
+                                <div class="sb-nav-link-icon"><i class="fas fa-lungs"></i></div>
+                               User
+                            </a>
+                        </div>
+
                     </div>
                     
                 </nav>

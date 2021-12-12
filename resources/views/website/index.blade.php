@@ -128,14 +128,18 @@
 							</ul>
 						</div>
 						<span id="responsiveFlag"></span>
-					</div>
+				
+		
+		
 		
 
 
-
 					<body>
+					
+<!-- 					
+					<div class="container_12">
 				
-					<div class="clear"></div>
+						
 					<div class="grid_12">
 						<a href="{{route('website.donar-reg')}}" class="Want To Donate, Register First" style="background-color:#5499C7;">Donate</a>
 						<div class="pad">
@@ -143,10 +147,30 @@
 						<p>Etiam dui eros, laoreet sit amet est vel,modo venenatis eros. Fusce adipiscing quam id riss sagittis, non consequat lacus interdum. Proin  tincidunt nulla, eu sodales arcu.</p>
 						Quisquerra nulla nunc, eu ultrices libero ultricies eget. Phasellus accumsan justo vitae feugiat placerat. Praesent vel ultrices velit. Suspendisse risus justo, lacinia vitae eleifend
 					</div>
-				
+		
 					</div>
-<div>
-		</div>
+					</div>
+		</div> -->
+
+		
+
+		<div class="col-9"></div>
+		<div class="col-9">
+	
+					<div class="clear"></div>
+					<div class="grid_12">
+						<center>
+							<!-- <div class="title" class="btn  btn-primary" style="background-color:#76D7C4;">Organ Needed Post</div> -->
+							<a href="{{route('website.donar-reg')}}" class="btn  btn-primary" style="background-color:#5499C7;">Donate</a>
+	
+							<div class="text1">You can change the life of those who have no hope</div>
+						<p>Etiam dui eros, laoreet sit amet est vel,modo venenatis eros. Fusce adipiscing quam id riss sagittis, non consequat lacus interdum. Proin  tincidunt nulla, eu sodales arcu.</p>					</center>
+						</div>
+						</div>
+				
+
+
+
 					<div class="col-md-2"></div>
 					<div class="col-md-2">
 					
@@ -175,8 +199,8 @@
 					</div>
 		
 		</div>
-				
-
+		
+		
 					<!-- _________________________________________________________ -->
 
 					
@@ -204,7 +228,7 @@
 							<div class="pad">Holot sit amet est el,mmodo venenatis eros. Jolosceng huam id risus sagittisnel consequat lacusut tinn sodales arcuisqmol.<div class="alright"><a href="#" class="btn" style="background-color:#A9CCE3 ;">Read More</a></div></div>
 						</div>
 					</div>
-					</center>
+		
 					</body>
 					
 					<div class="grid_6">
@@ -225,8 +249,10 @@
 					</div>
 				</div>
 			</div>
+		
 <!--==============================footer=================================-->
 @include('website.partials.footer')
 		</div>
+		
 	</body>
 </html>

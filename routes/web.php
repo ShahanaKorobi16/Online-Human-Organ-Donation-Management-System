@@ -11,6 +11,7 @@ use App\Http\Controllers\OrganController;
 use App\Http\Controllers\Website\WebsiteController;
 use App\Http\Controllers\Website\DonateController;
 use App\Http\Controllers\Website\RegistrationController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\Website\LoginController;
 use App\Http\Controllers\Website\AddPostController;
 use App\Http\Controllers\Website\DonorPostController;
@@ -46,6 +47,8 @@ Route::get('/reg',[RegistrationController::class,'reg'])->name('website.patient-
 Route::get('/create',[AddPostController::class,'create'])->name('website.create-post');
 Route::get('/post',[AddPostController::class,'post'])->name('website.post');
 Route::post('/store',[AddPostController::class,'store'])->name('website.store');
+Route::get('post/view/{post_id}',[AddPostController::class,'postDetails'])->name('website.post.details');
+Route::get('post/delete/{post_id}',[AddPostController::class,'postDelete'])->name('website.post.delete');
 
 //website donor post
 Route::get('/dcreate',[DonorPostController::class,'dcreate'])->name('website.donor-post-create');
@@ -69,7 +72,8 @@ Route::group(['prefix'=>'Admin'],function(){
     Route::get('/Admin',[AdminController::class,'demo'])->name('admin.demo');
     Route::get('/Admin',[AdminController::class,'adminn'])->name('admin.adminn');
     Route::get('/contact',[AdminController::class,'contact'])->name('admin.contact');
-    
+    Route::get('/user/list',[UserController::class,'userList'])->name('admin.user.list');
+
     //dashboard
     Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('admin.dashboard');
     

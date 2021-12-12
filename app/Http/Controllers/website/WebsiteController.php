@@ -12,8 +12,8 @@ class WebsiteController extends Controller
     {
         $addposts=Post::all();
         //dd($addposts);  
+       // return view('website.index',compact('addposts'));
         return view('website.index',compact('addposts'));
- 
     }
    
 }

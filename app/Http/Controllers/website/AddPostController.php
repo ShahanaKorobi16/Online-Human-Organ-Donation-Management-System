@@ -52,4 +52,21 @@ class AddPostController extends Controller
        ]);
        return redirect()->back()->with('msg','Post created successfully.');
 }
+
+public function postDetails($post_id)
+{
+
+//        collection= get(), all()====== read with loop (foreach)
+//       object= first(), find(), findOrFail(),======direct
+  $addpost=Post::find($post_id);
+//      $post=Post::where('id',$post_id)->first();
+    return view('website.layouts.post-details',compact('addpost'));
 }
+
+public function postDelete($post_id)
+{
+   Post::find($post_id)->delete();
+   return redirect()->back()->with('success','Post Deleted.');
+}
+}
+
