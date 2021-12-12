@@ -22,18 +22,19 @@
     </tr>
     </thead>
     <tbody>
+        
         @foreach ($users as $user)
             <tr>
-                <th>{{$user->Username}}</th>
-                <td>{{$user->Email}}</td>
-                <td>{{$user->Date_of_birth}}</td>
-                <td>{{$user->Weight}}</td>
-                <td>{{$user->Blood_group}}</td>
-                <td>{{$user->Gender}}</td>
-                <td>{{$user->Organ_Needed}}</td>
-                <td>{{$user->Details}}</td>
-                <td>{{$user->Contact}}</td>
-                <td>{{$user->Address}}</td>
+                <th>{{$user->username}}</th>
+                <td>{{$user->email}}</td>
+                <td>{{$user->date_of_birth}}</td>
+                <td>{{$user->weight}}</td>
+                <td>{{$user->blood_group}}</td>
+                <td>{{$user->gender}}</td>
+                <td>{{$user->organ_Needed}}</td>
+                <td>{{$user->details}}</td>
+                <td>{{$user->contact}}</td>
+                <td>{{$user->address}}</td>
             </tr>
         @endforeach
     
