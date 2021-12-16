@@ -64,6 +64,7 @@ Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout'
 
 
 
+
 Route::group(['prefix'=>'Admin'],function(){
     Route::get('/', function () {
         return view('Admin.index');
@@ -73,6 +74,8 @@ Route::group(['prefix'=>'Admin'],function(){
     Route::get('/Admin',[AdminController::class,'adminn'])->name('admin.adminn');
     Route::get('/contact',[AdminController::class,'contact'])->name('admin.contact');
     Route::get('/user/list',[UserController::class,'userList'])->name('admin.user.list');
+    Route::get('user/view/{user_id}',[UserController::class,'userDetails'])->name('admin.user.details');
+    Route::get('user/delete/{user_id}',[UserController::class,'userDelete'])->name('admin.user.delete');
 
     //dashboard
     Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('admin.dashboard');

@@ -1,95 +1,144 @@
-<h1 style="background-color:#5499C7;">
-    <center>Register as a Donor</center>
-</h1>
-<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <div class="row">
-  <div class="col-sm-4"></div>
-  <div class="col-sm-4"><form>
-    <!-- @csrf -->
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Name</label>
-        <input required name='Name' type="text" class="form-control" id="exampleInputEmail1"
-            aria-describedby="emailHelp">
-
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Date_of_birth</label>
-        <input required name='Date_of_birth' type="date" class="form-control" id="exampleInputEmail1"
-            aria-describedby="emailHelp">
-
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Weight</label>
-        <input required name='Weight' type="number" class="form-control" id="exampleInputEmail1"
-            aria-describedby="emailHelp">
-
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Blood_group</label>
-        <select required name='Blood_group' type="text" class="form-control" id="exampleInputEmail1"
-            aria-describedby="emailHelp">
-            <!-- <select class="form-select" aria-label="Default select example"> -->
-            <option>A+</option>
-            <option>B+</option>
-            <option>O+</option>
-            <option>AB+</option>
-            <option>A-</option>
-            <option>B-</option>
-            <option>O-</option>
-            <option>AB-</option>
-        </select>
-
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Gender</label>
-        <select required name='Gender' type="text" class="form-control" id="exampleInputEmail1"
-            aria-describedby="emailHelp">
-            <!-- <select class="form-select" aria-label="Default select example"> -->
-            <!-- <option selected>Open this select menu</option> -->
-            <option>Male</option>
-            <option>Female</option>
-            <option>Others</option>
-
-        </select>
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Organ_wants_to_donate</label>
-        <select required name='Organ_wants_to_donate' type="text" class="form-control" id="exampleInputEmail1"
-            aria-describedby="emailHelp">
-            <!-- <select class="form-select" aria-label="Default select example"> -->
-            <option value=>Kidney</option>
-            <option>Cornea</option>
-            <option>Heart</option>
-            <option>Lung</option>
-            <option>Liver</option>
-        </select>
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Details</label>
-        <input required name='Details' type="text" class="form-control" id="exampleInputEmail1"
-            aria-describedby="emailHelp">
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Contact</label>
-        <input required name='Contact' type="number" class="form-control" id="exampleInputEmail1"
-            aria-describedby="emailHelp">
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email</label>
-        <input required name='Email' type="text" class="form-control" id="exampleInputEmail1"
-            aria-describedby="emailHelp">
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Address</label>
-        <input required name='Address' type="text" class="form-control" id="exampleInputEmail1"
-            aria-describedby="emailHelp">
-    </div>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link rel="stylesheet" type="text/css" href="{{url('css/website/login.css')}}">
 
 
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form></div>
-  <div class="col-sm-4"></div>
-</div>
 
+<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="https://colorlib.com/etc/lf/Login_v1/images/img-01.png" alt="IMG">
+				</div>
+
+				<form action="{{route('user.registration.post')}}" method="POST" class="login100-form validate-form">
+				@csrf	
+                <span class="login100-form-title">
+						Donor Registration
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Username is required: ex@abc.xyz">
+						<input class="input100" type="text" name="Username" placeholder="Username">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+                    <div class="wrap-input100 validate-input" data-validate = "Valid Email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="Email" placeholder="Email">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" name="Password" placeholder="Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+                    <div class="wrap-input100 validate-input" data-validate = "Date_of_birth is required: ex@abc.xyz">
+						<input class="input100" type="date" name="Date_of_birth" placeholder="Date_of_birth">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+                    <div class="wrap-input100 validate-input" data-validate = "Weight is required: ex@abc.xyz">
+						<input class="input100" type="number" name="Weight" placeholder="Weight">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+                    <div class="wrap-input100 validate-input" data-validate = "Blood_group is required: ex@abc.xyz">
+						<select class="input100" type="text" name="Blood_group" placeholder="Blood_group">
+                        <option>A+</option>
+                        <option>B+</option>
+                        <option>O+</option>
+                        <option>AB+</option>
+                        <option>A-</option>
+                        <option>B-</option>
+                        <option>O-</option>
+                        <option>AB-</option>
+                        </select>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+                    <div class="wrap-input100 validate-input" data-validate = "Gender is required: ex@abc.xyz">
+						<select class="input100" type="text" name="Gender" placeholder="Gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Others</option>
+                        
+                        </select>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+                    <div class="wrap-input100 validate-input" data-validate = "Organ_Needed is required: ex@abc.xyz">
+						<select class="input100" type="text" name="Organ_Needed" placeholder="Organ_Needed">
+                        <option>Kidney</option>
+                        <option>Cornea</option>
+                        <option>Heart</option>
+                        <option>Lung</option>
+                        <option>Liver</option>
+                        </select>
+                        <span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+                    <div class="wrap-input100 validate-input" data-validate = "Details is required: ex@abc.xyz">
+						<input class="input100" type="text" name="Details" placeholder="Details">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+                    <div class="wrap-input100 validate-input" data-validate = "Contact is required: ex@abc.xyz">
+						<input class="input100" type="number" name="Contact" placeholder="Contact">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+                    <div class="wrap-input100 validate-input" data-validate = "Address is required: ex@abc.xyz">
+						<input class="input100" type="text" name="Address" placeholder="Address">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+                  
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Submit
+						</button>
+					</div>
+
+					<div class="text-center p-t-12">
+						<span class="txt1">
+							Forgot
+						</span>
+						<a class="txt2" href="#">
+							Username / Password?
+						</a>
+					</div>
+					<div class="text-center p-t-136">
+						<a class="txt2" href="{{route('user.login')}}">
+							Already have an Account?
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                            Login now</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>

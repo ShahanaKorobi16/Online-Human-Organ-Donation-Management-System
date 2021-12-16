@@ -136,43 +136,44 @@
 
 					<body>
 					
-<!-- 					
-					<div class="container_12">
-				
-						
-					<div class="grid_12">
-						<a href="{{route('website.donar-reg')}}" class="Want To Donate, Register First" style="background-color:#5499C7;">Donate</a>
-						<div class="pad">
-						<div class="text1">You can change the life of those who have no hope</div>
-						<p>Etiam dui eros, laoreet sit amet est vel,modo venenatis eros. Fusce adipiscing quam id riss sagittis, non consequat lacus interdum. Proin  tincidunt nulla, eu sodales arcu.</p>
-						Quisquerra nulla nunc, eu ultrices libero ultricies eget. Phasellus accumsan justo vitae feugiat placerat. Praesent vel ultrices velit. Suspendisse risus justo, lacinia vitae eleifend
-					</div>
-		
-					</div>
-					</div>
-		</div> -->
+
+		<div class="clear"></div>
+		<div class="col-lg"></div>
 
 		
-
-		<div class="col-9"></div>
-		<div class="col-9">
+		<!-- <div class="col-lg">
 	
-					<div class="clear"></div>
-					<div class="grid_12">
+	
+					
+					 <div class="grid_12">
 						<center>
-							<!-- <div class="title" class="btn  btn-primary" style="background-color:#76D7C4;">Organ Needed Post</div> -->
-							<a href="{{route('website.donar-reg')}}" class="btn  btn-primary" style="background-color:#5499C7;">Donate</a>
+							
+							<a href="{{route('website.donar-reg')}}" class="btn btn-primary btn-lg btn-block" style="background-color:#5499C7;">Donar Registration/Login</a>
 	
 							<div class="text1">You can change the life of those who have no hope</div>
 						<p>Etiam dui eros, laoreet sit amet est vel,modo venenatis eros. Fusce adipiscing quam id riss sagittis, non consequat lacus interdum. Proin  tincidunt nulla, eu sodales arcu.</p>					</center>
-						</div>
+						</div>  -->
+
+
+						
 						</div>
 				
 
 
 
-					<div class="col-md-2"></div>
-					<div class="col-md-2">
+						<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card" style=" background-color: #AED6F1;">
+    <div class="card-body">
+    <h3 class="card-title"><b><center>Want To Donate</center></b></h3>
+<p class="card-text"><h1><center>Save a life, Be a donor</center></h1></p>
+    <a href="{{route('website.donar-reg')}}" class="btn btn-dark" style="text-align:right;">Registration/Login</a>
+  </div>
+    </div>
+  </div>
+
+
+					
 					
 
 					<div class="clear"></div>
@@ -198,7 +199,7 @@
 						</div>
 					</div>
 		
-		</div>
+		
 		
 		
 					<!-- _________________________________________________________ -->

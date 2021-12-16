@@ -19,6 +19,7 @@
       <th scope="col">Details</th>
       <th scope="col">Contact</th>
       <th scope="col">Address</th>
+      <th scope="col">Action</th>
     </tr>
     </thead>
     <tbody>
@@ -35,6 +36,12 @@
                 <td>{{$user->details}}</td>
                 <td>{{$user->contact}}</td>
                 <td>{{$user->address}}</td>
+                <td> 
+                    <a class="btn btn-primary" href="{{route('admin.user.details',$user->id)}}">View</a>
+                  
+                    <a class="btn btn-danger" href="{{route('admin.user.delete',$user->id)}}">Delete</a>
+                    </td>
+
             </tr>
         @endforeach
     

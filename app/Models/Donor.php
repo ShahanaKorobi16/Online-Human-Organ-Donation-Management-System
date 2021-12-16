@@ -10,4 +10,13 @@ class Donor extends Model
     use HasFactory;
     protected $table="donors";
     protected $guarded=[];
+
+
+    protected $hidden = [
+        'Password',
+        'remember_token',
+    ];
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
 }
