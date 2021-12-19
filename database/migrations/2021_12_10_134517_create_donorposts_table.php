@@ -15,13 +15,16 @@ class CreateDonorpostsTable extends Migration
     {
         Schema::create('donorposts', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
             $table->string('Donor_Name');
             $table->date('Date_of_Birth');
             $table->string('Blood_group');
             $table->integer('Contact');
             $table->string('Email');
+            $table->integer('NID_Number');
             $table->string('Address');
             $table->string('Organ_wants_to_donate');
+            $table->string('Details');
             $table->date('Post_Date');
             $table->timestamps();
         });

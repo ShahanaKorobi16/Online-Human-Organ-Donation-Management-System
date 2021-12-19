@@ -41,6 +41,7 @@ Route::get('/', function () {
 
      
 Route::get('/home',[WebsiteController::class,'home'])->name('website.home');
+Route::get('/contact',[WebsiteController::class,'contact'])->name('website.contact');
 Route::get('/donate',[DonateController::class,'donate'])->name('website.donar-reg');
 Route::get('/reg',[RegistrationController::class,'reg'])->name('website.patient-reg');
 

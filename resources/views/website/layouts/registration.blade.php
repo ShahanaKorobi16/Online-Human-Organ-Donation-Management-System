@@ -12,7 +12,20 @@
 				<div class="login100-pic js-tilt" data-tilt>
 					<img src="https://colorlib.com/etc/lf/Login_v1/images/img-01.png" alt="IMG">
 				</div>
-
+				@if(session()->has('success'))
+<p class="alert alert-success">
+    {{session()->get('success')}}
+</p>
+@endif
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 				<form action="{{route('user.registration.post')}}" method="POST" class="login100-form validate-form">
 				@csrf	
                 <span class="login100-form-title">

@@ -33,7 +33,7 @@ class AddPostController extends Controller
        'Patient_Name'=>'required',
        'Date_of_Birth'=>'required',
        'Blood_group'=>'required',
-       'Contact'=>'required',
+       'Contact'=>'required|numeric|digits:11',
        'Email'=>'required',
        'Case'=>'required',
        'Post_Date'=>'required',

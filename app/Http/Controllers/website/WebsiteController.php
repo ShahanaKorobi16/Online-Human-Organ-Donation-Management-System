@@ -15,6 +15,11 @@ class WebsiteController extends Controller
        // return view('website.index',compact('addposts'));
         return view('website.index',compact('addposts'));
     }
+    
+    public function contact()
+    {
+        return view('website.layouts.contact');
+    }
    
 }
 
