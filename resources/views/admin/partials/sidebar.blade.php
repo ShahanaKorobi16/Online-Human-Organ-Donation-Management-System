@@ -59,7 +59,15 @@
                             <!-- <div class="sb-sidenav-menu-heading"></div> -->
                             <a class="nav-link" href="{{route('website.post')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-paste"></i></div>
-                               Post
+                              Patient Post
+                            </a>
+                        </div>
+                       
+                        <div class="nav">
+                            <!-- <div class="sb-sidenav-menu-heading"></div> -->
+                            <a class="nav-link" href="{{route('website.donor-post')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-paste"></i></div>
+                              Donor Post
                             </a>
                         </div>
 

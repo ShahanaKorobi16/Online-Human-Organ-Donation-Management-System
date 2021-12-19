@@ -17,6 +17,7 @@
       <th scope="col">Address</th>
       <th scope="col">Organ_wants_to_Donate</th>
       <th scope="col">Post_Date</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
  
@@ -30,8 +31,12 @@
       <td>{{$adpost->Contact}}</td>
       <td>{{$adpost->Email}}</td>
       <td>{{$adpost->Address}}</td>
-      <td>{{$adpost->Organ_wants_to_Donate}}</td>  
+      <td>{{$adpost->Organ_wants_to_donate}}</td>  
       <td>{{$adpost->Post_Date}}</td>
+      <td> 
+                <a class="btn btn-primary" href="{{route('website.donor-post.details',$adpost->id)}}">View</a>
+                    <a class="btn btn-danger" href="{{route('website.donor-post.delete',$adpost->id)}}">Delete</a>
+                    </td>
     </tr>
    @endforeach
     </tbody>

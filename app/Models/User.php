@@ -25,8 +25,7 @@ class User extends Authenticatable
     //     'Weight',
     //     'Blood_group',
     //     'Gender',
-    //     'Organ_Needed',
-    //     'Details',
+ 
     //     'Contact',
     //     'Address',
     //     'role',

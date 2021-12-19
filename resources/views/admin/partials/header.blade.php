@@ -29,8 +29,15 @@
     <ul class="navbar-nav">
      
     <div class="d-grid gap-2 d-md-block">
-    
-      <li class="nav-item d-none d-sm-inline-block">
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    <div class="navbar-nav">
+        <div class="nav-item text-nowrap">
+            <a class="nav-link px-3" href="{{route('admin.logout')}}">Log out</a>
+        </div>
+    </div>
+
+
+      <!-- <li class="nav-item d-none d-sm-inline-block">
         <a href="index3.html" class="btn btn-light">View Post</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
@@ -38,9 +45,9 @@
       </li>
       <td>
       <li class="nav-item d-none d-sm-inline-block">
-      <a href="/Admin/create"  type='table' class="btn btn-light">create New post</a>
+      <a href="/Admin/create"  type='table' class="btn btn-light">Logout</a>
       </li>
-      </div>
+      </div> -->
     </ul>
 
     </header>

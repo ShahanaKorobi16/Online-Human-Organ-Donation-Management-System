@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DonorController;
 use App\Http\Controllers\PatientController;
@@ -54,6 +55,8 @@ Route::get('post/delete/{post_id}',[AddPostController::class,'postDelete'])->nam
 Route::get('/dcreate',[DonorPostController::class,'dcreate'])->name('website.donor-post-create');
 Route::get('/dpost',[DonorPostController::class,'dpost'])->name('website.donor-post');
 Route::post('/dstore',[DonorPostController::class,'dstore'])->name('website.dstore');
+Route::get('dpost/view/{donorpost_id}',[DonorPostController::class,'dpostDetails'])->name('website.donor-post.details');
+Route::get('dpost/delete/{donorpost_id}',[DonorPostController::class,'dpostDelete'])->name('website.donor-post.delete');
 
 //website login
 Route::get('/user/registration',[LoginController::class,'registration'])->name('user.registration');
@@ -64,11 +67,21 @@ Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout'
 
 
 
-
+//Admin
 Route::group(['prefix'=>'Admin'],function(){
-    Route::get('/', function () {
-        return view('Admin.index');
-    })->name('admin');
+    
+
+    Route::get('/login',[AdminLoginController::class,'login'])->name('admin.login');
+    Route::post('/login',[AdminLoginController::class,'doLogin'])->name('admin.doLogin');
+
+
+    Route::group(['middleware'=>'auth'],function (){
+        Route::get('/', function () {
+            return view('Admin.index');
+        })->name('admin');
+
+        Route::get('/logout',[AdminLoginController::class,'logout'])->name('admin.logout');
+
 
     Route::get('/Admin',[AdminController::class,'demo'])->name('admin.demo');
     Route::get('/Admin',[AdminController::class,'adminn'])->name('admin.adminn');
@@ -101,4 +114,5 @@ Route::group(['prefix'=>'Admin'],function(){
         Route::get('/category',[OrganController::class,'list'])->name('admin.category');
         Route::get('category/form',[OrganController::class,'form'])->name('category.form');
         Route::post('/category/add',[OrganController::class,'add'])->name('category.add');
+});
 });

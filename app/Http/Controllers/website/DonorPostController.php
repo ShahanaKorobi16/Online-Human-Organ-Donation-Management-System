@@ -44,4 +44,20 @@ public function dstore(Request $request)
    ]);
    return redirect()->back()->with('msg','Donation Post created successfully.');
 }
+public function dpostDetails($donorpost_id)
+{
+  //dd("ok");
+
+//        collection= get(), all()====== read with loop (foreach)
+//       object= first(), find(), findOrFail(),======direct
+  $adpost=Donorpost::find($donorpost_id);
+//      $post=Post::where('id',$post_id)->first();
+    return view('website.layouts.donor-post-details',compact('adpost'));
+}
+
+public function dpostDelete($donorpost_id)
+{
+   Post::find($donorpost_id)->delete();
+   return redirect()->back()->with('success','Post Deleted.');
+}
 }

@@ -21,8 +21,7 @@ public function registrationPost(Request $request){
         'weight'=>$request->Weight,
         'blood_group'=>$request->Blood_group,
         'gender'=>$request->Gender,
-        'organ_Needed'=>$request->Organ_Needed,
-        'details'=>$request->Details, 
+         
         'contact'=>$request->Contact,
         'address'=>$request->Address,
     ]);

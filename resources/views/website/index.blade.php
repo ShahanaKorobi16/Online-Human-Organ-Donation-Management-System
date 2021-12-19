@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Home</title>
+	<title>Home</title>
 		<meta charset="utf-8">
 		<meta name = "format-detection" content = "telephone=no" />
 		<link rel="icon" href="{{url('images/favicon.ico')}}">
@@ -86,41 +85,35 @@
 	</head>
 	<body class="page1" id="top">
 <!--==============================header=================================-->
-@include('website.partials.header')
+		
+
+
+		@include('website.partials.header')
 
 
 @yield('content')
-
-
-
 		<div class="main">
 <!--==============================Content=================================-->
-		
-
-<div class="content"><div class="ic"></div>
-
+			<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - December 16, 2013!</div>
 				<div class="container_12">
-					<div class="grid_13">
+
+					<div class="">
 						<div class="flexslider">
 							<ul class="slides">
 								<li>
 									<img src="{{url('images/img1.jpg')}}" alt="">
-									<div class="flex-caption" style="background-color:#A3E4D7 ;">
-				
-										<p style="background-color:#1F618D; color: bisque;">
-
-										Hope</p>
+									<div class="flex-caption" style="background-color:#A3E4D7" >
+										<p style="background-color:#1F618D; color: bisque;">Hope</p>
 									</div>
 								</li>
 								<li>
 									<img src="{{url('images/img2.jpg')}}" alt="">
-									<div class="flex-caption c2" style="background-color:#1ABC9C" >
-										<p style="background-color:#1F618D; color:bisque;">
-										Save</p>
+									<div class="flex-caption c2" style="background-color:#154360" >
+										<p style="background-color:#7FB3D5; color: bisque;">Save</p>
 									</div>
 								</li>
 								<li>
-									<img src="{{url('images/img3.jpg')}}" alt="">
+									<img src="{{url('images/img33.jpg')}}" alt="">
 									<div class="flex-caption" style="background-color:#A3E4D7 ;">
 										<p style="background-color:#1F618D; color: bisque;">Help</p>
 									</div>
@@ -128,132 +121,131 @@
 							</ul>
 						</div>
 						<span id="responsiveFlag"></span>
-				
-		
-		
-		
+					</div>
 
-
-					<body>
+					<a href="{{route('website.donar-reg')}}" class="donate" style="width: 30%; margin: auto; margin-top: 33px;">Donar Registration</a>
 					
-
-		<div class="clear"></div>
-		<div class="col-lg"></div>
-
-		
-		<!-- <div class="col-lg">
-	
-	
+						<div class="text1"><align: center>You can change the life of those who have no hope by donating Organ</center></div>
+						<p>Etiam dui eros, laoreet sit amet est vel,modo venenatis eros. Fusce adipiscing quam id riss sagittis, non consequat lacus interdum. Proin  tincidunt nulla, eu sodales arcu.</p>
+						Quisquerra nulla nunc, eu ultrices libero ultricies eget. Phasellus accumsan justo vitae feugiat placerat. Praesent vel ultrices velit. Suspendisse risus justo, lacinia vitae eleifend
 					
-					 <div class="grid_12">
-						<center>
+					<div class="clear"></div>
+					
+                  <div style="display: flex; width: 100%; margin: auto;">
+					<div class="" style="width: 30%; padding-right: 30px; margin-left: 182px;">
+						<div class="block2 maxheight">
+							<div class="title" style="background-color:#21618C;">Organ Needed Post</div>
+							<div class="pad">
+							Faert sit amet est l,mmodo venenatis eros. Kusce ng quam id risus sagittisnel consequat lacusut tinn sodales arcuisqum.<div class="alright" style="text-align:center;"><a href="{{route('website.create-post')}}" class="btn" style="background-color:#2E86C1 ;">Create Post</a></div>
+	
+								<div class="alright" style="text-align:center;"><a href="{{route('website.post')}}" class="btn" style="background-color:#5DADE2;">View all Post</a></div>
 							
-							<a href="{{route('website.donar-reg')}}" class="btn btn-primary btn-lg btn-block" style="background-color:#5499C7;">Donar Registration/Login</a>
-	
-							<div class="text1">You can change the life of those who have no hope</div>
-						<p>Etiam dui eros, laoreet sit amet est vel,modo venenatis eros. Fusce adipiscing quam id riss sagittis, non consequat lacus interdum. Proin  tincidunt nulla, eu sodales arcu.</p>					</center>
-						</div>  -->
-
-
-						
-						</div>
-				
-
-
-
-						<div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card" style=" background-color: #AED6F1;">
-    <div class="card-body">
-    <h3 class="card-title"><b><center>Want To Donate</center></b></h3>
-<p class="card-text"><h1><center>Save a life, Be a donor</center></h1></p>
-    <a href="{{route('website.donar-reg')}}" class="btn btn-dark" style="text-align:right;">Registration/Login</a>
-  </div>
-    </div>
-  </div>
-
-
-					
-					
-
-					<div class="clear"></div>
-					<div class="grid_5">
-						<div class="block2 maxheight">
-							<div class="title" style="background-color:#76D7C4;">Organ Needed Post</div>
-							<div class="pad">
-								Faert sit amet est l,mmodo venenatis eros. Kusce ng quam id risus sagittisnel consequat lacusut tinn sodales arcuisqum.<div class="alright"><a href="{{route('website.create-post')}}" class="btn" style="background-color:#A9CCE3 ;">Create Post</a></div>
-	
-								<div class="alright"><a href="{{route('website.post')}}" class="btn" style="background-color:#A9CCE3 ;">View all Post</a></div>
-							</div>
-						</div>
-					</div>
-
-					<div class="clear"></div>
-					<div class="grid_5">
-						<div class="block2 maxheight">
-							<div class="title" style="background-color:#76D7C4;">Donation Post</div>
-							<div class="pad">
-								Faert sit amet est l,mmodo venenatis eros. Kusce ng quam id risus sagittisnel consequat lacusut tinn sodales arcuisqum.<div class="alright"><a href="{{route('website.donor-post-create')}}" class="btn" style="background-color:#A9CCE3 ;">Create Post</a></div>
-								<div class="alright"><a href="{{route('website.donor-post')}}" class="btn" style="background-color:#A9CCE3 ;">View Post</a></div>
-							</div>
-						</div>
-					</div>
-		
-		
-		
-		
-					<!-- _________________________________________________________ -->
-
-					
-					<div class="clear"></div>
-					<div class="grid_4">
-						<div class="block2 maxheight">
-							<div class="title" style="background-color:#76D7C4;">our Mission</div>
-							<div class="pad">
-								Faert sit amet est l,mmodo venenatis eros. Kusce ng quam id risus sagittisnel consequat lacusut tinn sodales arcuisqum.<div class="alright"><a href="#" class="btn" style="background-color:#A9CCE3 ;">View More</a></div>
 								
 							</div>
 						</div>
 					</div>
-					
-				
-					<div class="grid_4">
+					<div class="" style="width: 30%;">
+						<div class="block2 maxheight">
+							<div class="title" style="background-color:#21618C;">Donation Post</div>
+							<div class="pad">
+							Faert sit amet est l,mmodo venenatis eros. Kusce ng quam id risus sagittisnel consequat lacusut tinn sodales arcuisqum.<div class="alright" style="text-align:center;"><a href="{{route('website.donor-post-create')}}" class="btn" style="background-color:#2E86C1 ;">Create Post</a></div>
+								<div class="alright" style="text-align:center;"><a href="{{route('website.donor-post')}}" class="btn" style="background-color:#5DADE2 ;">View All Post</a></div>
+							</div>
+						</div>
+					</div>
+		</div>
+					<div>
+					<div class="grid_3">
+						<div class="block2 maxheight">
+							<div class="title" style="background-color:#76D7C4;">Our Mission</div>
+							<div class="pad">
+								Faert sit amet est l,mmodo venenatis eros. Kusce ng quam id risus sagittisnel consequat lacusut tinn sodales arcuisqum.<div class="alright" ><a href="#" class="btn">Read More</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="grid_3">
 						<div class="block2 maxheight">
 							<div class="title" style="background-color:#D2B4DE;">Our Vission</div>
-							<div class="pad">Holot sit amet est el,mmodo venenatis eros. Jolosceng huam id risus sagittisnel consequat lacusut tinn sodales arcuisqmol.<div class="alright"><a href="#" class="btn" style="background-color:#A9CCE3 ;">Read More</a></div></div>
+							<div class="pad">
+								Keet sit amet est el,mmodo venenatis eros. Fusce ng quam id risus sagittisnel consequat lacusut tinn sodales arcuisque.<div class="alright"><a href="#" class="btn">Read More</a></div>
+							</div>
 						</div>
 					</div>
-					<div class="grid_4">
+					<div class="grid_3">
 						<div class="block2 maxheight">
-							<div class="title" style="background-color:#F5B7B1;">Our Vission</div>
-							<div class="pad">Holot sit amet est el,mmodo venenatis eros. Jolosceng huam id risus sagittisnel consequat lacusut tinn sodales arcuisqmol.<div class="alright"><a href="#" class="btn" style="background-color:#A9CCE3 ;">Read More</a></div></div>
+							<div class="title" style="background-color:#F5B7B1;">Motivation</div>
+							<div class="pad">
+								Boetosit amet est el,mmodo venenatis eros. Musce ng quam id risus sagittisnel monsequat lacusut tinn
+								sodales arcuisqut <div class="alright"><a href="#" class="btn">Read More</a></div>
+							</div>
 						</div>
 					</div>
-		
-					</body>
-					
-					<div class="grid_6">
-						<h3 class="nowrap mb0">Successful stories</h3>
-						<time class="st1" datetime="2013-01-01">       </time>
-						Lorem ipsum dolor sit amet, consectetur iscing elit. Inllis eratattis neque facilisis, sit ameticies erat rutrum. Cras facilisis, nulla velrral auctor leo magna sodales felis, quis malesuada nib odio ut velitylok. Proin pharetra luctus.
-						<div class="alright"><a href="#" class="btn" style="background-color:#5DADE2;">Read More</a></div>
+					<div class="grid_3">
+						<div class="block2 maxheight">
+							<div class="title" style="background-color:#82E0AA">Objective</div>
+							<div class="pad">Holot sit amet est el,mmodo venenatis eros. Jolosceng huam id risus sagittisnel consequat lacusut tinn sodales arcuisqmol.<div class="alright"><a href="#" class="btn">Read More</a></div></div>
+						</div>
 					</div>
-					<div class="grid_6">
+		</div>
+					<!-- <div class="clear"></div>
+					<div class="grid_12">
+						<h2>You can help Them</h2>
+						<div id="owl">
+							<div class="item">
+								<a href="#"><img src="images/page1_img4.jpg" alt="">Jim <br>
+								8 years</a>
+							</div>
+							<div class="item it1">
+								<a href="#"><img src="images/page1_img5.jpg" alt="">Ann <br>
+								3 years</a>
+							</div>
+							<div class="item it2">
+								<a href="#"><img src="images/page1_img6.jpg" alt="">Linda <br>
+								5 years</a>
+							</div>
+							<div class="item it3">
+								<a href="#"><img src="images/page1_img7.jpg" alt="">Mark  <br>
+								6 years</a>
+							</div>
+							<div class="item">
+								<a href="#"><img src="images/page1_img4.jpg" alt="">Jim <br>
+								8 years</a>
+							</div>
+							<div class="item it1">
+								<a href="#"><img src="images/page1_img5.jpg" alt="">Ann <br>
+								3 years</a>
+							</div>
+							<div class="item it2">
+								<a href="#"><img src="images/page1_img6.jpg" alt="">Linda <br>
+								5 years</a>
+							</div>
+							<div class="item it3">
+								<a href="#"><img src="images/page1_img7.jpg" alt="">Mark  <br>
+								6 years</a>
+							</div>
+						</div>
+					</div> -->
+					<div class="grid_4">
+						<h3 class="nowrap mb0">Successful stories</h3>
+						<time class="st1" datetime="2013-01-01">29.11.2013</time>
+						Lorem ipsum dolor sit amet, consectetur iscing elit. Inllis eratattis neque facilisis, sit ameticies erat rutrum. Cras facilisis, nulla velrral auctor leo magna sodales felis, quis malesuada nib odio ut velitylok. Proin pharetra luctus.
+						<div class="alright"><a href="#" class="btn">Read More</a></div>
+					</div>
+					<div class="grid_7 prefix_1">
 						<h3>About Us</h3>
-						<!-- <img src="images/img5.jpg" alt="" class="img_inner fleft" height="60" width="40"> -->
+						<img src="images/page1_img8.jpg" alt="" class="img_inner fleft">
 						<div class="extra_wrapper">
 							<p>All you wanted to know about this freebie produced by TemplateMonster.com, you can find <span class="col1"><a href=" http://blog.templatemonster.com/free-website-templates/" rel="dofollow">here</a></span>.</p>
 							Visit the category of <span class="col1"><a href="http://www.templatemonster.com/category/charity-website-templates" rel="nofollow ">Charity templates</a></span> to find more themes of this kind.
 						</div>
 						<div class="clear"></div>
-						<div class="alright"><a href="#" class="btn" style="background-color:#5DADE2 ;">Read More</a></div>
+						<div class="alright"><a href="#" class="btn">Read More</a></div>
 					</div>
 				</div>
 			</div>
-		
 <!--==============================footer=================================-->
-@include('website.partials.footer')
-		</div>
 		
+			@include('website.partials.footer')
+		</div>
 	</body>
 </html>

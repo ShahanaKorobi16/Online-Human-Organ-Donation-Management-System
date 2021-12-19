@@ -45,7 +45,7 @@
 						<input class="input100" type="date" name="Date_of_birth" placeholder="Date_of_birth">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
+						<i class="far fa-calendar" aria-hidden="true"></i></i> 
 						</span>
 					</div>
                     <div class="wrap-input100 validate-input" data-validate = "Weight is required: ex@abc.xyz">
@@ -83,7 +83,7 @@
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
 					</div>
-                    <div class="wrap-input100 validate-input" data-validate = "Organ_Needed is required: ex@abc.xyz">
+                    <!-- <div class="wrap-input100 validate-input" data-validate = "Organ_Needed is required: ex@abc.xyz">
 						<select class="input100" type="text" name="Organ_Needed" placeholder="Organ_Needed">
                         <option>Kidney</option>
                         <option>Cornea</option>
@@ -102,12 +102,12 @@
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
-					</div>
+					</div> -->
                     <div class="wrap-input100 validate-input" data-validate = "Contact is required: ex@abc.xyz">
 						<input class="input100" type="number" name="Contact" placeholder="Contact">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
+						<div class="sb-nav-link-icon">			<i class="fas fa-mobile" aria-hidden="true"></i></div>
 						</span>
 					</div>
                     <div class="wrap-input100 validate-input" data-validate = "Address is required: ex@abc.xyz">

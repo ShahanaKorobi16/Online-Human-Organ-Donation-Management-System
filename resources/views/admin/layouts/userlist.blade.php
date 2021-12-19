@@ -15,8 +15,7 @@
       <th scope="col">Weight</th>
       <th scope="col">Blood_group</th>
       <th scope="col">Gender</th>
-      <th scope="col">Organ_Needed</th>
-      <th scope="col">Details</th>
+     
       <th scope="col">Contact</th>
       <th scope="col">Address</th>
       <th scope="col">Action</th>
@@ -32,8 +31,7 @@
                 <td>{{$user->weight}}</td>
                 <td>{{$user->blood_group}}</td>
                 <td>{{$user->gender}}</td>
-                <td>{{$user->organ_Needed}}</td>
-                <td>{{$user->details}}</td>
+              
                 <td>{{$user->contact}}</td>
                 <td>{{$user->address}}</td>
                 <td> 
