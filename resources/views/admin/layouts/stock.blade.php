@@ -16,25 +16,22 @@
       <th scope="col">Stock Id</th>
       <th scope="col">Quantity</th>
       <th scope="col">Organ</th>
+      <th scope="col">Action</th>
      
       
     </tr>
   </thead>
   <tbody>
-  @foreach($stocks as $stock)
+  @foreach($stocks as $organs)
    <tr>
-   <th>{{$stock->id}}</th>
-      <th>{{$stock->Quantity}}</th>
-      <th>{{$stock->organ->Organ_name}}</th>
-      
-      
+   <th>{{$organs->id}}</th>
+      <th>{{$organs->Quantity}}</th>
+      <!-- <th>{{$organs->organ->Organ_name}}</th> -->
+      <td><a href="{{route('admin.stock.details',$organs->id)}}" class="btn btn-primary">View</a>
+</td>
     </tr>
-   
-    
     @endforeach
 
-    
-  
   </tbody>
 </table>
 </html>

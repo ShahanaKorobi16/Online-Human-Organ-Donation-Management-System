@@ -13,7 +13,7 @@
 							<ul class="sf-menu">
 								<li class="current"><a href="{{route('admin')}}"  type='table' class="btn btn-primary">Admin</a>
 								
-								<!-- <li><a href="#" type='table' class="btn btn-primary">View Post </a></li> -->
+								<li><a href="#" type='table' class="btn btn-primary">Search </a></li>
 							
 								<li>@if(auth()->user())
 								<a class="btn btn-primary" href="{{route('user.logout')}}">Logout</a>
@@ -22,7 +22,7 @@
 										<a class="btn btn-primary" href="{{route('user.login')}}">Login/Registration</a>
 									</li>
 									@endif
-								<li><a href="{{route('website.contact')}}" type='table' class="btn btn-primary">Contacts</center></a></li>
+								<li><a href="{{route('website.contact')}}" type='table' class="btn btn-primary">Contact Us</center></a></li>
 								</p>
 				
 							</ul>

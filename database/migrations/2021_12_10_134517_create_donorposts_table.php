@@ -24,6 +24,7 @@ class CreateDonorpostsTable extends Migration
             $table->integer('NID_Number');
             $table->string('Address');
             $table->string('Organ_wants_to_donate');
+            $table->string('Quantity');
             $table->string('Details');
             $table->date('Post_Date');
             $table->timestamps();

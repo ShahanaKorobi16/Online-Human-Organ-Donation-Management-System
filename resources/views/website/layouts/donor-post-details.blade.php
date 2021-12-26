@@ -1,5 +1,5 @@
 <center>
-<h1>Patient Details</h1>
+<h1>Donor Details</h1>
 
 <p>
     <img style="border-radius: 4px;" width="200px;" src=" {{url('/uploads/'.$adpost->image)}}" alt="Donor_Post">
@@ -12,12 +12,13 @@
 <p><h3><span style="color:#2E4053">NID_Number: {{$adpost->NID_Number}}</span></h2></p>
 <p><h3><span style="color:#2E4053">Address: {{$adpost->Address}}</span></h2></p>
 <p><h3><span style="color:#2E4053">Organ_wants_to_Donate: {{$adpost->Organ_wants_to_donate}}</span></h2></p>
+<p><h3><span style="color:#2E4053">Quantity: {{$adpost->Quantity}}</span></h2></p>
 <p><h3><span style="color:#2E4053">Details: {{$adpost->Details}}</span></h2></p>
 <p><h3><span style="color:#2E4053">Post_Date: {{$adpost->Post_Date}}</span></h2></p>
 
 </center>
 
 
-<lable>Donor_Name:</lable>
+<!-- <lable>Donor_Name:</lable>
 <input type="text" class="form-control" value="{{$adpost->Donor_Name}}">
-<input type="file" class="form-control">
+<input type="file" class="form-control"> -->

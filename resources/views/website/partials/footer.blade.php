@@ -10,7 +10,7 @@
 						</div>
 						<div class="copy">
 							<strong><center>Donate Organ Donate Life</center></strong>    <a href="#"></a><br>
-							 <a href="http://www.templatemonster.com/" rel="nofollow"><center>Developed by Shahana Saiful Korobi</center></a>
+							 <!-- <a href="http://www.templatemonster.com/" rel="nofollow"><center>Developed by Shahana Saiful Korobi</center></a> -->
 						</div>
 					</div>
 				</div>

@@ -4,7 +4,7 @@
 <html>
 
 
-<h1 class="mt-4">Organ Details</h1>
+<h1 class="mt-4">Organ List</h1>
 <p align="right"> <a href="{{route('category.form')}}"  type='table' class="btn btn-success">Add to Organ</a>
       </p>
 
@@ -16,6 +16,7 @@
       <th scope="col">Organ Id</th>
       <th scope="col">Organ Name</th>
       <th scope="col">Organ Details</th>
+      <th scope="col">Action</th>
       
     </tr>
   </thead>
@@ -26,7 +27,11 @@
    <th>{{$category->id}}</th>
       <th>{{$category->Organ_name}}</th>
       <th>{{$category->Organ_details}}</th>
-     
+      <td> 
+                    <a class="btn btn-primary" href="{{route('admin.category.details',$category->id)}}">View Availability</a>
+                  
+                    <a class="btn btn-danger" href="{{route('admin.category.delete',$category->id)}}">Delete</a>
+                    </td>
     </tr>
    
     

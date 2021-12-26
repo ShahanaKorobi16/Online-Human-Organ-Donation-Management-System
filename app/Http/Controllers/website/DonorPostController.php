@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\website;
 use App\Models\Donorpost;
+use App\Models\Message;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -34,9 +35,10 @@ public function dstore(Request $request)
    'Blood_group'=>'required',
    'Contact'=>'required',
    'Email'=>'required',
-   'NID_Number'=>'required',
+   'NID_Number'=>'required|numeric',
    'Address'=>'required',
    'Organ_wants_to_donate'=>'required',
+   'Quantity'=>'required',
    'Details'=>'required',
    'Post_Date'=>'required',
  ]);
@@ -52,6 +54,7 @@ public function dstore(Request $request)
      'NID_Number'=>$request->NID_Number,
      'Address'=>$request->Address,
      'Organ_wants_to_donate'=>$request->Organ_wants_to_donate,
+     'Quantity'=>$request->Quantity,
      'Details'=>$request->Details,
      'Post_Date'=>$request->Post_Date
 
@@ -74,4 +77,79 @@ public function dpostDelete($donorpost_id)
   Donorpost::find($donorpost_id)->delete();
    return redirect()->back()->with('success','Post Deleted.');
 }
+
+public function dpostEdit($donorpost_id){
+   //dd($donorpost_id);
+   $adpost = Donorpost::find($donorpost_id);
+  // dd($adpost);
+ 
+      return view('website.layouts.donor-post-edit',compact('adpost'));
+  
+}
+
+public function dpostUpdate(Request $request,$donorpost_id){
+   //dd($request->all());
+  // dd($donorpost_id);
+  $adpost=Donorpost::find($donorpost_id);;
+  // dd($adpost);
+  if ($adpost) {
+    $adpost->update([
+      // 'name'=>$request->name,
+      'Donor_Name'=>$request->Donor_Name,
+     'Date_of_Birth'=>$request->Date_of_Birth,
+     'Blood_group'=>$request->Blood_group,
+     'Contact'=>$request->Contact,
+     'Email'=>$request->Email,
+     'NID_Number'=>$request->NID_Number,
+     'Address'=>$request->Address,
+     'Organ_wants_to_donate'=>$request->Organ_wants_to_donate,
+     'Quantity'=>$request->Quantity,
+     'Details'=>$request->Details,
+     'Post_Date'=>$request->Post_Date
+      ]);
+     
+      return redirect()->route('website.donor-post')->with('success','Post updated!');
+  }
+
+}
+
+public function message(){
+        $msgs=Message::all();
+        //dd($msgs);
+        return view('admin.layouts.message',compact('msgs'));
+}
+public function mcreate(Request $request){
+    return view('website.layouts.create-message');
+
+}
+
+public function mstore(Request $request)
+{
+ 
+//dd($request->all());
+ $request->validate([
+   'Patient_Name'=>'required',
+  
+   'Contact'=>'required',
+   'Email'=>'required',
+
+   'Address'=>'required',
+   'Why_need_this_organ'=>'required',
+   
+ ]);
+
+  //dd ($request->all());
+  Message::create([
+    
+     'Patient_Name'=>$request->Patient_Name,
+     'Contact'=>$request->Contact,
+     'Email'=>$request->Email,
+     'Address'=>$request->Address,
+     'Why_need_this_organ'=>$request->Why_need_this_organ,
+    
+
+   ]);
+   return redirect()->back()->with('success','Message created successfully.');
+}
+
 }

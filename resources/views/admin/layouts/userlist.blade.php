@@ -35,9 +35,10 @@
                 <td>{{$user->contact}}</td>
                 <td>{{$user->address}}</td>
                 <td> 
-                    <a class="btn btn-primary" href="{{route('admin.user.details',$user->id)}}">View</a>
+                    <a class="btn btn-primary" href="{{route('admin.user.details',$user->id)}}">View </a>
                   
                     <a class="btn btn-danger" href="{{route('admin.user.delete',$user->id)}}">Delete</a>
+                  
                     </td>
 
             </tr>

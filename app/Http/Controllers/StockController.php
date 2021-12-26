@@ -10,7 +10,7 @@ class StockController extends Controller
 {
     public function stock(){
         $stocks= Stock::with('organ')->get();
-        //dd($stocks);
+        // dd($stocks);
         return view('admin.layouts.stock',compact('stocks'));
 }
 public function addstock(){
@@ -23,7 +23,7 @@ public function addstock(){
 public function add(Request $request){
     // dd($request->all());
       $request->validate([
-        'Quantity'=>'required'|numeric,
+        'Quantity'=>'required|numeric',
 
       ]);
        Stock::create([
@@ -33,7 +33,14 @@ public function add(Request $request){
 
        ]);
        return redirect()->back()->with('msg','Added to stock successfully.');
-    
+}
+       public function stockDetails($id){
+        $category= Type::find($id);
+        // dd($category);
+        $organs = Organ::where('type',$category->organ)->get();
+        // dd($organs);
+        return view('admin.pages.stock-details',compact('organs'));
+    }
 
   
  }
@@ -47,4 +54,3 @@ public function add(Request $request){
 
        
    
-}

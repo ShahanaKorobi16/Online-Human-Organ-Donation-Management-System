@@ -17,6 +17,7 @@ class CreateOrgansTable extends Migration
             $table->id();
             $table->string('Organ_name');
             $table->string('Organ_details');
+            $table->double('total')->nullable();
             $table->timestamps();
         });
     }

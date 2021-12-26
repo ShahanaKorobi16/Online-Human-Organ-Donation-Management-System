@@ -1,3 +1,4 @@
+
 <h1 style="background-color:#73C6B6;">
     <Center>Post List</Center>
 </h1>
@@ -11,16 +12,21 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <div class="row">
 
-    <div class="col-md-2"></div>
-    <div class="col-md-2">
+    <!-- <div class="col-md-1"></div> -->
+    <div class="col-md-1">
         <table class="table table-success table-striped">
             <thead>
                 <tr>
                     <th scope="col">Patient_Name</th>
                     <th scope="col">Date_of_Birth</th>
                     <th scope="col">Blood_group</th>
+                    <th scope="col">Hospital_Name</th>
+                    <th scope="col">Hospital_Bed_No</th>
                     <th scope="col">Contact</th>
                     <th scope="col">Email</th>
+                    <th scope="col">NID_Number</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Organ_Needed</th>
                     <th scope="col">Case</th>
                     <th scope="col">Image</th>
                     <th scope="col">Post_Date</th>
@@ -36,14 +42,20 @@
                     <th>{{$addpost->Patient_Name}}</th>
                     <td>{{$addpost->Date_of_Birth}}</td>
                     <td>{{$addpost->Blood_group}}</td>
+                    <td>{{$addpost->Hospital_Name}}</td>
+                    <td>{{$addpost->Hospital_Bed_No}}</td>
                     <td>{{$addpost->Contact}}</td>
                     <td>{{$addpost->Email}}</td>
+                    <td>{{$addpost->NID_Number}}</td>
+                    <td>{{$addpost->Address}}</td>
+                    <td><h4>{{$addpost->Organ_Needed}}</h4></td>
                     <td>{{$addpost->Case}}</td>
                     <td><img src="{{url('/uploads/'.$addpost->image)}}" width="100px" alt="prescription image"></td>
                     <td>{{$addpost->Post_Date}}</td>
                     <td> 
                     <a class="btn btn-primary" href="{{route('website.post.details',$addpost->id)}}">View</a>
                     <a class="btn btn-danger" href="{{route('website.post.delete',$addpost->id)}}">Delete</a>
+                    <a class="btn btn-info" href="{{route('website.post.edit',$addpost->id)}}">Update</a>
                     </td>
                 </tr>
                 @endforeach
@@ -51,5 +63,5 @@
 
         </table>
     </div>
-    <div class="col-md-2"></div>
+    <!-- <div class="col-md-1"></div> -->
 </div>

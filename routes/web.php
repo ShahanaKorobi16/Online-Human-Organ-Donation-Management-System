@@ -42,6 +42,9 @@ Route::get('/', function () {
      
 Route::get('/home',[WebsiteController::class,'home'])->name('website.home');
 Route::get('/contact',[WebsiteController::class,'contact'])->name('website.contact');
+Route::get('/show',[WebsiteController::class,'show'])->name('website.postshow');
+
+Route::get('/show/details',[WebsiteController::class,'showdetails'])->name('website.post-details-show');
 Route::get('/donate',[DonateController::class,'donate'])->name('website.donar-reg');
 Route::get('/reg',[RegistrationController::class,'reg'])->name('website.patient-reg');
 
@@ -51,6 +54,9 @@ Route::get('/post',[AddPostController::class,'post'])->name('website.post');
 Route::post('/store',[AddPostController::class,'store'])->name('website.store');
 Route::get('post/view/{post_id}',[AddPostController::class,'postDetails'])->name('website.post.details');
 Route::get('post/delete/{post_id}',[AddPostController::class,'postDelete'])->name('website.post.delete');
+Route::get('post/edit/{post_id}',[AddPostController::class,'postEdit'])->name('website.post.edit');
+Route::put('post/update/{post_id}',[AddPostController::class,'postUpdate'])->name('website.post.update');
+Route::get('/pshow',[AddPostController::class,'pshow'])->name('website.patient.post.show');
 
 //website donor post
 Route::get('/dcreate',[DonorPostController::class,'dcreate'])->name('website.donor-post-create');
@@ -58,6 +64,12 @@ Route::get('/dpost',[DonorPostController::class,'dpost'])->name('website.donor-p
 Route::post('/dstore',[DonorPostController::class,'dstore'])->name('website.dstore');
 Route::get('dpost/view/{donorpost_id}',[DonorPostController::class,'dpostDetails'])->name('website.donor-post.details');
 Route::get('dpost/delete/{donorpost_id}',[DonorPostController::class,'dpostDelete'])->name('website.donor-post.delete');
+Route::get('dpost/edit/{donorpost_id}',[DonorPostController::class,'dpostEdit'])->name('website.donor-post.edit');
+Route::put('dpost/update/{donorpost_id}',[DonorPostController::class,'dpostUpdate'])->name('website.donor-post.update');
+//website donor post & message
+Route::get('/mcreate',[DonorPostController::class,'mcreate'])->name('website.create-message');
+Route::get('/message',[DonorPostController::class,'message'])->name('admin.message');
+Route::post('/mstore',[DonorPostController::class,'mstore'])->name('admin.mstore');
 
 //website login
 Route::get('/user/registration',[LoginController::class,'registration'])->name('user.registration');
@@ -110,10 +122,14 @@ Route::group(['prefix'=>'Admin'],function(){
     Route::get('/stock',[StockController::class,'stock'])->name('admin.stock');
     Route::get('/stock/addstock',[StockController::class,'addstock'])->name('admin.stock.addstock');
     Route::post('/add',[StockController::class,'add'])->name('stock.add');
+    Route::get('/stock/details/{id}',[StockController::class,'stockDetails'])->name('admin.stock.details'); 
+
 
     // organ
         Route::get('/category',[OrganController::class,'list'])->name('admin.category');
         Route::get('category/form',[OrganController::class,'form'])->name('category.form');
         Route::post('/category/add',[OrganController::class,'add'])->name('category.add');
+        Route::get('category/view/{category_id}',[OrganController::class,'organDetails'])->name('admin.category.details');
+    Route::get('category/delete/{category_id}',[OrganController::class,'organDelete'])->name('admin.category.delete');
 });
 });

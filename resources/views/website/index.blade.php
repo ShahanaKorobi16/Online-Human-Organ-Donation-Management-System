@@ -138,7 +138,7 @@
 							<div class="pad">
 							Faert sit amet est l,mmodo venenatis eros. Kusce ng quam id risus sagittisnel consequat lacusut tinn sodales arcuisqum.<div class="alright" style="text-align:center;"><a href="{{route('website.create-post')}}" class="btn" style="background-color:#2E86C1 ;">Create Post</a></div>
 	
-								<div class="alright" style="text-align:center;"><a href="{{route('website.post')}}" class="btn" style="background-color:#5DADE2;">View all Post</a></div>
+								<div class="alright" style="text-align:center;"><a href="{{route('website.patient.post.show')}}" class="btn" style="background-color:#5DADE2;">View all Post</a></div>
 							
 								
 							</div>
@@ -149,7 +149,7 @@
 							<div class="title" style="background-color:#21618C;">Donation Post</div>
 							<div class="pad">
 							Faert sit amet est l,mmodo venenatis eros. Kusce ng quam id risus sagittisnel consequat lacusut tinn sodales arcuisqum.<div class="alright" style="text-align:center;"><a href="{{route('website.donor-post-create')}}" class="btn" style="background-color:#2E86C1 ;">Create Post</a></div>
-								<div class="alright" style="text-align:center;"><a href="{{route('website.donor-post')}}" class="btn" style="background-color:#5DADE2 ;">View All Post</a></div>
+								<div class="alright" style="text-align:center;"><a href="{{route('website.postshow')}}" class="btn" style="background-color:#5DADE2 ;">View All Post</a></div>
 							</div>
 						</div>
 					</div>
@@ -233,7 +233,7 @@
 					</div>
 					<div class="grid_7 prefix_1">
 						<h3>About Us</h3>
-						<img src="images/page1_img8.jpg" alt="" class="img_inner fleft">
+						<img src="#" alt="" class="img_inner fleft">
 						<div class="extra_wrapper">
 							<p>All you wanted to know about this freebie produced by TemplateMonster.com, you can find <span class="col1"><a href=" http://blog.templatemonster.com/free-website-templates/" rel="dofollow">here</a></span>.</p>
 							Visit the category of <span class="col1"><a href="http://www.templatemonster.com/category/charity-website-templates" rel="nofollow ">Charity templates</a></span> to find more themes of this kind.

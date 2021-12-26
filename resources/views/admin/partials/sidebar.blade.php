@@ -25,11 +25,11 @@
 
 
                             <!-- <div class="sb-sidenav-menu-heading"></div> -->
-                            <a class="nav-link" href="{{url('/Admin/dashboard')}}">
+                            <!-- <a class="nav-link" href="{{url('/Admin/dashboard')}}">
 
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
-                            </a>
+                            </a> -->
                         </div>
                         <div class="nav">
                             <!-- <div class="sb-sidenav-menu-heading"></div> -->
@@ -73,10 +73,10 @@
 
                         <div class="nav">
                              <!-- <div class="sb-sidenav-menu-heading"></div> -->
-                            <a class="nav-link" href="{{url('/Admin/stock')}}"> 
+                            <!-- <a class="nav-link" href=""> 
                                 <div class="sb-nav-link-icon"><i class="fas fa-lungs"></i></div>
                                Stock
-                            </a>
+                            </a> -->
                         </div>
                         <div class="nav">
                              <!-- <div class="sb-sidenav-menu-heading"></div> -->
@@ -89,8 +89,15 @@
                         <div class="nav">
                              <!-- <div class="sb-sidenav-menu-heading"></div> -->
                             <a class="nav-link" href="{{route('admin.user.list')}}"> 
-                                <div class="sb-nav-link-icon"><i class="fas fa-lungs"></i></div>
-                               User
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-plus"></i></div>
+                               Donor/Patient
+                            </a>
+                        </div>
+                        <div class="nav">
+                             <!-- <div class="sb-sidenav-menu-heading"></div> -->
+                            <a class="nav-link" href="{{route('admin.message')}}"> 
+                                <div class="sb-nav-link-icon"><i class="fas fa-comments"></i></div>
+                               Message
                             </a>
                         </div>
 
