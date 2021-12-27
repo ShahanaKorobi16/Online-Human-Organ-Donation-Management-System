@@ -17,8 +17,9 @@
 
     <div class="col-md-2"></div>
     <div class="col-md-3">
-        <table class="table table-success table-striped">
-            <thead>
+    <table class="table table-bordered border-dark">
+  <thead class="table-Primary">
+            <!-- <thead> -->
                 <tr>
                     <th scope="col">Patient_Name</th>
                     <th scope="col">Contact</th>

@@ -101,7 +101,7 @@ public function postUpdate(Request $request,$post_id){
  
              //step 3 : store into project directory
  
-             $request->file('image')->storeAs('/$addpost',$image_name);
+             $request->file('image')->storeAs('/uploads',$image_name);
  
          }
 
@@ -119,10 +119,11 @@ public function postUpdate(Request $request,$post_id){
      'Address'=>$request->Address,
      'Organ_Needed'=>$request->Organ_Needed,
      'Case'=>$request->Case,
+     'image'=>$image_name,
      'Post_Date'=>$request->Post_Date
      ]);
     
-     return redirect()->route('website.post')->with('success','Post updated!');
+     return redirect()->route('website.patient.post.show')->with('success','Post updated!');
  }
 
 }

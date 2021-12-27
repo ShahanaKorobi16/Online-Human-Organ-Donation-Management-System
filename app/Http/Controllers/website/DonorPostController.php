@@ -88,13 +88,29 @@ public function dpostEdit($donorpost_id){
 }
 
 public function dpostUpdate(Request $request,$donorpost_id){
+  
    //dd($request->all());
   // dd($donorpost_id);
-  $adpost=Donorpost::find($donorpost_id);;
+  $adpost=Donorpost::find($donorpost_id);
+ 
+ //dd($adpost);
+ $image_name=$adpost->image;
+ //              step 1: check image exist in this request.
+         if($request->hasFile('image'))
+         {
+             // step 2: generate file name
+             $image_name=date('Ymdhis') .'.'. $request->file('image')->getClientOriginalExtension();
+ 
+             //step 3 : store into project directory
+ 
+             $request->file('image')->storeAs('/uploads',$image_name);
+ 
+         }
   // dd($adpost);
   if ($adpost) {
     $adpost->update([
       // 'name'=>$request->name,
+      'image'=>$image_name,
       'Donor_Name'=>$request->Donor_Name,
      'Date_of_Birth'=>$request->Date_of_Birth,
      'Blood_group'=>$request->Blood_group,
@@ -108,7 +124,7 @@ public function dpostUpdate(Request $request,$donorpost_id){
      'Post_Date'=>$request->Post_Date
       ]);
      
-      return redirect()->route('website.donor-post')->with('success','Post updated!');
+      return redirect()->route('website.postshow')->with('success','Post updated!');
   }
 
 }

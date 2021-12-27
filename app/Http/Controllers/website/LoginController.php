@@ -42,14 +42,14 @@ public function doLogin(Request $request){
 
     if(auth()->attempt($userpost))
     {
-        return redirect()->route('website.home');
+        return redirect()->route('website.home')->with('success','Login Successful!');
     }
     else
-    return redirect()->route('user.login');
+    return redirect()->route('user.login')->with('success','Invalid User Email or Password. Try Again !!!');
 
 }
 public function logout(){
     Auth::logout();
-    return redirect()->route('website.home');
+    return redirect()->route('website.home')->with('success','Logout Successful!');
 }
 }

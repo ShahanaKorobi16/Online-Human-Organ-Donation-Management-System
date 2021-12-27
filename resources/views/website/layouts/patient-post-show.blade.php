@@ -16,6 +16,8 @@
         <h3 class="card-title">{{$addpost->Patient_Name}}</h3>
         <p class="card-text">Organ Needed: {{$addpost->Organ_Needed}}</p>
         <p class="card-text"><small class="text-muted"></small></p>
+        <br>
+        <br>
 		<a type="button" class="btn btn-primary" href="{{route('website.post.details',$addpost->id)}}"> View</a>
         <a type="button" class="btn btn-danger" href="{{route('website.post.delete',$addpost->id)}}"> Delete</a>
         <a type="button" class="btn btn-info" href="{{route('website.post.edit',$addpost->id)}}"> Update</a>

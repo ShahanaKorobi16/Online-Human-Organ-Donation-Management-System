@@ -37,9 +37,13 @@
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">{{$adpost->Donor_Name}}</h5>
-        <p class="card-text">{{$adpost->Organ_wants_to_donate}}</p>
+        <p class="card-text">Organ wants to Donate: {{$adpost->Organ_wants_to_donate}}</p>
         <p class="card-text"><small class="text-muted"></small></p>
+		<br>
+		<br>
 		<a type="button" class="btn btn-primary" href="{{route('website.donor-post.details',$adpost->id)}}"> View</a>
+		<a class="btn btn-danger" href="{{route('website.donor-post.delete',$adpost->id)}}">Delete</a>
+                    <a class="btn btn-info" href="{{route('website.donor-post.edit',$adpost->id)}}">Update</a>
 		<a type="button" class="btn btn-dark" href="{{route('website.create-message',$adpost->id)}}"> Response</a>
       </div>
       </div>

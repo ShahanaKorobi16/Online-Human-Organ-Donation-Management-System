@@ -42,7 +42,7 @@ Route::get('/', function () {
      
 Route::get('/home',[WebsiteController::class,'home'])->name('website.home');
 Route::get('/contact',[WebsiteController::class,'contact'])->name('website.contact');
-Route::get('/show',[WebsiteController::class,'show'])->name('website.postshow');
+
 
 Route::get('/show/details',[WebsiteController::class,'showdetails'])->name('website.post-details-show');
 Route::get('/donate',[DonateController::class,'donate'])->name('website.donar-reg');
@@ -66,6 +66,7 @@ Route::get('dpost/view/{donorpost_id}',[DonorPostController::class,'dpostDetails
 Route::get('dpost/delete/{donorpost_id}',[DonorPostController::class,'dpostDelete'])->name('website.donor-post.delete');
 Route::get('dpost/edit/{donorpost_id}',[DonorPostController::class,'dpostEdit'])->name('website.donor-post.edit');
 Route::put('dpost/update/{donorpost_id}',[DonorPostController::class,'dpostUpdate'])->name('website.donor-post.update');
+Route::get('/show',[WebsiteController::class,'show'])->name('website.postshow');
 //website donor post & message
 Route::get('/mcreate',[DonorPostController::class,'mcreate'])->name('website.create-message');
 Route::get('/message',[DonorPostController::class,'message'])->name('admin.message');
