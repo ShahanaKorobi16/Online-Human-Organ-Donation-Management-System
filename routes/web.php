@@ -57,6 +57,7 @@ Route::get('post/delete/{post_id}',[AddPostController::class,'postDelete'])->nam
 Route::get('post/edit/{post_id}',[AddPostController::class,'postEdit'])->name('website.post.edit');
 Route::put('post/update/{post_id}',[AddPostController::class,'postUpdate'])->name('website.post.update');
 Route::get('/pshow',[AddPostController::class,'pshow'])->name('website.patient.post.show');
+Route::get('/post/search',[AddPostController::class,'postSearch'])->name('website.post.search');
 
 //website donor post
 Route::get('/dcreate',[DonorPostController::class,'dcreate'])->name('website.donor-post-create');
@@ -67,6 +68,7 @@ Route::get('dpost/delete/{donorpost_id}',[DonorPostController::class,'dpostDelet
 Route::get('dpost/edit/{donorpost_id}',[DonorPostController::class,'dpostEdit'])->name('website.donor-post.edit');
 Route::put('dpost/update/{donorpost_id}',[DonorPostController::class,'dpostUpdate'])->name('website.donor-post.update');
 Route::get('/show',[WebsiteController::class,'show'])->name('website.postshow');
+Route::get('/dpost/search',[DonorPostController::class,'dpostSearch'])->name('website.donor-post.search');
 //website donor post & message
 Route::get('/mcreate',[DonorPostController::class,'mcreate'])->name('website.create-message');
 Route::get('/message',[DonorPostController::class,'message'])->name('admin.message');

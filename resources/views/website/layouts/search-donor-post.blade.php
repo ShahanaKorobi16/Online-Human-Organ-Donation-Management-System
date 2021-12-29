@@ -1,9 +1,10 @@
-<h1 style="background-color:#73C6B6;"><Center>Donation Post List</Center></h1>
+<h1 style="background-color:#73C6B6;"><Center>Searched Donation Post </Center></h1>
 <center>  <a href="#" class="btn btn-warning" onclick="printDiv('PrintTableArea')">Print</a>
 
 
 </center>
 <div id="PrintTableArea">
+
 @if(session()->has('success'))
         <p class="alert alert-success">
             {{session()->get('success')}}

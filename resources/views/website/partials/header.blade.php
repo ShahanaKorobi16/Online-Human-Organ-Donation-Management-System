@@ -13,7 +13,7 @@
 							<ul class="sf-menu">
 								<li class="current"><a href="{{route('admin')}}"  type='table' class="btn btn-primary">Admin</a>
 								
-								<li><a href="#" type='table' class="btn btn-primary">Search </a></li>
+								<!-- <li><a href="#" type='table' class="btn btn-primary">Search </a></li> -->
 							
 								<li>@if(auth()->user())
 								<a class="btn btn-primary" href="{{route('user.logout')}}">Logout</a>

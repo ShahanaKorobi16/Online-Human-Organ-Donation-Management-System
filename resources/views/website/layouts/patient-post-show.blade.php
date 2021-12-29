@@ -4,7 +4,22 @@
 		<!-- <JavaScript Bundle with Popper> -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
+
+<form action="{{route('website.post.search')}}" method="GET">
+<ul class="navbar-nav">
+
+  <center>
+<li class="col-md-4">
+<input type="text" placeholder="Search.." name="search">
+<button type="submit">Submit</button>
+  </li>
+</center>
+</ul>
+    </form>
+  
 <h1 class="card-title">All Post</h1>
+
+
 @foreach ($addposts as $addpost)
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
@@ -27,4 +42,5 @@
     </div>
   </div>
 </div>
+
 @endforeach 

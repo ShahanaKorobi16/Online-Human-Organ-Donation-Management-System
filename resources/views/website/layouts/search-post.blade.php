@@ -1,12 +1,12 @@
-
 <h1 style="background-color:#73C6B6;">
-    <Center>Post List</Center>
+    <Center>Searched Post</Center>
 </h1>
 <center>  <a href="#" class="btn btn-warning" onclick="printDiv('PrintTableArea')">Print</a>
 
 
 </center>
 <div id="PrintTableArea">
+
 
 @if(session()->has('success'))
         <p class="alert alert-success">
@@ -42,6 +42,7 @@
 
 
             <tbody>
+            @if (!empty($addposts))
                 @foreach($addposts as $addpost)
                 <tr>
                
@@ -65,6 +66,13 @@
                     </td>
                 </tr>
                 @endforeach
+                @else
+            <tr>
+            <h1>post not found...404!</h1>
+                <th></th>
+            </tr>
+            
+        @endif
             </tbody>
 
         </table>

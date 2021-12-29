@@ -133,5 +133,12 @@ public function pshow()
     //dd($addposts);
     return view('website.layouts.patient-post-show',compact('addposts'));
 }
+public function postSearch(){
+  // dd(request()->all());
+  $key = request()->search;
+  $addposts = Post::where('Organ_Needed','LIKE',"%{$key}%")->get();
+  // dd($addposts);
+  return view('website.layouts.search-post',compact('addposts'));
+}
 }
 

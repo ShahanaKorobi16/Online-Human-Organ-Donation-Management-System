@@ -167,5 +167,11 @@ public function mstore(Request $request)
    ]);
    return redirect()->back()->with('success','Message created successfully.');
 }
-
+public function dpostSearch(){
+  // dd(request()->all());
+  $key = request()->search;
+  $adposts = Donorpost::where('Organ_wants_to_donate','LIKE',"%{$key}%")->get();
+  // dd($adposts);
+  return view('website.layouts.search-donor-post',compact('adposts'));
+}
 }

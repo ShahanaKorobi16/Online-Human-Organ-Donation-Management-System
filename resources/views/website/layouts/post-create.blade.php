@@ -1,4 +1,4 @@
-<h1 class="mt-4" style="background-color:#73C6B6;"><center>Create New Post</center></h1>
+<h1 class="mt-4" style="background-color:#16A085;"><center>Create New Post</center></h1>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">  
 
 @if(session()->has('success'))

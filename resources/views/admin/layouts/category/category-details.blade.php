@@ -1,12 +1,17 @@
 @extends('admin.index')
 
 @section('content')
+
 <html>
 
 
+
+<div id="PrintTableArea">
 <h1 class="mt-4">Donor List of individual Organ with Quantity</h1>
+<p align="right"> <a href="{{route('admin.category')}}"  type='table' class="btn btn-secondary">Go Back</a>
+      </p>
 
-
+    
 
 
 <table class="table table-success table-striped">
@@ -73,4 +78,19 @@
   </tbody>
 </table>
 </html>
+
+<center>  <a href="#" class="btn btn-warning" onclick="printDiv('PrintTableArea')">Print</a>
+
+
+</center>
+</div>
+<script type="text/javascript">
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
+</script>
 @endsection
