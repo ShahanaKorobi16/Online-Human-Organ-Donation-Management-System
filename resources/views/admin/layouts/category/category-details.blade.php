@@ -5,11 +5,11 @@
 <html>
 
 
-
+<p  align="right" class="mt-4"> <a href="{{route('admin.category')}}"  type='table' class="btn btn-secondary">Go Back</a>
+      </p>
 <div id="PrintTableArea">
 <h1 class="mt-4">Donor List of individual Organ with Quantity</h1>
-<p align="right"> <a href="{{route('admin.category')}}"  type='table' class="btn btn-secondary">Go Back</a>
-      </p>
+
 
     
 

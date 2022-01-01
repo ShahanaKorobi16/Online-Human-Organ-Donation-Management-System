@@ -16,7 +16,7 @@
 								<!-- <li><a href="#" type='table' class="btn btn-primary">Search </a></li> -->
 							
 								<li>@if(auth()->user())
-								<a class="btn btn-primary" href="{{route('user.logout')}}">Logout</a>
+								<a class="btn btn-primary" href="{{route('user.logout')}}">{{auth()->user()->username}} ({{auth()->user()->role}}) |Logout</a>
 									@else
 									<li class="nav-item">
 										<a class="btn btn-primary" href="{{route('user.login')}}">Login/Registration</a>

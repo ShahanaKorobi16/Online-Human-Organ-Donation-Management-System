@@ -28,14 +28,14 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
      
-    <li class="d-grid gap-2 d-md-block">
+    <!-- <li class="d-grid gap-2 d-md-block">
     <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-    <li class="navbar-nav">
+    <li class="navbar-nav"> -->
       <td>
         <div class="nav-item text-nowrap">
-            <a class="btn btn-secondary" href="{{route('admin.logout')}}">Log out</a>
+            <a class="btn btn-info" href="{{route('admin.logout')}}">{{auth()->user()->username}} ({{auth()->user()->role}}) |Log out</a>
         </li>
-</li>
+<!-- </li> -->
 
 
       <!-- <li class="nav-item d-none d-sm-inline-block">

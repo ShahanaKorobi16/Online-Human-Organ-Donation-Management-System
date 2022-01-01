@@ -91,7 +91,7 @@ Route::group(['prefix'=>'Admin'],function(){
     Route::post('/login',[AdminLoginController::class,'doLogin'])->name('admin.doLogin');
 
 
-    Route::group(['middleware'=>'auth'],function (){
+    Route::group(['middleware'=>['auth','admin']],function (){
         Route::get('/', function () {
             return view('Admin.index');
         })->name('admin');
