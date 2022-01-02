@@ -17,6 +17,7 @@ use App\Http\Controllers\Website\LoginController;
 use App\Http\Controllers\Website\AddPostController;
 use App\Http\Controllers\Website\DonorPostController;
 use App\Models\Post;
+use App\Models\User;
 use App\Models\Donorpost;
 use Illuminate\Support\Facades\Route;
 
@@ -42,6 +43,8 @@ Route::get('/', function () {
      
 Route::get('/home',[WebsiteController::class,'home'])->name('website.home');
 Route::get('/contact',[WebsiteController::class,'contact'])->name('website.contact');
+Route::get('user/profile',[WebsiteController::class,'profile'])->name('website.profile');
+Route::get('user/profile/store',[WebsiteController::class,'profile'])->name('website.profile.store');
 
 
 Route::get('/show/details',[WebsiteController::class,'showdetails'])->name('website.post-details-show');

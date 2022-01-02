@@ -28,7 +28,7 @@ class AdminLoginController extends Controller
     ];
 //dd((Auth::attempt($userInfo)));
         if(Auth::attempt($userInfo)){
-            return redirect()->route('admin')->with('message','Login successful.');
+            return redirect()->route('admin')->with('success','Login successful.');
         }
         return redirect()->back()->withErrors('Invalid user credentials');
 
@@ -38,6 +38,6 @@ class AdminLoginController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect()->route('admin.login')->with('message','Logging out.');
+        return redirect()->route('admin.login')->with('success','Logging out.');
     }
 }

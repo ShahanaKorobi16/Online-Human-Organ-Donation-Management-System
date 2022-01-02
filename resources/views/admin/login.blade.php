@@ -19,9 +19,9 @@
             </div>
         @endif
 
-            @if(session()->has('message'))
+            @if(session()->has('success'))
                 <p class="alert alert-success">
-                    {{session()->get('message')}}
+                    {{session()->get('success')}}
                 </p>
             @endif
 <div id="fullscreen_bg" class="fullscreen_bg"/>
