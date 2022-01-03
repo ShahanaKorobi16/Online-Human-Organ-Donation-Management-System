@@ -44,7 +44,11 @@ Route::get('/', function () {
 Route::get('/home',[WebsiteController::class,'home'])->name('website.home');
 Route::get('/contact',[WebsiteController::class,'contact'])->name('website.contact');
 Route::get('user/profile',[WebsiteController::class,'profile'])->name('website.profile');
-Route::get('user/profile/store',[WebsiteController::class,'profile'])->name('website.profile.store');
+Route::put('user/profile/show',[WebsiteController::class,'profileshow'])->name('website.profile.show');
+Route::get('/mission',[WebsiteController::class,'mission'])->name('website.mission');
+Route::get('/vission',[WebsiteController::class,'vission'])->name('website.vission');
+Route::get('/motivation',[WebsiteController::class,'motivation'])->name('website.motivation');
+Route::get('/objective',[WebsiteController::class,'objective'])->name('website.objective');
 
 
 Route::get('/show/details',[WebsiteController::class,'showdetails'])->name('website.post-details-show');

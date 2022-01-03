@@ -37,25 +37,48 @@ class WebsiteController extends Controller
    
    
     public function profile(){
-        return view('website.layouts.user-profile');
+        $users = User::all();
+        return view('website.layouts.user-profile',compact('users'));
 }
-    public function profilestore(Request $request)
-    {    // dd($request->all());
-        User::create([
-            'username'=>$request->Username,
-            'email'=>$request->Email,
-            'password'=>bcrypt($request->Password),
-            'date_of_birth'=>$request->Date_of_birth,
-            'weight'=>$request->Weight,
-            'blood_group'=>$request->Blood_group,
-            'gender'=>$request->Gender,
+    public function profileshow()
+    {    
+        
+          //dd($request->all());
+       //dd($user_id);
+       //$users = User::find($user_id);
+       //dd($users);
+     //  dd($request->all());
+        // User::create([
+        //     'username'=>$request->Username,
+        //     'email'=>$request->Email,
+        //     'password'=>bcrypt($request->Password),
+        //     'date_of_birth'=>$request->Date_of_birth,
+        //     'weight'=>$request->Weight,
+        //     'blood_group'=>$request->Blood_group,
+        //     'gender'=>$request->Gender,
              
-            'contact'=>$request->Contact,
-            'address'=>$request->Address,
-        ]);
+        //     'contact'=>$request->Contact,
+        //     'address'=>$request->Address,
+        // ]);
         return redirect()->route('website.profile');
         
     
+    }
+    public function mission()
+    {
+        return view('website.layouts.mission');
+    }
+    public function vission()
+    {
+        return view('website.layouts.vission');
+    }
+    public function motivation()
+    {
+        return view('website.layouts.motivation');
+    }
+    public function objective()
+    {
+        return view('website.layouts.objective');
     }
 }
 

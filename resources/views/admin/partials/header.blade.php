@@ -34,7 +34,8 @@
       <td>
         <div class="nav-item text-nowrap">
             <a class="btn btn-info" href="{{route('admin.logout')}}">{{auth()->user()->username}} ({{auth()->user()->role}}) |Log out</a>
-        </li>
+            <li class="login-form"><a href="{{route('website.profile')}}">Profile</a></li>
+          </li>
 <!-- </li> -->
 
 
