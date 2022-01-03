@@ -55,6 +55,11 @@ Route::get('/show/details',[WebsiteController::class,'showdetails'])->name('webs
 Route::get('/donate',[DonateController::class,'donate'])->name('website.donar-reg');
 Route::get('/reg',[RegistrationController::class,'reg'])->name('website.patient-reg');
 
+
+Route::group(['middleware'=>'user'],function (){
+    Route::get('/', function () {
+        return view('website.index');
+    })->name('user.registration');
 //website post
 Route::get('/create',[AddPostController::class,'create'])->name('website.create-post');
 Route::get('/post',[AddPostController::class,'post'])->name('website.post');
@@ -80,6 +85,7 @@ Route::get('/dpost/search',[DonorPostController::class,'dpostSearch'])->name('we
 Route::get('/mcreate',[DonorPostController::class,'mcreate'])->name('website.create-message');
 Route::get('/message',[DonorPostController::class,'message'])->name('admin.message');
 Route::post('/mstore',[DonorPostController::class,'mstore'])->name('admin.mstore');
+});
 
 //website login
 Route::get('/user/registration',[LoginController::class,'registration'])->name('user.registration');
