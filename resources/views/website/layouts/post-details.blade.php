@@ -10,6 +10,7 @@
 
 
 <p><h3>Patient_Name:</span></h3><h2><span style="color:#2874A6">{{$addpost->Patient_Name}}</span><h2></p>
+<!-- <p><h4><span style="color:#2E4053">Date_of_Birth: {{$addpost->user_id}}</span></h4></p> -->
 <p><h4><span style="color:#2E4053">Date_of_Birth: {{$addpost->Date_of_Birth}}</span></h4></p>
 <p><h4><span style="color:#2E4053">Blood_group: {{$addpost->Blood_group}}</span></h4></p>
 <p><h4><span style="color:#2E4053">Hospital_Name: {{$addpost->Hospital_Name}}</span></h4></p>

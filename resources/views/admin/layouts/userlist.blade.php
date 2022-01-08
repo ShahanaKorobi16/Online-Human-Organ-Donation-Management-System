@@ -18,6 +18,7 @@
      
       <th scope="col">Contact</th>
       <th scope="col">Address</th>
+      <th scope="col">Role</th>
       <th scope="col">Action</th>
     </tr>
     </thead>
@@ -34,6 +35,7 @@
               
                 <td>{{$user->contact}}</td>
                 <td>{{$user->address}}</td>
+                <td>{{$user->role}}</td>
                 <td> 
                     <a class="btn btn-primary" href="{{route('admin.user.details',$user->id)}}">View </a>
                   

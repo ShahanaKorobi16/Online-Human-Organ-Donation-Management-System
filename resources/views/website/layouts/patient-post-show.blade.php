@@ -34,9 +34,12 @@
         <br>
         <br>
 		<a type="button" class="btn btn-primary" href="{{route('website.post.details',$addpost->id)}}"> View</a>
+        
+        @if(auth()->user()->id == $addpost->user_id)
         <a type="button" class="btn btn-danger" href="{{route('website.post.delete',$addpost->id)}}"> Delete</a>
         <a type="button" class="btn btn-info" href="{{route('website.post.edit',$addpost->id)}}"> Update</a>
-		<!-- <a type="button" class="btn btn-dark" href="{{route('website.create-message',$addpost->id)}}"> Response</a> -->
+        @endif
+        <!-- <a type="button" class="btn btn-dark" href="{{route('website.create-message',$addpost->id)}}"> Response</a> -->
       </div>
       </div>
     </div>

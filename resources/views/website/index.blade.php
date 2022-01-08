@@ -123,9 +123,9 @@
 						<span id="responsiveFlag"></span>
 					</div>
 
-					<a href="{{route('website.donar-reg')}}" class="donate" style="width: 30%; margin: auto; margin-top: 33px;">Donar Registration</a>
+					<a href="" class="donate" style="width: 45%; margin: auto; margin-top: 33px;">Find a Donor??? <br>or<br> Become a Donor</a>
 					
-						<div class="text1"><align: center>You can change the life of those who have no hope by donating Organ</center></div>
+						<div class="text1"><align: center>You can change the life of those, who have no hope by donating Organ</center></div>
 						<p>Etiam dui eros, laoreet sit amet est vel,modo venenatis eros. Fusce adipiscing quam id riss sagittis, non consequat lacus interdum. Proin  tincidunt nulla, eu sodales arcu.</p>
 						Quisquerra nulla nunc, eu ultrices libero ultricies eget. Phasellus accumsan justo vitae feugiat placerat. Praesent vel ultrices velit. Suspendisse risus justo, lacinia vitae eleifend
 					

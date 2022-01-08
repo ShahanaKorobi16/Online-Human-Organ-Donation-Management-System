@@ -1,6 +1,11 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<!-- <JavaScript Bundle with Popper> -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <!------ Include the above in your HEAD tag ---------->
 <link rel="stylesheet" type="text/css" href="{{url('css/website/login.css')}}">
 
@@ -58,14 +63,14 @@
 						<input class="input100" type="date" name="Date_of_birth" placeholder="Date_of_birth">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-						<i class="far fa-calendar" aria-hidden="true"></i></i> 
+						<i class="far fa-calendar" aria-hidden="true"></i> 
 						</span>
 					</div>
                     <div class="wrap-input100 validate-input" data-validate = "Weight is required: ex@abc.xyz">
 						<input class="input100" type="number" name="Weight" placeholder="Weight">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<i class="fas fa-weight" aria-hidden="true"></i>
 						</span>
 					</div>
                     <div class="wrap-input100 validate-input" data-validate = "Blood_group is required: ex@abc.xyz">
@@ -81,7 +86,8 @@
                         </select>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<!-- <i class="fa fa-envelope" aria-hidden="true"></i> -->
+							<span class="iconify" data-icon="maki:blood-bank"></span>
 						</span>
 					</div>
                     <div class="wrap-input100 validate-input" data-validate = "Gender is required: ex@abc.xyz">
@@ -93,7 +99,7 @@
                         </select>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<i class="fas fa-restroom" aria-hidden="true"></i>
 						</span>
 					</div>
                     <!-- <div class="wrap-input100 validate-input" data-validate = "Organ_Needed is required: ex@abc.xyz">
@@ -120,17 +126,26 @@
 						<input class="input100" type="number" name="Contact" placeholder="Contact">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-						<div class="sb-nav-link-icon">			<i class="fas fa-mobile" aria-hidden="true"></i></div>
+						<div class="sb-nav-link-icon"><i class="fas fa-mobile" aria-hidden="true"></i></div>
 						</span>
 					</div>
                     <div class="wrap-input100 validate-input" data-validate = "Address is required: ex@abc.xyz">
 						<input class="input100" type="text" name="Address" placeholder="Address">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
+						<div class="sb-nav-link-icon">	<i class="fas fa-home" aria-hidden="true"></i></div>
 						</span>
 					</div>
-                  
+					<div class="wrap-input100 validate-input" data-validate = "Role is required: ex@abc.xyz">
+						<select class="input100" type="text" name="role" placeholder="Role">
+						<option>Patient</option>
+                        <option>Donor</option>
+						</select>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+						<div class="sb-nav-link-icon">	<i class="fas fa-users" aria-hidden="true"></i></div>
+						</span>
+					</div>
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
 							Submit

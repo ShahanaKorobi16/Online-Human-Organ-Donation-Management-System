@@ -35,66 +35,69 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('Admin.index');
 // });
+Route::get('/',[WebsiteController::class,'home'])->name('website.home');
+Route::group(['prefix'=>'home'],function(){
+    // Route::get('/', function () {
+    //         return view('website.index');
+    //     })->name('home');
+        
+    
+    
+    
+    Route::get('/contact',[WebsiteController::class,'contact'])->name('website.contact');
+    Route::get('user/profile',[WebsiteController::class,'profile'])->name('website.profile');
+    Route::put('user/profile/show',[WebsiteController::class,'profileshow'])->name('website.profile.show');
+    Route::get('/mission',[WebsiteController::class,'mission'])->name('website.mission');
+    Route::get('/vission',[WebsiteController::class,'vission'])->name('website.vission');
+    Route::get('/motivation',[WebsiteController::class,'motivation'])->name('website.motivation');
+    Route::get('/objective',[WebsiteController::class,'objective'])->name('website.objective');
+    Route::get('/show/details',[WebsiteController::class,'showdetails'])->name('website.post-details-show');
+    Route::get('/donate',[DonateController::class,'donate'])->name('website.donar-reg');
+    Route::get('/reg',[RegistrationController::class,'reg'])->name('website.patient-reg');
 
-Route::get('/', function () {
-        return view('website.index');
-     });
 
-     
-Route::get('/home',[WebsiteController::class,'home'])->name('website.home');
-Route::get('/contact',[WebsiteController::class,'contact'])->name('website.contact');
-Route::get('user/profile',[WebsiteController::class,'profile'])->name('website.profile');
-Route::put('user/profile/show',[WebsiteController::class,'profileshow'])->name('website.profile.show');
-Route::get('/mission',[WebsiteController::class,'mission'])->name('website.mission');
-Route::get('/vission',[WebsiteController::class,'vission'])->name('website.vission');
-Route::get('/motivation',[WebsiteController::class,'motivation'])->name('website.motivation');
-Route::get('/objective',[WebsiteController::class,'objective'])->name('website.objective');
+    Route::group(['middleware'=>['user']],function (){
+        // Route::get('/user', function () {
+        //     return view('website.index');
+        // })->name('user.login');
+
+    
+        //website post
+        Route::get('/create',[AddPostController::class,'create'])->name('website.create-post');
+        Route::get('/post',[AddPostController::class,'post'])->name('website.post');
+        Route::post('/store',[AddPostController::class,'store'])->name('website.store');
+        Route::get('post/view/{post_id}',[AddPostController::class,'postDetails'])->name('website.post.details');
+        Route::get('post/delete/{post_id}',[AddPostController::class,'postDelete'])->name('website.post.delete');
+        Route::get('post/edit/{post_id}',[AddPostController::class,'postEdit'])->name('website.post.edit');
+        Route::put('post/update/{post_id}',[AddPostController::class,'postUpdate'])->name('website.post.update');
+        Route::get('/pshow',[AddPostController::class,'pshow'])->name('website.patient.post.show');
+        Route::get('/post/search',[AddPostController::class,'postSearch'])->name('website.post.search');
+
+        //website donor post
+        Route::get('/dcreate',[DonorPostController::class,'dcreate'])->name('website.donor-post-create');
+        Route::get('/dpost',[DonorPostController::class,'dpost'])->name('website.donor-post');
+        Route::post('/dstore',[DonorPostController::class,'dstore'])->name('website.dstore');
+        Route::get('dpost/view/{donorpost_id}',[DonorPostController::class,'dpostDetails'])->name('website.donor-post.details');
+        Route::get('dpost/delete/{donorpost_id}',[DonorPostController::class,'dpostDelete'])->name('website.donor-post.delete');
+        Route::get('dpost/edit/{donorpost_id}',[DonorPostController::class,'dpostEdit'])->name('website.donor-post.edit');
+        Route::put('dpost/update/{donorpost_id}',[DonorPostController::class,'dpostUpdate'])->name('website.donor-post.update');
+        Route::get('/show',[WebsiteController::class,'show'])->name('website.postshow');
+        Route::get('/dpost/search',[DonorPostController::class,'dpostSearch'])->name('website.donor-post.search');
+        //website donor post & message
+        Route::get('/mcreate',[DonorPostController::class,'mcreate'])->name('website.create-message');
+        Route::get('/message',[DonorPostController::class,'message'])->name('admin.message');
+        Route::post('/mstore',[DonorPostController::class,'mstore'])->name('admin.mstore');
+    });
 
 
-Route::get('/show/details',[WebsiteController::class,'showdetails'])->name('website.post-details-show');
-Route::get('/donate',[DonateController::class,'donate'])->name('website.donar-reg');
-Route::get('/reg',[RegistrationController::class,'reg'])->name('website.patient-reg');
+        //website login
+    Route::get('/user/registration',[LoginController::class,'registration'])->name('user.registration');
+    Route::post('/user/registration/post',[LoginController::class,'registrationPost'])->name('user.registration.post');
+    Route::get('/user/login',[LoginController::class,'login'])->name('user.login');
+    Route::post('/user/do/login',[LoginController::class,'doLogin'])->name('user.do.login');
+    Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
 
-
-Route::group(['middleware'=>'user'],function (){
-    Route::get('/', function () {
-        return view('website.index');
-    })->name('user.registration');
-//website post
-Route::get('/create',[AddPostController::class,'create'])->name('website.create-post');
-Route::get('/post',[AddPostController::class,'post'])->name('website.post');
-Route::post('/store',[AddPostController::class,'store'])->name('website.store');
-Route::get('post/view/{post_id}',[AddPostController::class,'postDetails'])->name('website.post.details');
-Route::get('post/delete/{post_id}',[AddPostController::class,'postDelete'])->name('website.post.delete');
-Route::get('post/edit/{post_id}',[AddPostController::class,'postEdit'])->name('website.post.edit');
-Route::put('post/update/{post_id}',[AddPostController::class,'postUpdate'])->name('website.post.update');
-Route::get('/pshow',[AddPostController::class,'pshow'])->name('website.patient.post.show');
-Route::get('/post/search',[AddPostController::class,'postSearch'])->name('website.post.search');
-
-//website donor post
-Route::get('/dcreate',[DonorPostController::class,'dcreate'])->name('website.donor-post-create');
-Route::get('/dpost',[DonorPostController::class,'dpost'])->name('website.donor-post');
-Route::post('/dstore',[DonorPostController::class,'dstore'])->name('website.dstore');
-Route::get('dpost/view/{donorpost_id}',[DonorPostController::class,'dpostDetails'])->name('website.donor-post.details');
-Route::get('dpost/delete/{donorpost_id}',[DonorPostController::class,'dpostDelete'])->name('website.donor-post.delete');
-Route::get('dpost/edit/{donorpost_id}',[DonorPostController::class,'dpostEdit'])->name('website.donor-post.edit');
-Route::put('dpost/update/{donorpost_id}',[DonorPostController::class,'dpostUpdate'])->name('website.donor-post.update');
-Route::get('/show',[WebsiteController::class,'show'])->name('website.postshow');
-Route::get('/dpost/search',[DonorPostController::class,'dpostSearch'])->name('website.donor-post.search');
-//website donor post & message
-Route::get('/mcreate',[DonorPostController::class,'mcreate'])->name('website.create-message');
-Route::get('/message',[DonorPostController::class,'message'])->name('admin.message');
-Route::post('/mstore',[DonorPostController::class,'mstore'])->name('admin.mstore');
 });
-
-//website login
-Route::get('/user/registration',[LoginController::class,'registration'])->name('user.registration');
-Route::post('/user/registration/post',[LoginController::class,'registrationPost'])->name('user.registration.post');
-Route::get('/user/login',[LoginController::class,'login'])->name('user.login');
-Route::post('/user/do/login',[LoginController::class,'doLogin'])->name('user.do.login');
-Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
-
-
 
 //Admin
 Route::group(['prefix'=>'Admin'],function(){

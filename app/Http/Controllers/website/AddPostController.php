@@ -15,13 +15,14 @@ class AddPostController extends Controller
     
     }
     public function create(Request $request){
+
         return view('website.layouts.post-create');
     
     }
     public function store(Request $request)
     {
          //dd(date('Ymdhms'));
-         // dd($request->all());
+          // dd($request->all());
          $filename = '';
          if ($request->hasFile('image')) {
              $file = $request->file('image');
@@ -31,6 +32,7 @@ class AddPostController extends Controller
  
      $request->validate([
        'Patient_Name'=>'required',
+      //  'user_id'=>'required',
        'Date_of_Birth'=>'required',
        'Blood_group'=>'required',
        'Hospital_Name'=>'required',
@@ -46,6 +48,7 @@ class AddPostController extends Controller
      ]);
        Post::create([
          'Patient_Name'=>$request->Patient_Name,
+         'user_id'=>auth()->user()->id,
          'Date_of_Birth'=>$request->Date_of_Birth,
          'Blood_group'=>$request->Blood_group,
          'Hospital_Name'=>$request->Hospital_Name,
@@ -60,7 +63,7 @@ class AddPostController extends Controller
          'Post_Date'=>$request->Post_Date
   
        ]);
-       return redirect()->route('website.post')->with('success','Post created successfully.');
+       return redirect()->route('website.patient.post.show')->with('success','Post created successfully.');
 }
 
 public function postDetails($post_id)
@@ -109,6 +112,7 @@ public function postUpdate(Request $request,$post_id){
    $addpost->update([
      // 'name'=>$request->name,
      'Patient_Name'=>$request->Patient_Name,
+    //  'user_id'=>$request->user_id,
      'Date_of_Birth'=>$request->Date_of_Birth,
      'Blood_group'=>$request->Blood_group,
      'Hospital_Name'=>$request->Hospital_Name,

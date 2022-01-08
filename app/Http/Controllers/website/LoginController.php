@@ -12,7 +12,7 @@ class LoginController extends Controller
         return view('website.layouts.registration');
 }
 public function registrationPost(Request $request){
-    // dd($request->all());
+     //dd($request->all());
     User::create([
         'username'=>$request->Username,
         'email'=>$request->Email,
@@ -24,6 +24,8 @@ public function registrationPost(Request $request){
          
         'contact'=>$request->Contact,
         'address'=>$request->Address,
+        'role'=>$request->role,
+
     ]);
     return redirect()->route('user.login');
 }

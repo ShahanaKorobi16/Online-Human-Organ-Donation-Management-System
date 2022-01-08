@@ -24,6 +24,7 @@
             <thead>
                 <tr>
                     <th scope="col">Patient_Name</th>
+                    <th scope="col">user_id</th>
                     <th scope="col">Date_of_Birth</th>
                     <th scope="col">Blood_group</th>
                     <th scope="col">Hospital_Name</th>
@@ -46,6 +47,7 @@
                 <tr>
                
                     <th>{{$addpost->Patient_Name}}</th>
+                    <th>{{$addpost->user_id}}</th>
                     <td>{{$addpost->Date_of_Birth}}</td>
                     <td>{{$addpost->Blood_group}}</td>
                     <td>{{$addpost->Hospital_Name}}</td>
@@ -59,7 +61,7 @@
                     <td><img src="{{url('/uploads/'.$addpost->image)}}" width="100px" alt="prescription image"></td>
                     <td>{{$addpost->Post_Date}}</td>
                     <td> 
-                    <a class="btn btn-primary" href="{{route('website.post.details',$addpost->id)}}">View</a>
+                    <a class="btn btn-primary"  href="{{route('website.post.details',$addpost->id)}}">View</a>
                     <a class="btn btn-danger" href="{{route('website.post.delete',$addpost->id)}}">Delete</a>
                     <a class="btn btn-info" href="{{route('website.post.edit',$addpost->id)}}">Update</a>
                     </td>

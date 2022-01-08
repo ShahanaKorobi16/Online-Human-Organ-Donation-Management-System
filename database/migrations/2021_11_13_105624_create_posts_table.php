@@ -16,6 +16,7 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('Patient_Name');
+            $table->integer('user_id');
             $table->date('Date_of_Birth');
             $table->string('Blood_group');
             $table->string('Hospital_Name');

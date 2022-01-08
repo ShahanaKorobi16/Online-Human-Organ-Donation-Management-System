@@ -15,6 +15,7 @@
         </ul>
     </div>
 @endif
+
 <div class="row">
   <div class="col-sm-4"></div>
   <div class="col-sm-4">
@@ -26,7 +27,14 @@
             <label for="exampleInputEmail1" class="form-label">Patient_Name</label>
             <input required name='Patient_Name' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
-        </div><div class="mb-3">
+        </div>
+        <!-- <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">user_id</label>
+            <input required name='user_id' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+        </div> -->
+        
+        <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Date_of_Birth</label>
             <input required name='Date_of_Birth' type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 

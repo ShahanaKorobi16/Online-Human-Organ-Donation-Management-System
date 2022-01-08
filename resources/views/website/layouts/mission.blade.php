@@ -4,6 +4,8 @@
 		<!-- <JavaScript Bundle with Popper> -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
+<p  align="right" class="mt-4"> <a href="{{route('website.home')}}"  type='table' class="btn btn-secondary">Go Back</a>
+      </p>
 <h1><center><span style="color:#2874A6"> Mission of Organ Donation</span></center></h1>
 <div class="col-md-2"></div> 
 <!-- <div class="col-md-1"> -->
