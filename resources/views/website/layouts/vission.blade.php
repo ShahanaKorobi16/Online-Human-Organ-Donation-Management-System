@@ -9,7 +9,7 @@
 <h1><center><span style="color:#2874A6">Vission of Organ Donation</span></center></h1>
 
 
-
+<div class="col-md-2" style="width: 85%; margin: auto; margin-top: 20px;">
 <h5>
 Our vision is to bridge the gap between the number of people who need organs and the number of people who donate organs.
 We are as determined as soldiers are on a mission. These are our aims:
@@ -22,3 +22,4 @@ To convince the families of those patients who are declared brain-dead to donate
 To help the people cope with the mental trauma that comes when they are suffering during the diseases.
 Networking with hospitals that are capable of handling organ transplantation procedure.
 Each and everyone of us at Donate Life contribute our time and energy without any commercial motive, solely for the benefit of the humanity and large.</h5>
+</div>

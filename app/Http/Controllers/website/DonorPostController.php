@@ -47,6 +47,7 @@ public function dstore(Request $request)
   Donorpost::create([
     'image'=>$filename,
      'Donor_Name'=>$request->Donor_Name,
+     'user_id'=>auth()->user()->id,
      'Date_of_Birth'=>$request->Date_of_Birth,
      'Blood_group'=>$request->Blood_group,
      'Contact'=>$request->Contact,

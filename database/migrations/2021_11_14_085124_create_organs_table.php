@@ -15,7 +15,7 @@ class CreateOrgansTable extends Migration
     {
         Schema::create('organs', function (Blueprint $table) {
             $table->id();
-            $table->string('Organ_name');
+            $table->string('Organ_name')->unique();
             $table->string('Organ_details');
             $table->double('total')->nullable();
             $table->timestamps();

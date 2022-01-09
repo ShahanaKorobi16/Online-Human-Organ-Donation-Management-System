@@ -20,12 +20,18 @@ public function form(){
     return view('admin.layouts.category.category-create');
 }
 public function add(Request $request){
+//    dd($request ->all());
+    $request->validate([
+    'Organ_name'=>'required | unique:organs,Organ_name',
+    'Organ_details'=>'required',
+]);
     Organ::create([
         'Organ_name'=>$request->Organ_name,
         'Organ_details'=>$request->Organ_details
     ]);
-
+    
     return redirect()->back()->with('msg','Organ added successful.');
+
 }
 public function organDetails($category_id)
 {
@@ -40,7 +46,7 @@ $category = Organ::find($category_id);
     // dd($organs);
     return view('admin.layouts.category.category-details',compact('organs'));
 
-// //        collection= get(), all()====== read with loop (foreach)
+// //        collection= get(), all()====== read with loop (foreach)+
 // //       object= first(), find(), findOrFail(),======direct
 // $organs = Organ::find($category_id);
 // //      $organs = Organ::where('id',$category_id)->first();
@@ -49,7 +55,7 @@ $category = Organ::find($category_id);
 
 public function organDelete($category_id)
 {
-   User::find($category_id)->delete();
+    Organ::find($category_id)->delete();
    return redirect()->back()->with('success','organ Deleted.');
 }
 }

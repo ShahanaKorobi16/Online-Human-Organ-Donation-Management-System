@@ -17,6 +17,7 @@ class CreateDonorpostsTable extends Migration
             $table->id();
             $table->string('image');
             $table->string('Donor_Name');
+            $table->integer('user_id');
             $table->date('Date_of_Birth');
             $table->string('Blood_group');
             $table->integer('Contact');

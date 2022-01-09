@@ -8,7 +8,7 @@
       </p>
 <h1><center><span style="color:#2874A6">Motivation of Organ Donation</span></center></h1>
 
-
+<div class="col-md-2" style="width: 85%; margin: auto; margin-top: 20px;">
 
 <h5 class="mt-4">
 By donating one's organs and tissue after they die, they can save or improve as many as 75 lives. Many families say that knowing their loved one helped save or improve other lives helped them cope with their loss. It's especially important to consider becoming an organ donor if you belong to an ethnic minority.
@@ -21,3 +21,4 @@ Some motivations for organ donation were identified: <br>
    5. giving back to society, and <br>
    6. life extension.
 </h5>
+</div>

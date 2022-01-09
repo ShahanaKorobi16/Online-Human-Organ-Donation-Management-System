@@ -58,7 +58,7 @@ div {
                                 <div class="card bg-success text-white mb-4">
                                     <div class="card-body" style=" background-color: #616A6B"><h5>Stock Details</h5></div>
                                     <div class="card-footer d-flex align-items-center justify-content-between" style=" background-color: #7F8C8D">
-                                        <a class="small text-white stretched-link" href="http://127.0.0.1:8000/Admin/stock">View Details</a>
+                                        <a class="small text-white stretched-link" href="{{route('admin.category')}}">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>

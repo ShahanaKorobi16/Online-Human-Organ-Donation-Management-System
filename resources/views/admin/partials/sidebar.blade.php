@@ -38,23 +38,23 @@
                                Admin
                             </a>
                         </div>
-                        <div class="nav">
+                        <!-- <div class="nav"> -->
                             <!-- <div class="sb-sidenav-menu-heading"></div> -->
-                            <a class="nav-link" href="{{url('/Admin/Table')}}">
+                            <!-- <a class="nav-link" href="{{url('/Admin/Table')}}"> -->
                                 <!-- <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div> -->
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-plus"></i></div>
+                                <!-- <div class="sb-nav-link-icon"><i class="fas fa-user-plus"></i></div>
                                Donor
                             </a>
-                        </div>
+                        </div> -->
 
                         
-                        <div class="nav">
+                        <!-- <div class="nav"> -->
                             <!-- <div class="sb-sidenav-menu-heading"></div> -->
-                            <a class="nav-link" href="{{route('admin.patient')}}">
+                            <!-- <a class="nav-link" href="{{route('admin.patient')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-hospital-user"></i></div>
                                Patient
                             </a>
-                        </div>
+                        </div> -->
                         <div class="nav">
                             <!-- <div class="sb-sidenav-menu-heading"></div> -->
                             <a class="nav-link" href="{{route('website.post')}}">

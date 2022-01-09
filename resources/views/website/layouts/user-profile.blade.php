@@ -4,12 +4,13 @@
     <div class="row">
         <center>
         <div class="col-md-3 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span> </span></div>
+         <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+         <img src="{{url('uploads/img95.jpg')}}" ></div>
         </div>
 
 						<h6 class="Email">{{auth()->user()->Email}}</h6>
             
-        <form action ="{{route('website.profile.show')}}" method='POST'>
+        <form action ="{{route('website.profile.show')}}" method='POST' >
        @csrf
        @method('put')
         <div class="col-md-5 border-right">

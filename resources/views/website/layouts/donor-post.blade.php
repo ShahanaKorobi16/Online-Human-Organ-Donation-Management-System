@@ -1,4 +1,6 @@
 <h1 style="background-color:#73C6B6;"><Center>Donation Post List</Center></h1>
+<p align="right"> <a href="{{route('admin.adminn')}}"  type='table' class="btn btn-success">Go Back</a>
+      </p>
 <center>  <a href="#" class="btn btn-warning" onclick="printDiv('PrintTableArea')">Print</a>
 
 
@@ -19,6 +21,7 @@
     <tr>
     <th scope="col">Image</th>
       <th scope="col">Donor_Name</th>
+      <th scope="col">user_id</th>
       <th scope="col">Date_of_Birth</th>
       <th scope="col">Blood_group</th>
       <th scope="col">Contact</th>
@@ -39,6 +42,7 @@
     <tr>
     <td><img src="{{url('/uploads/'.$adpost->image)}}" width="100px" alt="Upload_Donor_Image"></td>
       <th>{{$adpost->Donor_Name}}</th>
+      <th>{{$adpost->user_id}}</th>
       <td>{{$adpost->Date_of_Birth}}</td>
       <td>{{$adpost->Blood_group}}</td>
       <td>{{$adpost->Contact}}</td>

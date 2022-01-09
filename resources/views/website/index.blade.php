@@ -126,8 +126,8 @@
 					<a href="" class="donate" style="width: 45%; margin: auto; margin-top: 33px;">Find a Donor??? <br>or<br> Become a Donor</a>
 					
 						<div class="text1"><align: center>You can change the life of those, who have no hope by donating Organ</center></div>
-						<p>Etiam dui eros, laoreet sit amet est vel,modo venenatis eros. Fusce adipiscing quam id riss sagittis, non consequat lacus interdum. Proin  tincidunt nulla, eu sodales arcu.</p>
-						Quisquerra nulla nunc, eu ultrices libero ultricies eget. Phasellus accumsan justo vitae feugiat placerat. Praesent vel ultrices velit. Suspendisse risus justo, lacinia vitae eleifend
+						<p>One organ donor can save up to 7 lives and transform over 50 lives. As an organ donor, you can save the life of someone who is suffering from a life-threatening disease or someone who was in a serious accident.</p>
+						Organ and tissue donation is the gift of life. Up to seven or eight people can benefit through solid organ donations of the lungs, heart, kidneys, liver, pancreas and intestines. Countless others are helped, and their quality of life is improved from tissue donation that includes heart valves, veins, skin, bones and corneas.
 					
 					<div class="clear"></div>
 					
@@ -136,7 +136,7 @@
 						<div class="block2 maxheight">
 							<div class="title" style="background-color:#21618C;">Organ Needed Post</div>
 							<div class="pad">
-							Faert sit amet est l,mmodo venenatis eros. Kusce ng quam id risus sagittisnel consequat lacusut tinn sodales arcuisqum.<div class="alright" style="text-align:center;"><a href="{{route('website.create-post')}}" class="btn" style="background-color:#2E86C1 ;">Create Post</a></div>
+							Organ Donation is the gift of an organ to a person who needs a transplant to improve his condition and health status. Donated organs give the recipient the opportunity of a longer and better quality of life.<div class="alright" style="text-align:center;"><a href="{{route('website.create-post')}}" class="btn" style="background-color:#2E86C1 ;">Create Post</a></div>
 	
 								<div class="alright" style="text-align:center;"><a href="{{route('website.patient.post.show')}}" class="btn" style="background-color:#5DADE2;">View all Post</a></div>
 							
@@ -148,7 +148,7 @@
 						<div class="block2 maxheight">
 							<div class="title" style="background-color:#21618C;">Donation Post</div>
 							<div class="pad">
-							Faert sit amet est l,mmodo venenatis eros. Kusce ng quam id risus sagittisnel consequat lacusut tinn sodales arcuisqum.<div class="alright" style="text-align:center;"><a href="{{route('website.donor-post-create')}}" class="btn" style="background-color:#2E86C1 ;">Create Post</a></div>
+							Organ donation is an opportunity to help others. People who are on an organ waiting list typically have end-stage organ disease that significantly impacts their quality of life and may be near the end of their life.<div class="alright" style="text-align:center;"><a href="{{route('website.donor-post-create')}}" class="btn" style="background-color:#2E86C1 ;">Create Post</a></div>
 								<div class="alright" style="text-align:center;"><a href="{{route('website.postshow')}}" class="btn" style="background-color:#5DADE2 ;">View All Post</a></div>
 							</div>
 						</div>

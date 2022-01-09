@@ -5,10 +5,13 @@
 
 <h1 class="mt-4">User list</h1>
 
-
+<p align="right"> <a href="{{route('admin.adminn')}}"  type='table' class="btn btn-success">Go Back</a>
+      </p>
+      
 <table class="table table-success table-striped">
     <thead>
     <tr>
+    <th scope="col">id</th>
         <th scope="col">Username</th>
         <th scope="col">Email</th>
         <th scope="col">Date_of_birth</th>
@@ -26,6 +29,7 @@
         
         @foreach ($users as $user)
             <tr>
+            <th>{{$user->id}}</th>
                 <th>{{$user->username}}</th>
                 <td>{{$user->email}}</td>
                 <td>{{$user->date_of_birth}}</td>

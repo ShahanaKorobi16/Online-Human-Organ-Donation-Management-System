@@ -2,6 +2,8 @@
 <h1 style="background-color:#73C6B6;">
     <Center>Post List</Center>
 </h1>
+<p align="right"> <a href="{{route('admin.adminn')}}"  type='table' class="btn btn-secondary">Go Back</a>
+      </p>
 <center>  <a href="#" class="btn btn-warning" onclick="printDiv('PrintTableArea')">Print</a>
 
 

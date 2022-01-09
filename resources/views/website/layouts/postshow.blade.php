@@ -56,8 +56,10 @@
 		<br>
 		<br>
 		<a type="button" class="btn btn-primary" href="{{route('website.donor-post.details',$adpost->id)}}"> View</a>
-		<a class="btn btn-danger" href="{{route('website.donor-post.delete',$adpost->id)}}">Delete</a>
-                    <a class="btn btn-info" href="{{route('website.donor-post.edit',$adpost->id)}}">Update</a>
+			@if(auth()->user()->id == $adpost->user_id)
+			<a class="btn btn-danger" href="{{route('website.donor-post.delete',$adpost->id)}}">Delete</a>
+			<a class="btn btn-info" href="{{route('website.donor-post.edit',$adpost->id)}}">Update</a>
+			@endif
 		<a type="button" class="btn btn-dark" href="{{route('website.create-message',$adpost->id)}}"> Response</a>
       </div>
       </div>

@@ -5,6 +5,8 @@
 
 
 <h1 class="mt-4">Organ List</h1>
+<p align="right"> <a href="{{route('admin.adminn')}}"  type='table' class="btn btn-secondary">Go Back</a>
+      </p>
 <p align="right"> <a href="{{route('category.form')}}"  type='table' class="btn btn-success">Add to Organ</a>
       </p>
 

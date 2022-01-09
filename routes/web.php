@@ -36,7 +36,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('Admin.index');
 // });
 Route::get('/',[WebsiteController::class,'home'])->name('website.home');
-Route::group(['prefix'=>'home'],function(){
+Route::group(['prefix'=>'home'],function()
+{
     // Route::get('/', function () {
     //         return view('website.index');
     //     })->name('home');
