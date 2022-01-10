@@ -40,6 +40,7 @@
                     <th scope="col">Image</th>
                     <th scope="col">Post_Date</th>
                     <th scope="col">Action</th>
+                    
                 </tr>
             </thead>
 

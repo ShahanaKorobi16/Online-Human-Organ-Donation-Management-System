@@ -33,6 +33,7 @@
       <th scope="col">Details</th>
       <th scope="col">Post_Date</th>
       <th scope="col">Action</th>
+      <th scope="col">Status</th>
     </tr>
   </thead>
  
@@ -58,6 +59,11 @@
                     <a class="btn btn-danger" href="{{route('website.donor-post.delete',$adpost->id)}}">Delete</a>
                     <a class="btn btn-info" href="{{route('website.donor-post.edit',$adpost->id)}}">Update</a>
                     </td>
+      <td> 
+           
+      <a class="btn btn-danger" href="{{route('admin.dopnorpost.approve',$adpost->id)}}">Approve</a>
+          
+            </td>
     </tr>
    @endforeach
     </tbody>

@@ -18,15 +18,14 @@
 <div class="row">
   <div class="col-sm-4"></div>
   <div class="col-sm-4">
-
  
-      <form action ="{{route('admin.mstore')}}" method='POST' enctype="multipart/form-data">
+      <form action ="{{route('admin.mstore',$post_details->id)}}" method='POST' enctype="multipart/form-data">
        @csrf
-        <div class="mb-3">
+        <!-- <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Patient_Name</label>
             <input required name='Patient_Name' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
-        </div>
+        </div> -->
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Contact</label>
             <input required name='Contact' type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

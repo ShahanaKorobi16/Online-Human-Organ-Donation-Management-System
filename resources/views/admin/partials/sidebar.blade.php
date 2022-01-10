@@ -93,6 +93,7 @@
                                Donor/Patient
                             </a>
                         </div>
+                        
                         <div class="nav">
                              <!-- <div class="sb-sidenav-menu-heading"></div> -->
                             <a class="nav-link" href="{{route('admin.message')}}"> 
@@ -100,7 +101,7 @@
                                Message
                             </a>
                         </div>
-
+                      
                     </div>
                     
                 </nav>

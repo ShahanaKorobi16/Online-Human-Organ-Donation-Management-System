@@ -60,10 +60,11 @@ public function dstore(Request $request)
      'Post_Date'=>$request->Post_Date
 
    ]);
-   return redirect()->back()->with('success','Donation Post created successfully.');
+   return redirect()->back()->with('success','Your Post is pending!!!!');
 }
 public function dpostDetails($donorpost_id)
 {
+   //dd($donorpost_id);
   //dd("ok");
 
 //        collection= get(), all()====== read with loop (foreach)
@@ -131,21 +132,25 @@ public function dpostUpdate(Request $request,$donorpost_id){
 }
 
 public function message(){
+  // dd($id);
         $msgs=Message::all();
         //dd($msgs);
         return view('admin.layouts.message',compact('msgs'));
 }
-public function mcreate(Request $request){
-    return view('website.layouts.create-message');
+public function mcreate($id){
+  // dd($id);
+  $post_details=Donorpost::find($id);
+    return view('website.layouts.create-message',compact('post_details'));
 
 }
 
-public function mstore(Request $request)
+public function mstore($id,Request $request)
 {
+  // dd($id);
  
-//dd($request->all());
+// dd($request->all());
  $request->validate([
-   'Patient_Name'=>'required',
+   //'Patient_Name'=>'required',
   
    'Contact'=>'required',
    'Email'=>'required',
@@ -158,7 +163,10 @@ public function mstore(Request $request)
   //dd ($request->all());
   Message::create([
     
-     'Patient_Name'=>$request->Patient_Name,
+    //  'Patient_Name'=>$request->Patient_Name,
+     'user_id'=>auth()->user()->id,
+     'Username'=>auth()->user()->username,
+     'donorpost_id'=>$id,
      'Contact'=>$request->Contact,
      'Email'=>$request->Email,
      'Address'=>$request->Address,
@@ -174,5 +182,15 @@ public function dpostSearch(){
   $adposts = Donorpost::where('Organ_wants_to_donate','LIKE',"%{$key}%")->get();
   // dd($adposts);
   return view('website.layouts.search-donor-post',compact('adposts'));
+}
+
+public function approve($id){
+  //dd($id);
+  $adpost=Donorpost::find($id);
+  $adpost->update([
+    'status'=> 'approved'
+  ]);
+
+
 }
 }

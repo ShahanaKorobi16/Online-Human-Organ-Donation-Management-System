@@ -1,25 +1,26 @@
 <?php
 
 
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\AdminLoginController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\DonorController;
-use App\Http\Controllers\PatientController;
-use App\Http\Controllers\StockController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\OrganController;
-use App\Http\Controllers\Website\WebsiteController;
-use App\Http\Controllers\Website\DonateController;
-use App\Http\Controllers\Website\RegistrationController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\Website\LoginController;
-use App\Http\Controllers\Website\AddPostController;
-use App\Http\Controllers\Website\DonorPostController;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Donorpost;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DonorController;
+use App\Http\Controllers\OrganController;
+use App\Http\Controllers\StockController;
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\PatientController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AdminLoginController;
+use App\Http\Controllers\Website\LoginController;
+use App\Http\Controllers\Website\DonateController;
+use App\Http\Controllers\Website\AddPostController;
+use App\Http\Controllers\Website\WebsiteController;
+use App\Http\Controllers\Website\DonorPostController;
+use App\Http\Controllers\Website\RegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,9 +86,9 @@ Route::group(['prefix'=>'home'],function()
         Route::get('/show',[WebsiteController::class,'show'])->name('website.postshow');
         Route::get('/dpost/search',[DonorPostController::class,'dpostSearch'])->name('website.donor-post.search');
         //website donor post & message
-        Route::get('/mcreate',[DonorPostController::class,'mcreate'])->name('website.create-message');
+        Route::get('/mcreate/{id}',[DonorPostController::class,'mcreate'])->name('website.create-message');
         Route::get('/message',[DonorPostController::class,'message'])->name('admin.message');
-        Route::post('/mstore',[DonorPostController::class,'mstore'])->name('admin.mstore');
+        Route::post('/mstore/{id}',[DonorPostController::class,'mstore'])->name('admin.mstore');
     });
 
 
@@ -150,6 +151,9 @@ Route::group(['prefix'=>'Admin'],function(){
         Route::get('category/form',[OrganController::class,'form'])->name('category.form');
         Route::post('/category/add',[OrganController::class,'add'])->name('category.add');
         Route::get('category/view/{category_id}',[OrganController::class,'organDetails'])->name('admin.category.details');
-    Route::get('category/delete/{category_id}',[OrganController::class,'organDelete'])->name('admin.category.delete');
+        Route::get('category/delete/{category_id}',[OrganController::class,'organDelete'])->name('admin.category.delete');
+        Route::get('all/post/message',[MessageController::class,'postMessage'])->name('admin.all.post.message');
+        Route::get('/view/comments/{id}',[MessageController::class,'viewComment'])->name('admin.view.comment');
+        Route::get('/donorpost/approve/{id}',[DonorpostController::class, 'approve'])->name('admin.dopnorpost.approve');
 });
 });

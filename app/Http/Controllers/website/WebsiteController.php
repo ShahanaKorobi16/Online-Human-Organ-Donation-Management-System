@@ -22,14 +22,20 @@ class WebsiteController extends Controller
     {
         return view('website.layouts.contact');
     }
+
+
     public function show()
     {
-        $adposts=Donorpost::all();
+       
+        $adposts=Donorpost::where('status','approved')->get();
         //dd($adposts);
         return view('website.layouts.postshow',compact('adposts'));
     }
+
+    
     public function showdetails()
     {
+        
         $adposts=Donorpost::all();
         //dd($adposts);
         return view('website.layouts.post-details-show',compact('adposts'));

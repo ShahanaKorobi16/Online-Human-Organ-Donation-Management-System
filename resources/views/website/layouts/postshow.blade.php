@@ -59,8 +59,11 @@
 			@if(auth()->user()->id == $adpost->user_id)
 			<a class="btn btn-danger" href="{{route('website.donor-post.delete',$adpost->id)}}">Delete</a>
 			<a class="btn btn-info" href="{{route('website.donor-post.edit',$adpost->id)}}">Update</a>
-			@endif
+			
+			@else
 		<a type="button" class="btn btn-dark" href="{{route('website.create-message',$adpost->id)}}"> Response</a>
+		@endif
+		
       </div>
       </div>
     </div>

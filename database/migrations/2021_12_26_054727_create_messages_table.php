@@ -15,8 +15,10 @@ class CreateMessagesTable extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
-            $table->string('Patient_Name');
-           
+           // $table->string('Patient_Name');
+            $table->integer('user_id');
+            $table->string('username');
+            $table->integer('donorpost_id');
             $table->integer('Contact');
             $table->string('Email');
           
