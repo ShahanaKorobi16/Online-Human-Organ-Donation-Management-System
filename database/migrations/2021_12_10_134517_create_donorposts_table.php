@@ -29,6 +29,7 @@ class CreateDonorpostsTable extends Migration
             $table->string('Details');
             $table->date('Post_Date');
             $table->string('status')->default();
+             $table->integer('message_id');
             $table->timestamps();
         });
     }

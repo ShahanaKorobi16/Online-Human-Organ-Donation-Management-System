@@ -85,10 +85,14 @@ Route::group(['prefix'=>'home'],function()
         Route::put('dpost/update/{donorpost_id}',[DonorPostController::class,'dpostUpdate'])->name('website.donor-post.update');
         Route::get('/show',[WebsiteController::class,'show'])->name('website.postshow');
         Route::get('/dpost/search',[DonorPostController::class,'dpostSearch'])->name('website.donor-post.search');
+
         //website donor post & message
         Route::get('/mcreate/{id}',[DonorPostController::class,'mcreate'])->name('website.create-message');
         Route::get('/message',[DonorPostController::class,'message'])->name('admin.message');
         Route::post('/mstore/{id}',[DonorPostController::class,'mstore'])->name('admin.mstore');
+        Route::get('/show/comments/{id}',[DonorPostController::class,'showComment'])->name('website.show.comment');
+        Route::get('/response/comments/{id}',[DonorPostController::class,'responseComment'])->name('website.response.comment');
+        
     });
 
 
@@ -155,5 +159,6 @@ Route::group(['prefix'=>'Admin'],function(){
         Route::get('all/post/message',[MessageController::class,'postMessage'])->name('admin.all.post.message');
         Route::get('/view/comments/{id}',[MessageController::class,'viewComment'])->name('admin.view.comment');
         Route::get('/donorpost/approve/{id}',[DonorpostController::class, 'approve'])->name('admin.dopnorpost.approve');
+        Route::get('/comment/approve/{id}',[DonorpostController::class, 'mapprove'])->name('website.comment.approve');
 });
 });

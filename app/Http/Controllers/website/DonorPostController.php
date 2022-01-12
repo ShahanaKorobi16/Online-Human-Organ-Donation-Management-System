@@ -18,7 +18,9 @@ public function dcreate(Request $request){
 
 }
 public function dstore(Request $request)
+
 {
+  //dd($id);
   //dd(date('Ymdhms'));
         // dd($request->all());
          $filename = '';
@@ -27,7 +29,9 @@ public function dstore(Request $request)
              $filename = date('Ymdhms').'.'.$file->getclientOriginalExtension();
              $file->storeAs('/uploads',$filename);
          }
+  //dd($id);
  
+// dd($request->all());
 //dd($request->all());
  $request->validate([
    'Donor_Name'=>'required',
@@ -57,7 +61,9 @@ public function dstore(Request $request)
      'Organ_wants_to_donate'=>$request->Organ_wants_to_donate,
      'Quantity'=>$request->Quantity,
      'Details'=>$request->Details,
-     'Post_Date'=>$request->Post_Date
+     'Post_Date'=>$request->Post_Date,
+     //'message_id'=>$id,
+     
 
    ]);
    return redirect()->back()->with('success','Your Post is pending!!!!');
@@ -190,7 +196,24 @@ public function approve($id){
   $adpost->update([
     'status'=> 'approved'
   ]);
+  return redirect()->back()->with('success','Post approved!!!!');
+
+}
+
+public function showComment($id){
+  //dd($id);
+  $msgs =Message::find($id);
+//dd($msgs);
+  return view('website.layouts.postshow',compact('msgs'));
+}
 
 
+public function responsecomment($id){
+ // dd($message_id);
+//  dd($id);
+  $responses=Message::where('donorpost_id',$id)->get();
+  // $responses=Message::find($message_id);
+ // dd($responses);
+  return view('website.layouts.response-message',compact('responses'));
 }
 }

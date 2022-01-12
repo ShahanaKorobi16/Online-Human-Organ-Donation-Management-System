@@ -19,29 +19,7 @@
     </form>
 
 <h1 class="card-title">All Post</h1>
-<!-- @foreach ($adposts as $adpost)
-<div class="row">
-<div class="col-sm-3">
-    <div class="card-body">
-    
-    <img style="width: 150px; height: 150px"  src="{{url('/uploads/'.$adpost->image)}}" class="card-img-top" alt="...">
-      <div class="card-body">
-        
-        <p><h3><span style="color:#2E4053">Donor_Name:</span></h3><h2><span style="color:#2874A6">{{$adpost->Donor_Name}}</span></h2></span></p>
-        <p><h3>	<span style="color:#2E4053">Organ_wants_to_Donate:</span><span style="color:#2E86C1"> {{$adpost->Organ_wants_to_donate}}</span></h3></p>
-		<a type="button" class="btn btn-primary" href=""> View</a>
-        <div class="card-body">
-		<br>
-<br>
-      <br>
-        <br>
-        
-      </div>
-    </div>
-  </div>
-</div>
 
-@endforeach -->
 @foreach ($adposts as $adpost)
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
@@ -56,6 +34,7 @@
 		<br>
 		<br>
 		<a type="button" class="btn btn-primary" href="{{route('website.donor-post.details',$adpost->id)}}"> View</a>
+		
 			@if(auth()->user()->id == $adpost->user_id)
 			<a class="btn btn-danger" href="{{route('website.donor-post.delete',$adpost->id)}}">Delete</a>
 			<a class="btn btn-info" href="{{route('website.donor-post.edit',$adpost->id)}}">Update</a>
@@ -63,7 +42,7 @@
 			@else
 		<a type="button" class="btn btn-dark" href="{{route('website.create-message',$adpost->id)}}"> Response</a>
 		@endif
-		
+		<a type="button" class="btn btn-secondary" href="{{route('website.response.comment',$adpost->id)}}">Comment</a>
       </div>
       </div>
     </div>

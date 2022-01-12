@@ -39,7 +39,7 @@
 
 <tbody>
         <tr>
-        <td><img src="{{url('/uploads/'.$donorPosts->image)}}" width="100px" alt="Upload_Donor_Image"></td>
+        <td><img src="{{url('/uploads/'.$donorPosts->image)}}" width="100px" alt="Upload_Donor_Image"></td> 
         <th>{{$donorPosts->Donor_Name}}</th>
         <th>{{ $donorPosts->user_id}}</th>
         <td>{{ $donorPosts->Date_of_Birth}}</td>

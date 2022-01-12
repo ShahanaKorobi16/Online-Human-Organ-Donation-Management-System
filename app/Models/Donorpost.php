@@ -9,5 +9,22 @@ class Donorpost extends Model
 {
     use HasFactory;
     protected $table="donorposts";
+    // protected $fillable = [
+    //         'image',
+    //         'Donor_Name',
+    //         'user_id',
+    //         'Date_of_Birth',
+    //         'Blood_group',
+    //         'Contact',
+    //         'Email',
+     
+    //         'NID_Number',
+    //         'Address',
+    //         'Organ_wants_to_donate',
+    //         'Quantity',
+    //         'Details',
+    //         'Post_Date',
+    //     ];
+    
     protected $guarded=[];
 }

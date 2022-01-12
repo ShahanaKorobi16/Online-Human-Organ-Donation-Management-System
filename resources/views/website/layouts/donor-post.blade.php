@@ -34,6 +34,7 @@
       <th scope="col">Post_Date</th>
       <th scope="col">Action</th>
       <th scope="col">Status</th>
+      <th scope="col">msg_id</th>
     </tr>
   </thead>
  
@@ -61,9 +62,10 @@
                     </td>
       <td> 
            
-      <a class="btn btn-danger" href="{{route('admin.dopnorpost.approve',$adpost->id)}}">Approve</a>
+      <a class="btn btn-success" href="{{route('admin.dopnorpost.approve',$adpost->id)}}">Approve</a>
           
             </td>
+          <td>  <a class="btn btn-secondary" href="{{route('website.comment.approve',$adpost->id)}}">change</a></th>
     </tr>
    @endforeach
     </tbody>
