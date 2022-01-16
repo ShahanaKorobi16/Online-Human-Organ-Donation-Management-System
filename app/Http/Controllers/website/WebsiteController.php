@@ -70,6 +70,40 @@ class WebsiteController extends Controller
         
     
     }
+    public function profileEdit($user_id){
+        //dd($user_id);
+        $users = User::find($user_id);
+       // dd($user);
+      
+           return view('website.layouts.profile-edit',compact('users'));
+       
+     }
+     
+     public function profileupdate(Request $request,$user_id){
+       
+      //  dd($request->all());
+       // dd($user_id);
+       $users = User::find($user_id);
+     
+       
+       if ($users) {
+         $users->update([
+           'username'=>$request->Username,
+            'email'=>$request->Email,
+            'password'=>bcrypt($request->Password),
+            'date_of_birth'=>$request->Date_of_birth,
+            'weight'=>$request->Weight,
+            'blood_group'=>$request->Blood_group,
+            'gender'=>$request->Gender,
+             
+            'contact'=>$request->Contact,
+            'address'=>$request->Address,
+        ]);
+      //  dd($users);
+           return redirect()->route('website.profile')->with('success','profile updated!');
+       }
+     
+     }
     public function mission()
     {
         return view('website.layouts.mission');

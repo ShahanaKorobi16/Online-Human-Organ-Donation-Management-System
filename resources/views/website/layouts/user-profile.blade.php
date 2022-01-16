@@ -10,9 +10,9 @@
 
 						<h6 class="Email">{{auth()->user()->Email}}</h6>
             
-        <form action ="{{route('website.profile.show')}}" method='POST' >
+        <form action ="{{route('website.profile.edit',auth()->user()->id)}}" method='get' >
        @csrf
-       @method('put')
+     
         <div class="col-md-5 border-right">
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center mb-3">
@@ -21,20 +21,20 @@
                 <h4 class="text-right">User Profile</h4>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels"><h2>Username</label><input type="text" class="form-control" placeholder="Username" value="{{auth()->user()->username}}"></div>
-                    <div class="col-md-6"><label class="labels"><h2>Email</label><input type="text" class="form-control" value="{{auth()->user()->email}}" placeholder="Email"></div>
+                    <div class="col-md-6"><label class="labels"><h1>Username: </label>{{auth()->user()->username}}</h1></div>
+                    <div class="col-md-6"><label class="labels"><h2>Email: </label>{{auth()->user()->email}} </div>
                 </div>
                 <div class="row mt-3">
                    
-                    <div class="col-md-12"><label class="labels"><h2>Date_of_birth</label><input type="text" class="form-control" placeholder="Date_of_birth" value="{{auth()->user()->date_of_birth}}"></div>
-                    <div class="col-md-12"><label class="labels"><h2>Weight</label><input type="text" class="form-control" placeholder="Weight" value="{{auth()->user()->weight}}"></div>
-                    <div class="col-md-12"><label class="labels"><h2>Blood_group</label><input type="text" class="form-control" placeholder="Blood_group" value="{{auth()->user()->blood_group}}"></div>
-                    <div class="col-md-12"><label class="labels"><h2>Gender</label><input type="text" class="form-control" placeholder="Gender" value="{{auth()->user()->gender}}"></div>
-                    <div class="col-md-12"><label class="labels"><h2>Contact</label><input type="text" class="form-control" placeholder="Contact" value="{{auth()->user()->contact}}"></div>
-                    <div class="col-md-12"><label class="labels"><h2>Address</label><input type="text" class="form-control" placeholder="Address" value="{{auth()->user()->address}}"></div>
+                    <div class="col-md-12"><label class="labels"><h2>Date_of_birth: </label>{{auth()->user()->date_of_birth}}</div>
+                    <div class="col-md-12"><label class="labels"><h2>Weight: </label>{{auth()->user()->weight}}</div>
+                    <div class="col-md-12"><label class="labels"><h2>Blood_group: </label>{{auth()->user()->blood_group}}</div>
+                    <div class="col-md-12"><label class="labels"><h2>Gender: </label>{{auth()->user()->gender}}</div>
+                    <div class="col-md-12"><label class="labels"><h2>Contact: </label>{{auth()->user()->contact}}</div>
+                    <div class="col-md-12"><label class="labels"><h2>Address: </label>{{auth()->user()->address}}</div>
 
                 </div>
-<!-- <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>  -->
+                <button type="submit" class="btn btn-primary">Update Profile</button>
             </div> 
         </div>
         <div class="col-md-4">

@@ -21,7 +21,7 @@
   <thead class="table-Primary">
             <!-- <thead> -->
                 <tr>
-                <th scope="col">id</th>
+                <th scope="col">sl</th>
                     <th scope="col">user_id</th>
                     <th scope="col">username</th>
                     

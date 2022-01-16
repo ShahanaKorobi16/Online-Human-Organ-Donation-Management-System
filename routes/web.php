@@ -49,6 +49,8 @@ Route::group(['prefix'=>'home'],function()
     Route::get('/contact',[WebsiteController::class,'contact'])->name('website.contact');
     Route::get('user/profile',[WebsiteController::class,'profile'])->name('website.profile');
     Route::put('user/profile/show',[WebsiteController::class,'profileshow'])->name('website.profile.show');
+    Route::get('user/profile/edit/{id}',[WebsiteController::class,'profileedit'])->name('website.profile.edit');
+    Route::put('user/profile/update/{id}',[WebsiteController::class,'profileupdate'])->name('website.profile.update');
     Route::get('/mission',[WebsiteController::class,'mission'])->name('website.mission');
     Route::get('/vission',[WebsiteController::class,'vission'])->name('website.vission');
     Route::get('/motivation',[WebsiteController::class,'motivation'])->name('website.motivation');

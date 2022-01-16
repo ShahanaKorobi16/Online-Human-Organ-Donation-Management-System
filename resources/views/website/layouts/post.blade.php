@@ -25,6 +25,7 @@
         <table class="table table-success table-striped">
             <thead>
                 <tr>
+                <th scope="col">Sl</th>
                     <th scope="col">Patient_Name</th>
                     <th scope="col">user_id</th>
                     <th scope="col">Date_of_Birth</th>
@@ -48,7 +49,7 @@
             <tbody>
                 @foreach($addposts as $addpost)
                 <tr>
-               
+                <th>{{$addpost->id}}</th>
                     <th>{{$addpost->Patient_Name}}</th>
                     <th>{{$addpost->user_id}}</th>
                     <td>{{$addpost->Date_of_Birth}}</td>

@@ -19,6 +19,7 @@
 <table class="table table-success table-striped"> 
      <thead>
     <tr>
+    <th scope="col">Sl</th>
     <th scope="col">Image</th>
       <th scope="col">Donor_Name</th>
       <th scope="col">user_id</th>
@@ -42,6 +43,7 @@
 <tbody>
       @foreach($adposts as $adpost)
     <tr>
+    <th>{{$adpost->id}}</th>
     <td><img src="{{url('/uploads/'.$adpost->image)}}" width="100px" alt="Upload_Donor_Image"></td>
       <th>{{$adpost->Donor_Name}}</th>
       <th>{{$adpost->user_id}}</th>
