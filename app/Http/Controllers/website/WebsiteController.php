@@ -100,7 +100,7 @@ class WebsiteController extends Controller
             'address'=>$request->Address,
         ]);
       //  dd($users);
-           return redirect()->route('website.profile')->with('success','profile updated!');
+           return redirect()->route('website.home')->with('success','profile updated!');
        }
      
      }

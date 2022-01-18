@@ -17,7 +17,7 @@
 </center>
 </ul>
     </form>
-
+	<center>
 <h1 class="card-title">All Post</h1>
 
 @foreach ($adposts as $adpost)
@@ -49,6 +49,8 @@
   </div>
 </div>
 @endforeach 
+</center>
+	
  <!-- <div class="section products-block new-arrivals layout-3">
 					<div class="block-title">
 						<h2 class="title">New <span>Post</span></h2>

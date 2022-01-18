@@ -12,7 +12,7 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <div class="row">
 
-    <div class="col-md-1"></div>
+    <div class="col-md-3" style="padding: 20px"><h4>Total Comments: {{$no_of_comments}}</h4></div>
     <div class="col-md-4">
     <table class="table table-bordered border-dark">
   <thead class="table-Primary">

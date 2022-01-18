@@ -66,7 +66,7 @@ Route::group(['prefix'=>'home'],function()
         // })->name('user.login');
 
     
-        //website post
+        //weshowbsite post
         Route::get('/create',[AddPostController::class,'create'])->name('website.create-post');
         Route::get('/post',[AddPostController::class,'post'])->name('website.post');
         Route::post('/store',[AddPostController::class,'store'])->name('website.store');

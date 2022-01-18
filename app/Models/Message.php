@@ -9,4 +9,8 @@ class Message extends Model
 {
     use HasFactory;
     protected $guarded=[];
+
+    // public function comment(){
+    //     return $this->belongsTo(Donorpost::class);
+    // }
 }

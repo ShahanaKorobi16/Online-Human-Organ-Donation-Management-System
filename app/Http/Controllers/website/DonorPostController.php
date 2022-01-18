@@ -212,8 +212,10 @@ public function responsecomment($id){
  // dd($message_id);
 //  dd($id);
   $responses=Message::where('donorpost_id',$id)->get();
+  $no_of_comments= $responses->count();
+  // dd($no_of_comments);
   // $responses=Message::find($message_id);
- // dd($responses);
-  return view('website.layouts.response-message',compact('responses'));
+ //dd($responses);
+  return view('website.layouts.response-message',compact('responses','no_of_comments'));
 }
 }
