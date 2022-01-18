@@ -34,6 +34,8 @@ public function dstore(Request $request)
 // dd($request->all());
 //dd($request->all());
  $request->validate([
+  'user_id'=>auth()->user()->id,
+  'Username'=>auth()->user()->username,
    'Donor_Name'=>'required',
    'Date_of_Birth'=>'required',
    'Blood_group'=>'required',
@@ -172,6 +174,7 @@ public function mstore($id,Request $request)
     //  'Patient_Name'=>$request->Patient_Name,
      'user_id'=>auth()->user()->id,
      'Username'=>auth()->user()->username,
+  
      'donorpost_id'=>$id,
      'Contact'=>$request->Contact,
      'Email'=>$request->Email,

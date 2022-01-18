@@ -23,7 +23,7 @@
       <form action ="{{route('website.post.update',$addpost->id)}}" method='POST' enctype="multipart/form-data">
        @csrf
        @method('put')
-
+<!-- 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Patient_Name</label>
             <input value="{{$addpost->Patient_Name}}" required name='Patient_Name' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -35,7 +35,7 @@
         </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Blood_group</label>
             <select value="{{$addpost->Blood_group}}" required name='Blood_group' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <!-- <select class="form-select" aria-label="Default select example"> -->
+          
                 <option >A+</option>
   <option >B+</option>
   <option >O+</option>
@@ -45,7 +45,7 @@
   <option >O-</option>
   <option >AB-</option>
 </select>
-        </div>
+        </div> -->
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Hospital_Name</label>
             <input value="{{$addpost->Hospital_Name}}" required name='Hospital_Name' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -56,22 +56,22 @@
             <input value="{{$addpost->Hospital_Bed_No}}" required name='Hospital_Bed_No' type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
         </div>
-        <div class="mb-3">
+        <!-- <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Contact</label>
             <input value="{{$addpost->Contact}}" required name='Contact' type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email</label>
             <input value="{{$addpost->Email}}" required name='Email' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
+        </div> -->
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">NID_Number</label>
             <input value="{{$addpost->NID_Number}}" required name='NID_Number' type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
-        <div class="mb-3">
+        <!-- <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Address</label>
             <input value="{{$addpost->Address}}" required name='Address' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
+        </div> -->
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Organ_Needed</label>
             <select value="{{$addpost->Organ_Needed}}" required name='Organ_Needed' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

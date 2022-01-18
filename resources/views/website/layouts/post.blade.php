@@ -50,16 +50,16 @@
                 @foreach($addposts as $addpost)
                 <tr>
                 <th>{{$addpost->id}}</th>
-                    <th>{{$addpost->Patient_Name}}</th>
+                    <th>{{$addpost->username}}</th>
                     <th>{{$addpost->user_id}}</th>
-                    <td>{{$addpost->Date_of_Birth}}</td>
-                    <td>{{$addpost->Blood_group}}</td>
+                    <td>{{$addpost->date_of_birth}}</td>
+                    <td>{{$addpost->blood_group}}</td>
                     <td>{{$addpost->Hospital_Name}}</td>
                     <td>{{$addpost->Hospital_Bed_No}}</td>
-                    <td>{{$addpost->Contact}}</td>
-                    <td>{{$addpost->Email}}</td>
+                    <td>{{$addpost->contact}}</td>
+                    <td>{{$addpost->email}}</td>
                     <td>{{$addpost->NID_Number}}</td>
-                    <td>{{$addpost->Address}}</td>
+                    <td>{{$addpost->address}}</td>
                     <td><h4>{{$addpost->Organ_Needed}}</h4></td>
                     <td>{{$addpost->Case}}</td>
                     <td><img src="{{url('/uploads/'.$addpost->image)}}" width="100px" alt="prescription image"></td>

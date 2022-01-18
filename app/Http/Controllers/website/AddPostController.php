@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\website;
 use App\Models\Post;
+use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -14,49 +15,52 @@ class AddPostController extends Controller
 
     
     }
-    public function create(Request $request){
-
-        return view('website.layouts.post-create');
+    public function create(){
+//dd($id);
+$addposts=User::all();
+        return view('website.layouts.post-create',compact('addposts'));
     
     }
     public function store(Request $request)
     {
          //dd(date('Ymdhms'));
-          // dd($request->all());
+        //   dd($request->all());
          $filename = '';
          if ($request->hasFile('image')) {
              $file = $request->file('image');
              $filename = date('Ymdhms').'.'.$file->getclientOriginalExtension();
              $file->storeAs('/uploads',$filename);
          }
- 
+         //dd($id);
+      //   dd($request->all());
      $request->validate([
-       'Patient_Name'=>'required',
-      //  'user_id'=>'required',
-       'Date_of_Birth'=>'required',
-       'Blood_group'=>'required',
+     // 'Username'=>auth()->user()->username,
+      // 'user_id'=>auth()->user()->id,
+      // 'Date_of_birth'=>auth()->user()->Date_of_birth,
+      // 'Blood_group'=>auth()->user()->Blood_group,
        'Hospital_Name'=>'required',
        'Hospital_Bed_No'=>'required|numeric',
-       'Contact'=>'required|numeric|digits:11',
-       'Email'=>'required',
+      // 'Contact'=>auth()->user()->contact,
+      // 'Email'=>auth()->user()->email,
        'NID_Number'=>'required',
-       'Address'=>'required',
+     //  'Address'=>auth()->user()->address,
        'Organ_Needed'=>'required',
        'Case'=>'required',
        'Post_Date'=>'required',
  
      ]);
        Post::create([
-         'Patient_Name'=>$request->Patient_Name,
+       
+         'Username'=>auth()->user()->username,
          'user_id'=>auth()->user()->id,
-         'Date_of_Birth'=>$request->Date_of_Birth,
-         'Blood_group'=>$request->Blood_group,
+         'Date_of_birth'=>auth()->user()->date_of_birth,
+         'Blood_group'=>auth()->user()->blood_group,
          'Hospital_Name'=>$request->Hospital_Name,
          'Hospital_Bed_No'=>$request->Hospital_Bed_No,
-         'Contact'=>$request->Contact,
-         'Email'=>$request->Email,
+         'Contact'=>auth()->user()->contact,
+         'Email'=>auth()->user()->email,
          'NID_Number'=>$request->NID_Number,
-         'Address'=>$request->Address,
+         'Address'=>auth()->user()->address,
          'Organ_Needed'=>$request->Organ_Needed,
          'Case'=>$request->Case,
          'image'=>$filename,
@@ -111,16 +115,16 @@ public function postUpdate(Request $request,$post_id){
  if ($addpost) {
    $addpost->update([
      // 'name'=>$request->name,
-     'Patient_Name'=>$request->Patient_Name,
+    // 'Patient_Name'=>$request->Patient_Name,
     //  'user_id'=>$request->user_id,
-     'Date_of_Birth'=>$request->Date_of_Birth,
-     'Blood_group'=>$request->Blood_group,
+    // 'Date_of_Birth'=>$request->Date_of_Birth,
+    // 'Blood_group'=>$request->Blood_group,
      'Hospital_Name'=>$request->Hospital_Name,
      'Hospital_Bed_No'=>$request->Hospital_Bed_No,
-     'Contact'=>$request->Contact,
-     'Email'=>$request->Email,
+   //  'Contact'=>$request->Contact,
+    // 'Email'=>$request->Email,
      'NID_Number'=>$request->NID_Number,
-     'Address'=>$request->Address,
+    // 'Address'=>$request->Address,
      'Organ_Needed'=>$request->Organ_Needed,
      'Case'=>$request->Case,
      'image'=>$image_name,

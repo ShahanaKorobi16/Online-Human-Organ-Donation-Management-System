@@ -20,6 +20,7 @@
      <thead>
     <tr>
     <th scope="col">Sl</th>
+  
     <th scope="col">Image</th>
       <th scope="col">Donor_Name</th>
       <th scope="col">user_id</th>
@@ -35,7 +36,7 @@
       <th scope="col">Post_Date</th>
       <th scope="col">Action</th>
       <th scope="col">Status</th>
-      <th scope="col">msg_id</th>
+      <!-- <th scope="col">msg_id</th> -->
     </tr>
   </thead>
  
@@ -44,6 +45,8 @@
       @foreach($adposts as $adpost)
     <tr>
     <th>{{$adpost->id}}</th>
+<!--     
+    <th>{{$adpost->id}}</th> -->
     <td><img src="{{url('/uploads/'.$adpost->image)}}" width="100px" alt="Upload_Donor_Image"></td>
       <th>{{$adpost->Donor_Name}}</th>
       <th>{{$adpost->user_id}}</th>
@@ -67,7 +70,7 @@
       <a class="btn btn-success" href="{{route('admin.dopnorpost.approve',$adpost->id)}}">Approve</a>
           
             </td>
-          <td>  <a class="btn btn-secondary" href="{{route('website.comment.approve',$adpost->id)}}">change</a></th>
+          <!-- <td>  <a class="btn btn-secondary" href="{{route('website.comment.approve',$adpost->id)}}">change</a></th> -->
     </tr>
    @endforeach
     </tbody>

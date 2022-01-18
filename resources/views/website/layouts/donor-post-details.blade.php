@@ -16,7 +16,7 @@
 
 
 @if(auth()->user()->role=='admin')
-<p><h4><span style="color:#2E4053"> Date_of_Birth: {{$adpost->Date_of_Birth}}</span></h4></p>
+<p><h4><span style="color:#2E4053"> Date_of_Birth: {{$adpost->Date_of_birth}}</span></h4></p>
 <p><h4><span style="color:#2E4053">NID_Number: {{$adpost->NID_Number}}</span></h4></p>
 <p><h4><span style="color:#2E4053">Address: {{$adpost->Address}}</span></h4></p>
 @endif
