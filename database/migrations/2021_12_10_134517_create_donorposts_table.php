@@ -16,20 +16,20 @@ class CreateDonorpostsTable extends Migration
         Schema::create('donorposts', function (Blueprint $table) {
             $table->id();
             $table->string('image');
-            $table->string('Donor_Name');
+            $table->string('username');
             $table->integer('user_id');
-            $table->date('Date_of_Birth');
-            $table->string('Blood_group');
-            $table->integer('Contact');
-            $table->string('Email');
+            $table->date('date_of_birth');
+            $table->string('blood_group');
+            $table->integer('contact');
+            $table->string('email');
             $table->integer('NID_Number');
-            $table->string('Address');
+            $table->string('address');
             $table->string('Organ_wants_to_donate');
             $table->string('Quantity');
             $table->string('Details');
             $table->date('Post_Date');
             $table->string('status')->default();
-             $table->integer('message_id');
+           
             $table->timestamps();
         });
     }

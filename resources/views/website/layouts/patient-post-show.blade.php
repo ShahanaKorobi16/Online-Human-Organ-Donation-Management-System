@@ -28,7 +28,7 @@
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h3 class="card-title">{{$addpost->Patient_Name}}</h3>
+        <h3 class="card-title">{{$addpost->username}}</h3>
         <p class="card-text">Organ Needed: {{$addpost->Organ_Needed}}</p>
         <p class="card-text"><small class="text-muted"></small></p>
         <br>

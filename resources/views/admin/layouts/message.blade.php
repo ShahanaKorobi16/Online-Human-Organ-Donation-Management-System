@@ -22,9 +22,9 @@
             <!-- <thead> -->
                 <tr>
                 <th scope="col">sl</th>
+                   
+                    <th scope="col">Patient Name</th>
                     <th scope="col">user_id</th>
-                    <th scope="col">username</th>
-                    
                    
                     <th scope="col">Contact</th>
                     <th scope="col">Email</th>
@@ -42,14 +42,14 @@
                 <tr>
                
                 <th>{{$msg->id}}</th>
-                    <th>{{$msg->user_id}}</th>
+                   
                     <th>{{$msg->username}}</th>
+                    <th>{{$msg->user_id}}</th>
                     
-                    
-                    <td>{{$msg->Contact}}</td>
-                    <td>{{$msg->Email}}</td>
+                    <td>{{$msg->contact}}</td>
+                    <td>{{$msg->email}}</td>
                
-                    <td>{{$msg->Address}}</td>
+                    <td>{{$msg->address}}</td>
                     <td><h4>{{$msg->Why_need_this_organ}}</h4></td>
                    
                     <td> <a class="btn btn-primary"  href="{{route('admin.view.comment',$msg->donorpost_id)}}">Details</a>

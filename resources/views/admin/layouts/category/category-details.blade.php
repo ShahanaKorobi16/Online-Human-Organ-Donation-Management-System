@@ -38,9 +38,9 @@
   @foreach($organs as $key=>$category)
    <tr>
        <th>{{$key+1}}</th>
-   <th>{{$category->Donor_Name}}</th>
-   <th>{{$category->Date_of_Birth}}</th>
-   <th>{{$category->Blood_group}}</th>
+   <th>{{$category->username}}</th>
+   <th>{{$category->date_of_birth}}</th>
+   <th>{{$category->blood_group}}</th>
    <th><h4>{{$category->Organ_wants_to_donate}}</h4></th>
    <th>{{$category->Quantity}}</th>
    @php 
@@ -48,9 +48,9 @@
     $total = $quantity+$total;
    @endphp
    
-   <th>{{$category->Contact}}</th>
+   <th>{{$category->contact}}</th>
    <th>{{$category->NID_Number}}</th>
-   <th>{{$category->Address}}</th>
+   <th>{{$category->address}}</th>
      
     </tr>
    

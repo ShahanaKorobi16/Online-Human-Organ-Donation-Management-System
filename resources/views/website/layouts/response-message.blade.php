@@ -1,6 +1,6 @@
 
 <h1 class="mt-4" style="background-color:#73C6B6; ">
-    <Center>Responder's Details</Center>
+    <!-- <Center>Responder's Details</Center> -->
 </h1>
 @if(session()->has('success'))
         <p class="alert alert-success">
@@ -13,15 +13,15 @@
 <div class="row">
 
     <div class="col-md-3" style="padding: 20px"><h4>Total Comments: {{$no_of_comments}}</h4></div>
-    <div class="col-md-4">
-    <table class="table table-bordered border-dark">
-  <thead class="table-Primary">
+    <div class="col-md-6">
+    <!-- <table class="table table-bordered border-dark">
+  <thead class="table-Primary"> -->
      
             <!-- <thead> -->
-                <tr>
-                <th scope="col">id</th>
-                    <th scope="col">user_id</th>
-                    <th scope="col">username</th>
+                <!-- <tr>
+                <th scope="col">Comment no</th>
+                    < <th scope="col">user_id</th> 
+                    <th scope="col">Patient Name</th>
                     
                    
                     <th scope="col">Contact</th>
@@ -35,24 +35,41 @@
             </thead>
 
 
-            <tbody>
+            <tbody> -->
+            <h4 class="card-header"><center>Responder's Details</center></h4>
+            <br>
+            
                 @foreach($responses as $response)
-                <tr>
+                <!-- <tr>
                
                 <th>{{$response->id}}</th>
-                    <th>{{$response->user_id}}</th>
+                     <th>{{$response->user_id}}</th> 
                     <th>{{$response->username}}</th>
                     
                     
-                    <td>{{$response->Contact}}</td>
-                    <td>{{$response->Email}}</td>
+                    <td>{{$response->contact}}</td>
+                    <td>{{$response->email}}</td>
                
-                    <td>{{$response->Address}}</td>
+                    <td>{{$response->address}}</td>
                     <td><h4>{{$response->Why_need_this_organ}}</h4></td>
                    
                 </tr>
              
-            </tbody>
+            </tbody> -->
+
+
+            <div class="card">
+  
+  <div class="card-body">
+  <p class="card-text">Comment no: {{$response->id}}</p>
+    <h5 class="card-title">Patient Name: {{$response->username}}</h5>
+    <p class="card-text">Contact: {{$response->contact}}</p>
+    <p class="card-text">Email: {{$response->email}}</p>
+    <p class="card-text">Contact: {{$response->contact}}</p>
+    <p class="card-text">Why_need_this_organ: {{$response->Why_need_this_organ}}</p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
             @endforeach
         </table>
         

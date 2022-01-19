@@ -19,10 +19,10 @@ class CreateMessagesTable extends Migration
             $table->integer('user_id');
             $table->string('username');
             $table->integer('donorpost_id');
-            $table->integer('Contact');
-            $table->string('Email');
+            $table->integer('contact');
+            $table->string('email');
           
-            $table->string('Address');
+            $table->string('address');
             $table->string('Why_need_this_organ');
         
             $table->timestamps();

@@ -48,14 +48,14 @@
 <!--     
     <th>{{$adpost->id}}</th> -->
     <td><img src="{{url('/uploads/'.$adpost->image)}}" width="100px" alt="Upload_Donor_Image"></td>
-      <th>{{$adpost->Donor_Name}}</th>
+      <th>{{$adpost->username}}</th>
       <th>{{$adpost->user_id}}</th>
-      <td>{{$adpost->Date_of_Birth}}</td>
-      <td>{{$adpost->Blood_group}}</td>
-      <td>{{$adpost->Contact}}</td>
-      <td>{{$adpost->Email}}</td>
+      <td>{{$adpost->date_of_birth}}</td>
+      <td>{{$adpost->blood_group}}</td>
+      <td>{{$adpost->contact}}</td>
+      <td>{{$adpost->email}}</td>
       <td>{{$adpost->NID_Number}}</td>
-      <td>{{$adpost->Address}}</td>
+      <td>{{$adpost->address}}</td>
       <td>{{$adpost->Organ_wants_to_donate}}</td> 
       <td>{{$adpost->Quantity}}</td>  
       <td>{{$adpost->Details}}</td>

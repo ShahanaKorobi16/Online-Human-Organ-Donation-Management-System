@@ -26,7 +26,7 @@
             <input required name='Patient_Name' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
         </div> -->
-        <div class="mb-3">
+        <!-- <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Contact</label>
             <input required name='Contact' type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
@@ -38,7 +38,7 @@
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Address</label>
             <input required name='Address' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
+        </div> -->
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Why_need_this_organ</label>
             <input required name='Why_need_this_organ' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

@@ -40,14 +40,14 @@
 <tbody>
         <tr>
         <td><img src="{{url('/uploads/'.$donorPosts->image)}}" width="100px" alt="Upload_Donor_Image"></td> 
-        <th>{{$donorPosts->Donor_Name}}</th>
+        <th>{{$donorPosts->username}}</th>
         <th>{{ $donorPosts->user_id}}</th>
-        <td>{{ $donorPosts->Date_of_Birth}}</td>
-        <td>{{ $donorPosts->Blood_group}}</td>
-        <td>{{ $donorPosts->Contact}}</td>
-        <td>{{ $donorPosts->Email}}</td>
+        <td>{{ $donorPosts->date_of_birth}}</td>
+        <td>{{ $donorPosts->blood_group}}</td>
+        <td>{{ $donorPosts->contact}}</td>
+        <td>{{ $donorPosts->email}}</td>
         <td>{{ $donorPosts->NID_Number}}</td>
-        <td>{{ $donorPosts->Address}}</td>
+        <td>{{ $donorPosts->address}}</td>
         <td>{{ $donorPosts->Organ_wants_to_donate}}</td> 
         <td>{{ $donorPosts->Quantity}}</td>  
         <td>{{$donorPosts->Details}}</td>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\website;
 use App\Models\Donorpost;
 use App\Models\Message;
+use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -34,15 +35,15 @@ public function dstore(Request $request)
 // dd($request->all());
 //dd($request->all());
  $request->validate([
-  'user_id'=>auth()->user()->id,
-  'Username'=>auth()->user()->username,
-   'Donor_Name'=>'required',
-   'Date_of_Birth'=>'required',
-   'Blood_group'=>'required',
-   'Contact'=>'required',
-   'Email'=>'required',
+  //'user_id'=>auth()->user()->id,
+  //'Username'=>auth()->user()->username,
+  //  'Donor_Name'=>'required',
+  //  'Date_of_Birth'=>'required',
+  //  'Blood_group'=>'required',
+  //  'Contact'=>'required',
+  //  'Email'=>'required',
    'NID_Number'=>'required|numeric',
-   'Address'=>'required',
+  //  'Address'=>'required',
    'Organ_wants_to_donate'=>'required',
    'Quantity'=>'required',
    'Details'=>'required',
@@ -52,14 +53,14 @@ public function dstore(Request $request)
   //dd ($request->all());
   Donorpost::create([
     'image'=>$filename,
-     'Donor_Name'=>$request->Donor_Name,
+    'Username'=>auth()->user()->username,
      'user_id'=>auth()->user()->id,
-     'Date_of_Birth'=>$request->Date_of_Birth,
-     'Blood_group'=>$request->Blood_group,
-     'Contact'=>$request->Contact,
-     'Email'=>$request->Email,
+     'Date_of_birth'=>auth()->user()->date_of_birth,
+     'Blood_group'=>auth()->user()->blood_group,
+     'Contact'=>auth()->user()->contact,
+     'Email'=>auth()->user()->email,
      'NID_Number'=>$request->NID_Number,
-     'Address'=>$request->Address,
+     'Address'=>auth()->user()->address,
      'Organ_wants_to_donate'=>$request->Organ_wants_to_donate,
      'Quantity'=>$request->Quantity,
      'Details'=>$request->Details,
@@ -121,13 +122,13 @@ public function dpostUpdate(Request $request,$donorpost_id){
     $adpost->update([
       // 'name'=>$request->name,
       'image'=>$image_name,
-      'Donor_Name'=>$request->Donor_Name,
-     'Date_of_Birth'=>$request->Date_of_Birth,
-     'Blood_group'=>$request->Blood_group,
-     'Contact'=>$request->Contact,
-     'Email'=>$request->Email,
+    //   'Donor_Name'=>$request->Donor_Name,
+    //  'Date_of_Birth'=>$request->Date_of_Birth,
+    //  'Blood_group'=>$request->Blood_group,
+    //  'Contact'=>$request->Contact,
+    //  'Email'=>$request->Email,
      'NID_Number'=>$request->NID_Number,
-     'Address'=>$request->Address,
+    //  'Address'=>$request->Address,
      'Organ_wants_to_donate'=>$request->Organ_wants_to_donate,
      'Quantity'=>$request->Quantity,
      'Details'=>$request->Details,
@@ -160,10 +161,10 @@ public function mstore($id,Request $request)
  $request->validate([
    //'Patient_Name'=>'required',
   
-   'Contact'=>'required',
-   'Email'=>'required',
+  //  'Contact'=>'required',
+  //  'Email'=>'required',
 
-   'Address'=>'required',
+  //  'Address'=>'required',
    'Why_need_this_organ'=>'required',
    
  ]);
@@ -176,9 +177,9 @@ public function mstore($id,Request $request)
      'Username'=>auth()->user()->username,
   
      'donorpost_id'=>$id,
-     'Contact'=>$request->Contact,
-     'Email'=>$request->Email,
-     'Address'=>$request->Address,
+     'Contact'=>auth()->user()->contact,
+     'Email'=>auth()->user()->email,
+     'Address'=>auth()->user()->address,
      'Why_need_this_organ'=>$request->Why_need_this_organ,
     
 

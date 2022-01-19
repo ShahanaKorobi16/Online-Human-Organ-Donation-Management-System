@@ -26,7 +26,7 @@
             <label for="exampleInputEmail1" class="form-label">Upload_Donor_Image</label>
             <input name="image" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
-        <div class="mb-3">
+        <!-- <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Donor_Name</label>
             <input required name='Donor_Name' type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
@@ -37,7 +37,7 @@
         </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Blood_group</label>
             <select required name='Blood_group' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <!-- <select class="form-select" aria-label="Default select example"> -->
+             <select class="form-select" aria-label="Default select example"> 
                 <option >A+</option>
   <option >B+</option>
   <option >O+</option>
@@ -57,15 +57,15 @@
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email</label>
             <input required name='Email' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
+        </div> -->
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">NID_Number</label>
             <input required name='NID_Number' type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
-        <div class="mb-3">
+        <!-- <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Address</label>
             <input required name='Address' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
+        </div> -->
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Organ_wants_to_donate</label>
             <select required name='Organ_wants_to_donate' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
