@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\website;
 use App\Models\Post;
 use App\Models\User;
+use App\Models\Organ;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -18,13 +19,15 @@ class AddPostController extends Controller
     public function create(){
 //dd($id);
 $addposts=User::all();
-        return view('website.layouts.post-create',compact('addposts'));
+$organs=Organ::all();
+        return view('website.layouts.post-create',compact('addposts','organs'));
     
     }
     public function store(Request $request)
     {
          //dd(date('Ymdhms'));
-        //   dd($request->all());
+        
+       //  dd($request->all());
          $filename = '';
          if ($request->hasFile('image')) {
              $file = $request->file('image');
@@ -44,7 +47,7 @@ $addposts=User::all();
       // 'Email'=>auth()->user()->email,
        'NID_Number'=>'required',
      //  'Address'=>auth()->user()->address,
-       'Organ_Needed'=>'required',
+       //'Organ_Needed'=>'required',
        'Case'=>'required',
        'Post_Date'=>'required',
  
@@ -61,13 +64,13 @@ $addposts=User::all();
          'Email'=>auth()->user()->email,
          'NID_Number'=>$request->NID_Number,
          'Address'=>auth()->user()->address,
-         'Organ_Needed'=>$request->Organ_Needed,
+         'organ_id'=>$request->organ_id,
          'Case'=>$request->Case,
          'image'=>$filename,
          'Post_Date'=>$request->Post_Date
   
        ]);
-       return redirect()->route('website.patient.post.show')->with('success','Post created successfully.');
+       return redirect()->route('website.patient.post.show')->with('success','Your Post is pending!!!!');
 }
 
 public function postDetails($post_id)
@@ -125,7 +128,7 @@ public function postUpdate(Request $request,$post_id){
     // 'Email'=>$request->Email,
      'NID_Number'=>$request->NID_Number,
     // 'Address'=>$request->Address,
-     'Organ_Needed'=>$request->Organ_Needed,
+     'organ_id'=>$request->organ_id,
      'Case'=>$request->Case,
      'image'=>$image_name,
      'Post_Date'=>$request->Post_Date
@@ -137,9 +140,15 @@ public function postUpdate(Request $request,$post_id){
 }
 public function pshow()
 {
-    $addposts=Post::all();
+  //dd(request()->all());
+    $addposts=Post::where('status','approved')->get();
+    $organs=Organ::all();
+
+    
+        //dd($adposts);
+     
     //dd($addposts);
-    return view('website.layouts.patient-post-show',compact('addposts'));
+    return view('website.layouts.patient-post-show',compact('addposts','organs'));
 }
 public function postSearch(){
   // dd(request()->all());
@@ -147,6 +156,15 @@ public function postSearch(){
   $addposts = Post::where('Organ_Needed','LIKE',"%{$key}%")->get();
   // dd($addposts);
   return view('website.layouts.search-post',compact('addposts'));
+}
+public function postapprove($id){
+ // dd($id);
+  $addpost=Post::find($id);
+  $addpost->update([
+    'status'=> 'approved'
+  ]);
+  return redirect()->back()->with('success','Post approved!!!!');
+
 }
 }
 

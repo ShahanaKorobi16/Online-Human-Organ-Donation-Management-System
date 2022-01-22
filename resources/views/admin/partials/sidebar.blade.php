@@ -98,7 +98,7 @@
                              <!-- <div class="sb-sidenav-menu-heading"></div> -->
                             <a class="nav-link" href="{{route('admin.message')}}"> 
                                 <div class="sb-nav-link-icon"><i class="fas fa-comments"></i></div>
-                               Message
+                               Comment
                             </a>
                         </div>
                       

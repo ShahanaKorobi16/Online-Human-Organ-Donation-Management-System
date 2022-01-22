@@ -25,10 +25,12 @@ class CreatePostsTable extends Migration
             $table->string('email');
             $table->string('NID_Number');
             $table->string('address');
-            $table->string('Organ_Needed');
+            $table->integer('organ_id');
+           // $table->string('Organ_Needed');
             $table->string('Case');
             $table->string('image');
             $table->date('Post_Date');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

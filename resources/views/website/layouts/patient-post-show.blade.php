@@ -29,8 +29,9 @@
     <div class="col-md-8">
       <div class="card-body">
         <h3 class="card-title">{{$addpost->username}}</h3>
-        <p class="card-text">Organ Needed: {{$addpost->Organ_Needed}}</p>
-        <p class="card-text"><small class="text-muted"></small></p>
+   
+        <p class="card-text">Organ Needed: {{$addpost->organ_id}}</p>
+       <p class="card-text"><small class="text-muted"></small></p>
         <br>
         <br>
 		<a type="button" class="btn btn-primary" href="{{route('website.post.details',$addpost->id)}}"> View</a>

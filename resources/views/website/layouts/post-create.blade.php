@@ -78,16 +78,61 @@
             <label for="exampleInputEmail1" class="form-label">Address</label>
             <input required name='Address' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div> -->
-        <div class="mb-3">
+        <!-- <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Organ_Needed</label>
-            <select required name='Organ_Needed' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <option>Kidney</option>
+            <input required name='Organ_Needed' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            
+             -->
+
+
+
+
+
+
+             <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Organ_Needed</label>
+            <select type="text" required name='organ_id' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            @foreach ($organs as $organ)
+                <option value="{{$organ->id}}">{{$organ->Organ_name}}</option>
+            @endforeach
+           
+            <!-- <option>Kidney</option>
+            <option>Cornea</option>
+            <option>Heart</option>
+            <option>Lung</option>
+            <option>Liver</option> -->
+        </select>  
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+             <div class="mb-3">
+             <select required name="Organ_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <select id="Organ_name" required name="Organ_name"> 
+                <option>Organ Name</option>
+                @foreach ($addposts as $fororgan)
+                <option value="{{$fororgan->id}}">{{$fororgan->Organ_name}}</option>
+            @endforeach
+        </div> -->
+           
+            <!-- <option>Kidney</option>
             <option>Cornea</option>
             <option>Heart</option>
             <option>Lung</option>
             <option>Liver</option>
-        </select>
-        </div>
+        </select> -->
         
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Case</label>

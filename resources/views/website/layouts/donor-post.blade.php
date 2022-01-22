@@ -36,6 +36,7 @@
       <th scope="col">Post_Date</th>
       <th scope="col">Action</th>
       <th scope="col">Status</th>
+      <th scope="col">#</th>
       <!-- <th scope="col">msg_id</th> -->
     </tr>
   </thead>
@@ -65,8 +66,9 @@
                     <a class="btn btn-danger" href="{{route('website.donor-post.delete',$adpost->id)}}">Delete</a>
                     <a class="btn btn-info" href="{{route('website.donor-post.edit',$adpost->id)}}">Update</a>
                     </td>
-      <td> 
-           
+     
+                    <td>{{$adpost->status}}</td>                <td> 
+          
       <a class="btn btn-success" href="{{route('admin.dopnorpost.approve',$adpost->id)}}">Approve</a>
           
             </td>

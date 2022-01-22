@@ -28,7 +28,7 @@
                     <div class="col-md-6"><label class="labels"><h2>Email</label><input value="{{$users->email}}" required name="Email" type="text" class="form-control" placeholder="Email"></div>
                 </div>
                 <div class="row mt-3">
-                   
+                <div class="col-md-12"><label class="labels"><h2>Password</label><input  required name="Password" type="text" class="form-control" placeholder="Password" ></div>
                     <div class="col-md-12"><label class="labels"><h2>Date_of_birth</label><input value="{{$users->date_of_birth}}" required name="Date_of_birth" type="text" class="form-control" placeholder="Date_of_birth" ></div>
                     <div class="col-md-12"><label class="labels"><h2>Weight</label><input value="{{$users->weight}}" required name="Weight" type="text" class="form-control" placeholder="Weight" ></div>
                     <div class="col-md-12"><label class="labels"><h2>Blood_group</label><input value="{{$users->blood_group}}" required name="Blood_group" type="text" class="form-control" placeholder="Blood_group" ></div>

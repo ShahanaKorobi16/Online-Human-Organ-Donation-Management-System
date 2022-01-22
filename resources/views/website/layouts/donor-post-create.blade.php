@@ -69,12 +69,13 @@
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Organ_wants_to_donate</label>
             <select required name='Organ_wants_to_donate' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            
             <option>Kidney</option>
             <option>Cornea</option>
             <option>Heart</option>
             <option>Lung</option>
             <option>Liver</option>
-        </select>
+        </select>  
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Quantity</label>

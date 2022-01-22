@@ -25,7 +25,8 @@
                     <div class="col-md-6"><label class="labels"><h2>Email: </label>{{auth()->user()->email}} </div>
                 </div>
                 <div class="row mt-3">
-                   
+                <!-- <div class="col-md-6"><label class="labels"><h2>Password: </label>{{auth()->user()->password}} </div> -->
+                
                     <div class="col-md-12"><label class="labels"><h2>Date_of_birth: </label>{{auth()->user()->date_of_birth}}</div>
                     <div class="col-md-12"><label class="labels"><h2>Weight: </label>{{auth()->user()->weight}}</div>
                     <div class="col-md-12"><label class="labels"><h2>Blood_group: </label>{{auth()->user()->blood_group}}</div>

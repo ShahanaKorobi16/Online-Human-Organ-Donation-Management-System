@@ -161,6 +161,7 @@ Route::group(['prefix'=>'Admin'],function(){
         Route::get('all/post/message',[MessageController::class,'postMessage'])->name('admin.all.post.message');
         Route::get('/view/comments/{id}',[MessageController::class,'viewComment'])->name('admin.view.comment');
         Route::get('/donorpost/approve/{id}',[DonorpostController::class, 'approve'])->name('admin.dopnorpost.approve');
+        Route::get('/post/approve/{id}',[AddPostController::class, 'postapprove'])->name('admin.post.approve');
         Route::get('/comment/approve/{id}',[DonorpostController::class, 'mapprove'])->name('website.comment.approve');
 });
 });

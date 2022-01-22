@@ -61,18 +61,20 @@
             <div class="card">
   
   <div class="card-body">
-  <p class="card-text">Comment no: {{$response->id}}</p>
+  <!-- <p class="card-text">Comment no: {{$response->id}}</p> -->
     <h5 class="card-title">Patient Name: {{$response->username}}</h5>
     <p class="card-text">Contact: {{$response->contact}}</p>
     <p class="card-text">Email: {{$response->email}}</p>
-    <p class="card-text">Contact: {{$response->contact}}</p>
+    <p class="card-text">Address: {{$response->address}}</p>
     <p class="card-text">Why_need_this_organ: {{$response->Why_need_this_organ}}</p>
+    
     <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
   </div>
 </div>
             @endforeach
+            <br>
         </table>
-        
+       
         </div>
 
 </div>

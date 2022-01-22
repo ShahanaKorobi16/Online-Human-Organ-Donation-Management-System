@@ -9,4 +9,8 @@ class Post extends Model
 {
     use HasFactory;
     protected $guarded=[];
+    public function organ()
+    {
+        return this-> belongsTo(Organ::class,'organ_id','id');
+    }
 }

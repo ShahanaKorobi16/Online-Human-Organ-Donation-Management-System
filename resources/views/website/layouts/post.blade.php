@@ -41,6 +41,8 @@
                     <th scope="col">Image</th>
                     <th scope="col">Post_Date</th>
                     <th scope="col">Action</th>
+                    <th scope="col">Status</th>
+                     <th scope="col">#</th>
                     
                 </tr>
             </thead>
@@ -60,7 +62,7 @@
                     <td>{{$addpost->email}}</td>
                     <td>{{$addpost->NID_Number}}</td>
                     <td>{{$addpost->address}}</td>
-                    <td><h4>{{$addpost->Organ_Needed}}</h4></td>
+                    <td><h4>{{$addpost->organ_id}}</h4></td>
                     <td>{{$addpost->Case}}</td>
                     <td><img src="{{url('/uploads/'.$addpost->image)}}" width="100px" alt="prescription image"></td>
                     <td>{{$addpost->Post_Date}}</td>
@@ -69,6 +71,12 @@
                     <a class="btn btn-danger" href="{{route('website.post.delete',$addpost->id)}}">Delete</a>
                     <a class="btn btn-info" href="{{route('website.post.edit',$addpost->id)}}">Update</a>
                     </td>
+                    
+                    <td>{{$addpost->status}}</td>                <td> 
+          
+      <a class="btn btn-success" href="{{route('admin.post.approve',$addpost->id)}}">Approve</a>
+          
+            </td>
                 </tr>
                 @endforeach
             </tbody>
