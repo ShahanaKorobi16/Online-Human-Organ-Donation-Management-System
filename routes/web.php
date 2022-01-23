@@ -14,6 +14,7 @@ use App\Http\Controllers\StockController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\Website\LoginController;
 use App\Http\Controllers\Website\DonateController;
@@ -163,5 +164,6 @@ Route::group(['prefix'=>'Admin'],function(){
         Route::get('/donorpost/approve/{id}',[DonorpostController::class, 'approve'])->name('admin.dopnorpost.approve');
         Route::get('/post/approve/{id}',[AddPostController::class, 'postapprove'])->name('admin.post.approve');
         Route::get('/comment/approve/{id}',[DonorpostController::class, 'mapprove'])->name('website.comment.approve');
+        Route::get('/report',[ReportController::class,'report'])->name('admin.report');
 });
 });

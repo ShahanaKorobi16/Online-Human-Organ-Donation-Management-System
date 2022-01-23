@@ -22,6 +22,7 @@ class UsersTableSeeder extends Seeder
                 'weight'=>'62',
                 'blood_group'=>'A+',
                 'gender'=>'Female',
+                'nid'=>'8832689428',
                 'contact'=>'01600000095',
                 'address'=>'Uttara, Dhaka',
                 'role'=>'admin'

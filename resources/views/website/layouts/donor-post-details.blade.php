@@ -26,7 +26,7 @@
 <p><h4><span style="color:#2E4053">Contact: {{$adpost->contact}}</span></h4></p>
 <p><h4><span style="color:#2E4053">Email: {{$adpost->email}}</span></h4></p>
 
-<p><h4><span style="color:#2E4053">Organ_wants_to_Donate: {{$adpost->Organ_wants_to_donate}}</span></h4></p>
+<p><h4><span style="color:#2E4053">Organ_wants_to_Donate: {{$adpost->organ->Organ_name}}</span></h4></p>
 <p><h4><span style="color:#2E4053">Quantity: {{$adpost->Quantity}}</span></h4></p>
 <p><h4><span style="color:#2E4053">Details: {{$adpost->Details}}</span></h4></p>
 <p><h4><span style="color:#2E4053">Post_Date: {{$adpost->Post_Date}}</span></h4></p>

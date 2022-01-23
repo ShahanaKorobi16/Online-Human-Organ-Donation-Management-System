@@ -101,7 +101,13 @@
                                Comment
                             </a>
                         </div>
-                      
+                        <div class="nav">
+                             <!-- <div class="sb-sidenav-menu-heading"></div> -->
+                            <a class="nav-link" href="{{route('admin.report')}}"> 
+                                <div class="sb-nav-link-icon"><i class="fas fa-comments"></i></div>
+                               Report
+                            </a>
+                        </div>
                     </div>
                     
                 </nav>

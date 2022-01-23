@@ -30,7 +30,7 @@
       <div class="card-body">
         <h3 class="card-title">{{$addpost->username}}</h3>
    
-        <p class="card-text">Organ Needed: {{$addpost->organ_id}}</p>
+        <p class="card-text">Organ Needed: {{$addpost->organ->Organ_name}}</p>
        <p class="card-text"><small class="text-muted"></small></p>
         <br>
         <br>

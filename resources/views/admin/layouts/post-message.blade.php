@@ -48,7 +48,7 @@
         <td>{{ $donorPosts->email}}</td>
         <td>{{ $donorPosts->NID_Number}}</td>
         <td>{{ $donorPosts->address}}</td>
-        <td>{{ $donorPosts->Organ_wants_to_donate}}</td> 
+        <td>{{ $donorPosts->organ->Organ_name}}</td> 
         <td>{{ $donorPosts->Quantity}}</td>  
         <td>{{$donorPosts->Details}}</td>
         <td>{{$donorPosts->Post_Date}}</td>

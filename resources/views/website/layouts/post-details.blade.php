@@ -18,7 +18,7 @@
 <p><h4><span style="color:#2E4053">Email: {{$addpost->email}}</span></h4></p>
 <p><h4><span style="color:#2E4053">NID_Number: {{$addpost->NID_Number}}</span></h4></p>
 <p><h4><span style="color:#2E4053">Address: {{$addpost->address}}</span></h4></p>
-<p><h4><span style="color:#2E4053">Organ_Needed: {{$addpost->organ_id}}</span></h4></p>
+<p><h4><span style="color:#2E4053">Organ_Needed: {{$addpost->organ->Organ_name}}</span></h4></p>
 <p><h4><span style="color:#2E4053">Contact: {{$addpost->contact}}</span></h4></p>
 <p><h4><span style="color:#2E4053">Case: {{$addpost->Case}}</span></h4></p>
 <p>

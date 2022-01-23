@@ -4,18 +4,21 @@ namespace App\Http\Controllers\website;
 use App\Models\Donorpost;
 use App\Models\Message;
 use App\Models\User;
+use App\Models\Organ;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class DonorPostController extends Controller
 {
     public function dpost(){
-        $adposts=Donorpost::all();
+        $adposts=Donorpost::with('organ')->get();
         //dd($adposts);
         return view('website.layouts.donor-post',compact('adposts'));
 }
 public function dcreate(Request $request){
-    return view('website.layouts.donor-post-create');
+  $adposts=Donorpost::all();
+  $organs=Organ::all();
+    return view('website.layouts.donor-post-create',compact('adposts','organs'));
 
 }
 public function dstore(Request $request)
@@ -23,7 +26,7 @@ public function dstore(Request $request)
 {
   //dd($id);
   //dd(date('Ymdhms'));
-        // dd($request->all());
+         //dd($request->all());
          $filename = '';
          if ($request->hasFile('image')) {
              $file = $request->file('image');
@@ -42,9 +45,9 @@ public function dstore(Request $request)
   //  'Blood_group'=>'required',
   //  'Contact'=>'required',
   //  'Email'=>'required',
-   'NID_Number'=>'required|numeric',
+   //'NID_Number'=>'required|numeric',
   //  'Address'=>'required',
-   'Organ_wants_to_donate'=>'required',
+  // 'Organ_wants_to_donate'=>'required',
    'Quantity'=>'required',
    'Details'=>'required',
    'Post_Date'=>'required',
@@ -59,9 +62,9 @@ public function dstore(Request $request)
      'Blood_group'=>auth()->user()->blood_group,
      'Contact'=>auth()->user()->contact,
      'Email'=>auth()->user()->email,
-     'NID_Number'=>$request->NID_Number,
+     'NID'=>auth()->user()->nid,
      'Address'=>auth()->user()->address,
-     'Organ_wants_to_donate'=>$request->Organ_wants_to_donate,
+     'organ_id'=>$request->organ_id,
      'Quantity'=>$request->Quantity,
      'Details'=>$request->Details,
      'Post_Date'=>$request->Post_Date,

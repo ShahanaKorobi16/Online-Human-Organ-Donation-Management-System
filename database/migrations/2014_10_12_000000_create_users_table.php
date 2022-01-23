@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->integer('weight');
             $table->string('blood_group');
             $table->string('gender');
-          
+            $table->bigInteger('nid');
             $table->integer('contact');
             $table->string('address');
             $table->string('role');

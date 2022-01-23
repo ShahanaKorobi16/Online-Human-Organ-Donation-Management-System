@@ -22,13 +22,13 @@ class CreateDonorpostsTable extends Migration
             $table->string('blood_group');
             $table->integer('contact');
             $table->string('email');
-            $table->integer('NID_Number');
+            $table->bigInteger('nid');
             $table->string('address');
-            $table->string('Organ_wants_to_donate');
+            $table->integer('organ_id');
             $table->string('Quantity');
             $table->string('Details');
             $table->date('Post_Date');
-            $table->string('status')->default();
+            $table->string('status')->default('pending');
            
             $table->timestamps();
         });

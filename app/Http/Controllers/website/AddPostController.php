@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class AddPostController extends Controller
 {
     public function post(){
-        $addposts=Post::all();
+        $addposts=Post::with('organ')->get(); 
        // dd($addposts);
         return view('website.layouts.post',compact('addposts'));
 

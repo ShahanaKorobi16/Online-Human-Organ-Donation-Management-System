@@ -11,6 +11,6 @@ class Post extends Model
     protected $guarded=[];
     public function organ()
     {
-        return this-> belongsTo(Organ::class,'organ_id','id');
+        return $this-> belongsTo(Organ::class,'organ_id','id');
     }
 }

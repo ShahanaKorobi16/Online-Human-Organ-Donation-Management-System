@@ -55,9 +55,9 @@
       <td>{{$adpost->blood_group}}</td>
       <td>{{$adpost->contact}}</td>
       <td>{{$adpost->email}}</td>
-      <td>{{$adpost->NID_Number}}</td>
+      <td>{{$adpost->nid}}</td>
       <td>{{$adpost->address}}</td>
-      <td>{{$adpost->Organ_wants_to_donate}}</td> 
+      <td>{{$adpost->organ->Organ_name}}</td> 
       <td>{{$adpost->Quantity}}</td>  
       <td>{{$adpost->Details}}</td>
       <td>{{$adpost->Post_Date}}</td>

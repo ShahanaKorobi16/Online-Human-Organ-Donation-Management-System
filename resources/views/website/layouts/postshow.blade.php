@@ -29,7 +29,7 @@
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">{{$adpost->username}}</h5>
-        <p class="card-text">Organ wants to Donate: {{$adpost->Organ_wants_to_donate}}</p>
+        <p class="card-text">Organ wants to Donate: {{$adpost->organ->Organ_name}}</p>
         <p class="card-text"><small class="text-muted"></small></p>
 		<br>
 		<br>
