@@ -154,6 +154,63 @@
 						</div>
 					</div>
 		</div>
+
+
+
+
+
+		<div class="grid_2">
+						<div class="block2 maxheight">
+							<!-- <div class="title" style="background-color:#F5B7B1;">Motivation</div> -->
+							<div class="pad">
+							<a href="#"><img src="{{url('uploads/img81.jpg')}}"   alt="">Kidney<br>
+							 <div class="alright"><a href="" class="btn">Read More...</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="grid_2">
+						<div class="block2 maxheight">
+							<!-- <div class="title" style="background-color:#F5B7B1;">Motivation</div> -->
+							<div class="pad">
+							<a href="#"><img src="{{url('uploads/img82.jpg')}}"  alt="">Cornea<br>
+							<div class="alright"><a href="" class="btn">Read More...</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="grid_2">
+						<div class="block2 maxheight">
+							<!-- <div class="title" style="background-color:#F5B7B1;">Motivation</div> -->
+							<div class="pad">
+							<a href="#"><img src="{{url('uploads/img83.jpg')}}"  alt="">Heart<br>
+							<div class="alright"><a href="" class="btn">Read More...</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="grid_2">
+						<div class="block2 maxheight">
+							<!-- <div class="title" style="background-color:#F5B7B1;">Motivation</div> -->
+							<div class="pad">
+							<a href="#"><img src="{{url('uploads/img84.jpg')}}"  alt="">Liver<br>
+							<div class="alright"><a href="" class="btn">Read More...</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="grid_2">
+						<div class="block2 maxheight">
+							<!-- <div class="title" style="background-color:#F5B7B1;">Motivation</div> -->
+							<div class="pad">
+							<a href="#"><img src="{{url('uploads/img85.jpg')}}"  alt="">Lungs<br>
+							<div class="alright"><a href="" class="btn">Read More...</a></div>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+
+
 					<div>
 					<div class="grid_3">
 						<div class="block2 maxheight">
@@ -187,7 +244,11 @@ Organ Donation is the gift of an organ to a person who needs a transplant to imp
 						</div>
 					</div>
 		</div>
-					<!-- <div class="clear"></div>
+
+
+
+<!-- 
+					<div class="clear"></div>
 					<div class="grid_12">
 						<h2>You can help Them</h2>
 						<div id="owl">
@@ -195,6 +256,7 @@ Organ Donation is the gift of an organ to a person who needs a transplant to imp
 								<a href="#"><img src="images/page1_img4.jpg" alt="">Jim <br>
 								8 years</a>
 							</div>
+							
 							<div class="item it1">
 								<a href="#"><img src="images/page1_img5.jpg" alt="">Ann <br>
 								3 years</a>
@@ -223,14 +285,17 @@ Organ Donation is the gift of an organ to a person who needs a transplant to imp
 								<a href="#"><img src="images/page1_img7.jpg" alt="">Mark  <br>
 								6 years</a>
 							</div>
+							<div class="item it1">
+								<a href="#"><img src="images/page1_img5.jpg" alt="">Ann <br>
+								3 years</a>
+							</div>
 						</div>
-					</div> -->
-					<!-- <div class="grid_4">
-						<h3 class="nowrap mb0">Successful stories</h3>
-						<time class="st1" datetime="2013-01-01">29.11.2013</time>
-						Lorem ipsum dolor sit amet, consectetur iscing elit. Inllis eratattis neque facilisis, sit ameticies erat rutrum. Cras facilisis, nulla velrral auctor leo magna sodales felis, quis malesuada nib odio ut velitylok. Proin pharetra luctus.
-						<div class="alright"><a href="#" class="btn">Read More</a></div>
-					</div> -->
+					</div> 
+					 -->
+
+
+
+
 					<div class="grid_10 prefix_1">
 						<h3><center>About Us</center></h3>
 						<img src="#" alt="" class="img_inner fleft">

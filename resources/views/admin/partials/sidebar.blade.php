@@ -33,9 +33,9 @@
                         </div>
                         <div class="nav">
                             <!-- <div class="sb-sidenav-menu-heading"></div> -->
-                            <a class="nav-link" href="{{route('admin.adminn')}}">
+                            <a class="nav-link" href="{{route('admin.dashboard')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-shield"></i></div>
-                               Admin
+                               Dashboard
                             </a>
                         </div>
                         <!-- <div class="nav"> -->

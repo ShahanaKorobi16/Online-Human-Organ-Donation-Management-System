@@ -28,7 +28,7 @@ class AdminLoginController extends Controller
     ];
 //dd((Auth::attempt($userInfo)));
         if(Auth::attempt($userInfo)){
-            return redirect()->route('admin')->with('success','Login successful.');
+            return redirect()->route('admin.dashboard')->with('success','Login successful.');
         }
         return redirect()->back()->withErrors('Invalid user credentials');
 
