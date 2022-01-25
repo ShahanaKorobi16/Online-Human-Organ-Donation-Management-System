@@ -5,9 +5,9 @@
 
 
 <h1 class="mt-4" style="background-color:#73C6B6;">
-    <Center><h1>Post Report</h1></Center>
+    <Center><h1>Donation Post Report</h1></Center>
 </h1>
-<p align="right"> <a href="{{route('admin.adminn')}}"  type='table' class="btn btn-secondary">Go Back</a>
+<p align="right"> <a href="{{route('admin.dashboard')}}"  type='table' class="btn btn-secondary">Go Back</a>
       </p>
 
 <div id="PrintTableArea">
@@ -51,18 +51,17 @@
             <thead>
                 <tr>
                 <th scope="col">Sl</th>
-                    <th scope="col">Patient_Name</th>
+                    <th scope="col">Donor_Name</th>
                     <!-- <th scope="col">user_id</th>
                     <th scope="col">Date_of_Birth</th> -->
                     <th scope="col">Blood_group</th>
-                    <th scope="col">Hospital_Name</th>
-                    <!-- <th scope="col">Hospital_Bed_No</th> -->
+                    
                     <th scope="col">Contact</th>
                     <th scope="col">Email</th>
                     <th scope="col">NID_Number</th>
                     <th scope="col">Address</th>
-                    <th scope="col">Organ_Needed</th>
-                    <th scope="col">Case</th>
+                    <th scope="col">Organ_want_to_donate</th>
+                    <!-- <th scope="col">Details</th> -->
                     <!-- <th scope="col">Image</th> -->
                     <th scope="col">Post_Date</th>
                     <!-- <th scope="col">Action</th>
@@ -73,32 +72,32 @@
             </thead>
 
             <tbody>
-                @foreach($addposts as $addpost)
+                @foreach($adposts as $adpost)
                 <tr>
-                <th>{{$addpost->id}}</th>
-                    <th>{{$addpost->username}}</th>
-                    <!-- <th>{{$addpost->user_id}}</th>
-                    <td>{{$addpost->date_of_birth}}</td> -->
-                    <td>{{$addpost->blood_group}}</td>
-                    <td>{{$addpost->Hospital_Name}}</td>
-                    <!-- <td>{{$addpost->Hospital_Bed_No}}</td> -->
-                    <td>{{$addpost->contact}}</td>
-                    <td>{{$addpost->email}}</td>
-                    <td>{{$addpost->nid}}</td>
-                    <td>{{$addpost->address}}</td>
-                    <td><h4>{{$addpost->organ->Organ_name}}</h4></td>
-                    <td>{{$addpost->Case}}</td>
-                    <!-- <td><img src="{{url('/uploads/'.$addpost->image)}}" width="100px" alt="prescription image"></td> -->
-                    <td>{{$addpost->Post_Date}}</td>
+                <th>{{$adpost->id}}</th>
+                    <th>{{$adpost->username}}</th>
+                    <!-- <th>{{$adpost->user_id}}</th>
+                    <td>{{$adpost->date_of_birth}}</td> -->
+                    <td>{{$adpost->blood_group}}</td>
+                
+                    <td>{{$adpost->contact}}</td>
+                    <td>{{$adpost->email}}</td>
+                    <td>{{$adpost->nid}}</td>
+                    <td>{{$adpost->address}}</td>
+                    <td><h4>{{$adpost->organ->Organ_name}}</h4></td>
+                    <!-- <td>{{$adpost->Details}}</td> -->
+                    <!-- <td>{{$adpost->Details}}</td> -->
+                    <!-- <td><img src="{{url('/uploads/'.$adpost->image)}}" width="100px" alt="prescription image"></td> -->
+                    <td>{{$adpost->Post_Date}}</td>
                     <!-- <td> 
-                    <a class="btn btn-primary"  href="{{route('website.post.details',$addpost->id)}}">View</a>
-                    <a class="btn btn-danger" href="{{route('website.post.delete',$addpost->id)}}">Delete</a>
-                    <a class="btn btn-info" href="{{route('website.post.edit',$addpost->id)}}">Update</a>
+                    <a class="btn btn-primary"  href="{{route('website.post.details',$adpost->id)}}">View</a>
+                    <a class="btn btn-danger" href="{{route('website.post.delete',$adpost->id)}}">Delete</a>
+                    <a class="btn btn-info" href="{{route('website.post.edit',$adpost->id)}}">Update</a>
                     </td>
                     
-                    <td>{{$addpost->status}}</td>                <td> 
+                    <td>{{$adpost->status}}</td>                <td> 
           
-      <a class="btn btn-success" href="{{route('admin.post.approve',$addpost->id)}}">Approve</a>
+      <a class="btn btn-success" href="{{route('admin.post.approve',$adpost->id)}}">Approve</a>
            -->
             </td>
                 </tr>

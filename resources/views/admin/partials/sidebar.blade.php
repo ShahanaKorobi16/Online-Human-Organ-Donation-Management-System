@@ -108,6 +108,13 @@
                                Report
                             </a>
                         </div>
+                        <div class="nav">
+                             <!-- <div class="sb-sidenav-menu-heading"></div> -->
+                            <a class="nav-link" href="{{route('admin.dreport')}}"> 
+                                <div class="sb-nav-link-icon"><i class="fas fa-comments"></i></div>
+                               Donation Post Report
+                            </a>
+                        </div>
                     </div>
                     
                 </nav>

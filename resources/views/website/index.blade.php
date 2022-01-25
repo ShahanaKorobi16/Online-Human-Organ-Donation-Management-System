@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="{{url('css/website/owl.carousel.css')}}">
 		<link rel="stylesheet" href="{{url('css/website/slider.css')}}">
 		<link rel="stylesheet" href="{{url('css/website/style.css')}}">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 		<script src="{{url('js/website/jquery.js')}}"></script>
 		<script src="{{url('js/website/jquery-migrate-1.1.1.js')}}"></script>
 		<script src="{{url('js/website/script.js')}}"></script>
@@ -101,19 +102,19 @@
 						<div class="flexslider">
 							<ul class="slides">
 								<li>
-									<img src="{{url('images/img1.jpg')}}" alt="">
+									<img src="{{url('images/img1.jpg')}}" alt="" style="height: 150px; width: 350px;">
 									<div class="flex-caption" style="background-color:#A3E4D7" >
 										<p style="background-color:#1F618D; color: bisque;">Hope</p>
 									</div>
 								</li>
 								<li>
-									<img src="{{url('images/img2.jpg')}}" alt="">
+									<img src="{{url('images/img2.jpg')}}" alt="" style="height: 150px; width: 350px;" >
 									<div class="flex-caption c2" style="background-color:#154360" >
 										<p style="background-color:#7FB3D5; color: bisque;">Save</p>
 									</div>
 								</li>
 								<li>
-									<img src="{{url('images/img33.jpg')}}" alt="">
+									<img src="{{url('images/img33.jpg')}}" alt="" style="height: 150px; width: 350px;">
 									<div class="flex-caption" style="background-color:#A3E4D7 ;">
 										<p style="background-color:#1F618D; color: bisque;">Help</p>
 									</div>
@@ -131,8 +132,8 @@
 					
 					<div class="clear"></div>
 					
-                  <div style="display: flex; width: 100%; margin: auto;">
-					<div class="" style="width: 30%; padding-right: 30px; margin-left: 182px;">
+                  <div style="display: flex; width: 90%; margin: auto;">
+					<div class="" style="width: 35%; padding-right: 35px; margin-left: 112px; ">
 						<div class="block2 maxheight">
 							<div class="title" style="background-color:#21618C;">Organ Needed Post</div>
 							<div class="pad">
@@ -144,7 +145,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="" style="width: 30%;">
+					<div class="" style="width: 35%; padding-right: 35px; margin: auto; ">
 						<div class="block2 maxheight">
 							<div class="title" style="background-color:#21618C;">Donation Post</div>
 							<div class="pad">
@@ -158,48 +159,49 @@
 
 
 
-
-		<div class="grid_2">
-						<div class="block2 maxheight">
+<div class="" style="display: flex; justify-content: space-between; align-item: center;">
+		        <div class="" style="padding-right: 10px;">
+						<div class="block2 ">
 							<!-- <div class="title" style="background-color:#F5B7B1;">Motivation</div> -->
 							<div class="pad">
-							<a href="#"><img src="{{url('uploads/img81.jpg')}}"   alt="">Kidney<br>
+							<a href="#"><img src="{{url('uploads/img81.jpg')}}" style="height: 150px; width: 150px;"
+							  alt=""/>Kidney<br>
 							 <div class="alright"><a href="" class="btn">Read More...</a></div>
 							</div>
 						</div>
 					</div>
-					<div class="grid_2">
-						<div class="block2 maxheight">
+					<div class="" style="padding-right: 10px;">
+						<div class="block2 ">
 							<!-- <div class="title" style="background-color:#F5B7B1;">Motivation</div> -->
 							<div class="pad">
-							<a href="#"><img src="{{url('uploads/img82.jpg')}}"  alt="">Cornea<br>
+							<a href="#"><img src="{{url('uploads/img82.jpg')}}"  style="height: 150px; width: 150px;"  alt="">Cornea<br>
 							<div class="alright"><a href="" class="btn">Read More...</a></div>
 							</div>
 						</div>
 					</div>
-					<div class="grid_2">
-						<div class="block2 maxheight">
+					<div class="" style="padding-right: 10px;">
+						<div class="block2 ">
 							<!-- <div class="title" style="background-color:#F5B7B1;">Motivation</div> -->
 							<div class="pad">
-							<a href="#"><img src="{{url('uploads/img83.jpg')}}"  alt="">Heart<br>
+							<a href="#"><img src="{{url('uploads/img83.jpg')}}"  style="height: 150px; width: 150px;"  alt="">Heart<br>
 							<div class="alright"><a href="" class="btn">Read More...</a></div>
 							</div>
 						</div>
 					</div>
-					<div class="grid_2">
-						<div class="block2 maxheight">
+					<div class="" style="padding-right: 10px;">
+						<div class="block2 ">
 							<!-- <div class="title" style="background-color:#F5B7B1;">Motivation</div> -->
 							<div class="pad">
-							<a href="#"><img src="{{url('uploads/img84.jpg')}}"  alt="">Liver<br>
+							<a href="#"><img src="{{url('uploads/img84.jpg')}}"  style="height: 150px; width: 150px;" alt="">Liver<br>
 							<div class="alright"><a href="" class="btn">Read More...</a></div>
 							</div>
 						</div>
 					</div>
-					<div class="grid_2">
-						<div class="block2 maxheight">
+					<div class="" style="padding-right: 10px;">
+						<div class="block2 ">
 							<!-- <div class="title" style="background-color:#F5B7B1;">Motivation</div> -->
 							<div class="pad">
-							<a href="#"><img src="{{url('uploads/img85.jpg')}}"  alt="">Lungs<br>
+							<a href="#"><img src="{{url('uploads/img85.jpg')}}"  style="height: 150px; width: 150px;"  alt="">Lungs<br>
 							<div class="alright"><a href="" class="btn">Read More...</a></div>
 							</div>
 						</div>
@@ -209,7 +211,7 @@
 
 
 
-
+		</div>
 
 					<div>
 					<div class="grid_3">
@@ -240,7 +242,7 @@ Organ Donation is the gift of an organ to a person who needs a transplant to imp
 					<div class="grid_3">
 						<div class="block2 maxheight">
 							<div class="title" style="background-color:#82E0AA">Objective</div>
-							<div class="pad">The primary objective is to promote awareness of life-saving solid organ transplants. The secondary objective is...  <div class="alright"><a href="{{route('website.objective')}}" class="btn">Read More...</a></div></div>
+							<div class="pad">The primary objective is to promote awareness of life-saving solid organ transplants. The secondary objective is to promote awareness...  <div class="alright"><a href="{{route('website.objective')}}" class="btn">Read More...</a></div></div>
 						</div>
 					</div>
 		</div>
@@ -312,5 +314,14 @@ Organ Donation is the gift of an organ to a person who needs a transplant to imp
 		
 			@include('website.partials.footer')
 		</div>
+
+		  <!-- Option 1: Bootstrap Bundle with Popper -->
+		  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
 	</body>
 </html>

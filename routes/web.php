@@ -165,5 +165,6 @@ Route::group(['prefix'=>'Admin'],function(){
         Route::get('/post/approve/{id}',[AddPostController::class, 'postapprove'])->name('admin.post.approve');
         Route::get('/comment/approve/{id}',[DonorpostController::class, 'mapprove'])->name('website.comment.approve');
         Route::get('/report',[ReportController::class,'report'])->name('admin.report');
+        Route::get('/dreport',[ReportController::class,'dreport'])->name('admin.dreport');
 });
 });

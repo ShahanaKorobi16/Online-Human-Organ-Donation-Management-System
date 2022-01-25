@@ -23,7 +23,7 @@ class CreatePostsTable extends Migration
             $table->string('Hospital_Bed_No');
             $table->integer('contact');
             $table->string('email');
-            $table->string('NID_Number');
+            $table->bigInteger('nid');
             $table->string('address');
             $table->integer('organ_id');
            // $table->string('Organ_Needed');

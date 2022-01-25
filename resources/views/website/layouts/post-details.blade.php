@@ -16,7 +16,7 @@
 <p><h4><span style="color:#2E4053">Hospital_Name: {{$addpost->Hospital_Name}}</span></h4></p>
 <p><h4><span style="color:#2E4053">Hospital_Bed_No: {{$addpost->Hospital_Bed_No}}</span></h4></p>
 <p><h4><span style="color:#2E4053">Email: {{$addpost->email}}</span></h4></p>
-<p><h4><span style="color:#2E4053">NID_Number: {{$addpost->NID_Number}}</span></h4></p>
+<p><h4><span style="color:#2E4053">NID_Number: {{$addpost->nid}}</span></h4></p>
 <p><h4><span style="color:#2E4053">Address: {{$addpost->address}}</span></h4></p>
 <p><h4><span style="color:#2E4053">Organ_Needed: {{$addpost->organ->Organ_name}}</span></h4></p>
 <p><h4><span style="color:#2E4053">Contact: {{$addpost->contact}}</span></h4></p>

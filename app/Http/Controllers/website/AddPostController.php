@@ -45,7 +45,7 @@ $organs=Organ::all();
        'Hospital_Bed_No'=>'required|numeric',
       // 'Contact'=>auth()->user()->contact,
       // 'Email'=>auth()->user()->email,
-       'NID_Number'=>'required',
+       //'NID_Number'=>'required',
      //  'Address'=>auth()->user()->address,
        //'Organ_Needed'=>'required',
        'Case'=>'required',
@@ -62,7 +62,7 @@ $organs=Organ::all();
          'Hospital_Bed_No'=>$request->Hospital_Bed_No,
          'Contact'=>auth()->user()->contact,
          'Email'=>auth()->user()->email,
-         'NID_Number'=>$request->NID_Number,
+         'NID'=>auth()->user()->nid,
          'Address'=>auth()->user()->address,
          'organ_id'=>$request->organ_id,
          'Case'=>$request->Case,
@@ -70,7 +70,7 @@ $organs=Organ::all();
          'Post_Date'=>$request->Post_Date
   
        ]);
-       return redirect()->route('website.patient.post.show')->with('success','Your Post is pending!!!!');
+       return redirect()->back()->with('success','Your Post is pending!!!!');
 }
 
 public function postDetails($post_id)

@@ -2,7 +2,7 @@
 <h1 style="background-color:#73C6B6;">
     <Center>Post List</Center>
 </h1>
-<p align="right"> <a href="{{route('admin.adminn')}}"  type='table' class="btn btn-secondary">Go Back</a>
+<p align="right"> <a href="{{route('admin.dashboard')}}"  type='table' class="btn btn-secondary">Go Back</a>
       </p>
 <center>  <a href="#" class="btn btn-warning" onclick="printDiv('PrintTableArea')">Print</a>
 
@@ -60,7 +60,7 @@
                     <td>{{$addpost->Hospital_Bed_No}}</td>
                     <td>{{$addpost->contact}}</td>
                     <td>{{$addpost->email}}</td>
-                    <td>{{$addpost->NID_Number}}</td>
+                    <td>{{$addpost->nid}}</td>
                     <td>{{$addpost->address}}</td>
                     <td><h4>{{$addpost->organ->Organ_name}}</h4></td>
                     <td>{{$addpost->Case}}</td>

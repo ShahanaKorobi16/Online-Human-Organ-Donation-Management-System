@@ -187,7 +187,7 @@ public function mstore($id,Request $request)
     
 
    ]);
-   return redirect()->back()->with('success','Message created successfully.');
+   return redirect()->route('website.response.comment')->with('success','Message created successfully.');
 }
 public function dpostSearch(){
   // dd(request()->all());

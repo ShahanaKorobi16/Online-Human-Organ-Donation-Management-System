@@ -1,3 +1,8 @@
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
 <h1 class="mt-4" style="background-color:#16A085;"><center>Create New Post</center></h1>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">  
 
@@ -70,10 +75,10 @@
             <label for="exampleInputEmail1" class="form-label">Email</label>
             <input required name='Email' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div> -->
-        <div class="mb-3">
+        <!-- <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">NID_Number</label>
             <input required name='NID_Number' type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
+        </div> -->
         <!-- <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Address</label>
             <input required name='Address' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -143,13 +148,25 @@
             <input name="image" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         
-        <div class="mb-3">
+        <!-- <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Post_Date</label>
             <input required name='Post_Date' type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
+        </div> -->
+
+        <div class="form-group">
+		<label>Post_Date</label>
+		<input required name="Post_Date" type="text"  id="datepicker" class="form-control datepicker" placeholder="" autocomplete="off">
+	</div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     </div>
   <div class="col-sm-4"></div>
 </div>
+<script type="text/javascript">
+	$('.datepicker').datepicker({
+		minDate:0,
+		maxDate: 0,
+        dateFormat: 'yy-mm-dd'
+	});
+</script>
