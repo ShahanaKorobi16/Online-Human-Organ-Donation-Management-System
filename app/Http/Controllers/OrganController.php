@@ -38,10 +38,12 @@ public function organDetails($category_id)
 
     // dd($category_id);
 $category = Organ::find($category_id);
-// dd($category->Organ_name);
+// dd($category);
 
+        $organs = Donorpost::where('organ_id',$category->id)->get();
+        // dd($organs);
 
-    $organs = Donorpost::where('Organ_wants_to_donate',$category->Organ_name)->get();
+   // $organs = Donorpost::where('Organ_wants_to_donate',$category->Organ_name)->get();
    
     // dd($organs);
     return view('admin.layouts.category.category-details',compact('organs'));

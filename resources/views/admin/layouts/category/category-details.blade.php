@@ -41,7 +41,7 @@
    <th>{{$category->username}}</th>
    <th>{{$category->date_of_birth}}</th>
    <th>{{$category->blood_group}}</th>
-   <th><h4>{{$category->Organ_wants_to_donate}}</h4></th>
+   <th><h4>{{$category->organ->Organ_name}}</h4></th>
    <th>{{$category->Quantity}}</th>
    @php 
     $quantity = $category->Quantity;
