@@ -4,6 +4,7 @@ namespace App\Http\Controllers\website;
 
 use App\Http\Controllers\Controller;
 use App\Models\Post;
+use App\Models\Organ;
 use App\Models\User;
 use App\Models\Donorpost;
 use Illuminate\Http\Request;
@@ -25,11 +26,12 @@ class WebsiteController extends Controller
 
 
     public function show()
-    {
-       
+    { $key = request()->search;
+        $organs=Organ::all();
+        $adposts = Donorpost::where('organ_id','LIKE',"%{$key}%")->get();
         $adposts=Donorpost::where('status','approved')->get();
         //dd($adposts);
-        return view('website.layouts.postshow',compact('adposts'));
+        return view('website.layouts.postshow',compact('adposts','organs'));
     }
 
     

@@ -4,7 +4,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <div class="clear"></div>
 <!-- <div class="container_6"> -->
-                        <div class="row">
+                       <center> <div class="row">
                             <div class="titles">
                                
                                 <i class="fa fa-plane"></i>
@@ -20,8 +20,8 @@
                                          <img src="{{url('/uploads/'.$addpost->image)}}" width="200px" height="200px" alt="prescription image">
                                         </div>
                                         <div class="info-gallery" style="width: 45%; margin: auto; margin-top: 20px;">
-                                          <h3>{{$addpost->Patient_Name}}</h3>
-                                            <h5><span style="color:#2E4053">Organ Needed: {{$addpost->Organ_Needed}}</span></h5>
+                                          <h3>{{$addpost->username}}</h3>
+                                            <h5><span style="color:#2E4053">Organ Needed: {{$addpost->organ->Organ_name}}</span></h5>
                                             <!-- <hr class="separator"> -->
                                                     <a class="btn btn-primary" style="width: 45%; margin: auto; margin-top: 33px;" href="{{route('website.post.details',$addpost->id)}}">View</a> 
                                         </div>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
              </div>
-
+</center>
              @endforeach 
 
              

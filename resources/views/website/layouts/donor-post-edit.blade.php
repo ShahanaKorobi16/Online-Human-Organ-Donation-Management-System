@@ -1,4 +1,4 @@
-<h1 class="mt-4" style="background-color:#73C6B6;"><center>Create New Donation Post</center></h1>
+<h1 class="mt-4" style="background-color:#73C6B6;"><center>Update Donation Post</center></h1>
 @if(session()->has('success'))
 <p class="alert alert-success">
     {{session()->get('success')}}
@@ -17,7 +17,6 @@
 <div class="row">
   <div class="col-sm-4"></div>
   <div class="col-sm-4">
-
       <form action ="{{route('website.donor-post.update',$adpost->id)}}" method="POST" enctype="multipart/form-data">
        @csrf
        @method('put')
@@ -57,15 +56,29 @@
             <label for="exampleInputEmail1" class="form-label">Email</label>
             <input value="{{$adpost->Email}}" required name='Email' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div> -->
-        <div class="mb-3">
+        <!-- <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">NID_Number</label>
             <input value="{{$adpost->NID_Number}}" required name='NID_Number' type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
+        </div> -->
         <!-- <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Address</label>
             <input value="{{$adpost->Address}}" required name='Address' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div> -->
+
+
         <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Organ_wants_to_donate</label>
+           
+            <select value="{{$adpost->organ->Organ_name}}" type="text" required name='organ_id' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            @foreach ($organs as $organ)
+            <option @if($adpost->organ_id === $organ->id) selected @endif value="{{$organ->id}}">{{$organ->Organ_name}}</option>
+                <!-- <option value="{{$organ->id}}">{{$organ->Organ_name}}</option> -->
+            @endforeach
+            </select>  
+        </div>
+
+
+        <!-- <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Organ_wants_to_donate</label>
             <select value="{{$adpost->Organ_wants_to_donate}}" required name='Organ_wants_to_donate' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             <option>Kidney</option>
@@ -74,7 +87,7 @@
             <option>Lung</option>
             <option>Liver</option>
         </select>
-        </div>
+        </div> -->
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Quantity</label>
             <input value="{{$adpost->Quantity}}" required name='Quantity' type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

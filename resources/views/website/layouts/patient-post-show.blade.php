@@ -4,19 +4,34 @@
 		<!-- <JavaScript Bundle with Popper> -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">
 
 <form action="{{route('website.post.search')}}" method="GET">
 <ul class="navbar-nav">
 
   <center>
-<li class="col-md-4">
+<!-- <li class="col-md-4">
 <input type="text" placeholder="Search.." name="search">
 <button type="submit">Submit</button>
-  </li>
+  </li> -->
+
+  
+  <li class="mb-3">
+            <!-- <label for="exampleInputEmail1" class="form-label">"Search.."</label> -->
+            <select type="text" placeholder="Search by Organ Name.." required name='organ_id' class="form-control"  name="search">
+            @foreach ($organs as $organ)
+                <option value="{{$organ->id}}">{{$organ->Organ_name}}</option>
+            @endforeach
+            </select>  	<button type="submit">Submit</button>
+		
+</li>
+
 </center>
 </ul>
     </form>
-  
+</div>
 <h1 class="card-title">All Post</h1>
 
 

@@ -91,9 +91,10 @@ public function postDelete($post_id)
 public function postEdit($post_id){
   //dd($post_id);
   $addpost = Post::find($post_id);
+  $organs=Organ::all();
 //dd($addpost);
 
-     return view('website.layouts.post-edit',compact('addpost'));
+     return view('website.layouts.post-edit',compact('addpost','organs'));
  
 }
 
@@ -126,7 +127,7 @@ public function postUpdate(Request $request,$post_id){
      'Hospital_Bed_No'=>$request->Hospital_Bed_No,
    //  'Contact'=>$request->Contact,
     // 'Email'=>$request->Email,
-     'NID_Number'=>$request->NID_Number,
+     //'NID_Number'=>$request->NID_Number,
     // 'Address'=>$request->Address,
      'organ_id'=>$request->organ_id,
      'Case'=>$request->Case,
@@ -140,22 +141,37 @@ public function postUpdate(Request $request,$post_id){
 }
 public function pshow()
 {
+
+  
+       
   //dd(request()->all());
+  $key = request()->search;
+        $organs=Organ::all();
+  $addposts=Post::where('organ_id','LIKE',"%{$key}%")->get();
     $addposts=Post::where('status','approved')->get();
     $organs=Organ::all();
 
     
-        //dd($adposts);
-     
     //dd($addposts);
     return view('website.layouts.patient-post-show',compact('addposts','organs'));
 }
 public function postSearch(){
   // dd(request()->all());
-  $key = request()->search;
-  $addposts = Post::where('Organ_Needed','LIKE',"%{$key}%")->get();
-  // dd($addposts);
-  return view('website.layouts.search-post',compact('addposts'));
+
+   // dd(request()->all());
+   $key = (int)request()->organ_id;
+   // dd($key);
+   $organs=Organ::all();
+   $addposts = Post::with('organ')->where('organ_id',$key)->get();
+   // dd($addposts);
+   return view('website.layouts.search-post',compact('addposts'));
+
+
+
+  // $key = request()->search;
+  // $addposts = Post::where('Organ_Needed','LIKE',"%{$key}%")->get();
+ 
+  // return view('website.layouts.search-post',compact('addposts'));
 }
 public function postapprove($id){
  // dd($id);

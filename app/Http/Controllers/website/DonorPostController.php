@@ -95,9 +95,10 @@ public function dpostDelete($donorpost_id)
 public function dpostEdit($donorpost_id){
    //dd($donorpost_id);
    $adpost = Donorpost::find($donorpost_id);
+   $organs=Organ::all();
   // dd($adpost);
  
-      return view('website.layouts.donor-post-edit',compact('adpost'));
+      return view('website.layouts.donor-post-edit',compact('adpost','organs'));
   
 }
 
@@ -130,9 +131,10 @@ public function dpostUpdate(Request $request,$donorpost_id){
     //  'Blood_group'=>$request->Blood_group,
     //  'Contact'=>$request->Contact,
     //  'Email'=>$request->Email,
-     'NID_Number'=>$request->NID_Number,
+    // 'NID_Number'=>$request->NID_Number,
     //  'Address'=>$request->Address,
-     'Organ_wants_to_donate'=>$request->Organ_wants_to_donate,
+    //  'Organ_wants_to_donate'=>$request->Organ_wants_to_donate,
+     'organ_id'=>$request->organ_id,
      'Quantity'=>$request->Quantity,
      'Details'=>$request->Details,
      'Post_Date'=>$request->Post_Date
@@ -191,10 +193,12 @@ public function mstore($id,Request $request)
 }
 public function dpostSearch(){
   // dd(request()->all());
-  $key = request()->search;
-  $adposts = Donorpost::where('Organ_wants_to_donate','LIKE',"%{$key}%")->get();
+  $key = (int)request()->organ_id;
+  // dd($key);
+  $organs=Organ::all();
+  $adposts = Donorpost::with('organ')->where('organ_id',$key)->get();
   // dd($adposts);
-  return view('website.layouts.search-donor-post',compact('adposts'));
+  return view('website.layouts.search-donor-post',compact('adposts','organs'));
 }
 
 public function approve($id){

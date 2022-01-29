@@ -13,16 +13,18 @@
                         </div>
                         <div class="portfolioContainer" style="margin-top: -50px;">
                         @foreach($adposts as $adpost)
-                            <div class="col-xs-6 col-sm-4 col-md-3 hsgrids"
+                         <center>   <div class="col-xs-6 col-sm-4 col-md-3 hsgrids"
                                 style="padding-right: 5px;padding-left: 5px;">
                                   <a class="g-list" href="">
                                         <div class="img-hover" style="width: 45%; margin: auto; margin-top: 33px;">
                                          <img src="{{url('/uploads/'.$adpost->image)}}" width="220px" height="300px" alt="prescription image">
                                         </div>
                                         <div class="info-gallery" style="width: 45%; margin: auto; margin-top: 20px;">
-                                          <h3>{{$adpost->Donor_Name}}</h3>
-                                            <h5><span style="color:#2E4053">Organ wants to Donate:{{$adpost->Organ_wants_to_donate}}</span></h5>
-                                            <!-- <hr class="separator"> -->
+                                          <h3><center>{{$adpost->username}}</center></h3>
+                                            <h5><span style="color:#2E4053"><center>Organ wants to Donate:{{$adpost->organ->Organ_name}}</center></span></h5>
+                                           
+                                 
+                                            <hr class="separator"> 
                                                     <a class="btn btn-primary" style="width: 45%; margin: auto; margin-top:5px;" href="{{route('website.donor-post.details',$adpost->id)}}">View</a> 
                                         </div>
                                     </a>     
@@ -32,5 +34,5 @@
                     </div>
                 </div>
              </div>
-
+</center>
              @endforeach 
