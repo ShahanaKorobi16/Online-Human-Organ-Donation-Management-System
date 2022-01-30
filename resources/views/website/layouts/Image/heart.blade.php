@@ -83,12 +83,11 @@
 </head>
 <p  align="right" class="mt-4"> <a href="{{route('website.home')}}"  type='table' class="btn btn-secondary">Go Back</a>
       </p>
-<h1><center><span style="color:#2874A6"> Mission of Organ Donation</span></center></h1>
+<h1><center><span style="color:#2874A6">Heart Transplant</span></center></h1>
+
+
 <div class="col-md-2" style="width: 85%; margin: auto; margin-top: 20px;">
-<!-- <div class="col-md-1"> -->
-<h5>Organ Donation is the gift of an organ to a person who needs a transplant to improve his condition and health status. It is a procedure in which a health organ (donor) is taken from an individual who is either living or deceased and is transplanted into a person whose respective orphan (recipient) is malfunctioning. Donated organs give the recipient the opportunity of a longer and better quality of life. it is a legal procedure. It is governed by a transplant regulatory body and special acts laid down by authorities. All institutions conducting transplants have to be registered under the government and follow rules and regulations.</h5>
-</div> 
-<!-- </div> -->
-<!-- <div class="col-md-2">
-</div> -->
+<h5>
+The heart must be donated by someone who is brain-dead but is still on life support. The donor heart must be in normal condition without disease and must be matched as closely as possible to your blood and /or tissue type to reduce the chance that your body will reject it</h5>
+</div>
 @include('website.partials.footer')

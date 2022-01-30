@@ -5,6 +5,8 @@
 
 
 <h1 class="mt-4" style="background-color:#73C6B6;"><center>Create New Donation Post</center></h1>
+<p  align="right" class="mt-4"> <a href="{{route('website.home')}}"  type='table' class="btn btn-secondary">Go Back</a>
+      </p>
 @if(session()->has('success'))
 <p class="alert alert-success">
     {{session()->get('success')}}

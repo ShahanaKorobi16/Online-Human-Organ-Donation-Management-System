@@ -36,6 +36,8 @@
 
 
             <tbody> -->
+            <p  align="right" class="mt-4"> <a href="{{route('website.home')}}"  type='table' class="btn btn-secondary">Go Back</a>
+      </p>
             <h4 class="card-header"><center>Responder's Details</center></h4>
             <br>
             
@@ -67,7 +69,7 @@
     <p class="card-text">Email: {{$response->email}}</p>
     <p class="card-text">Address: {{$response->address}}</p>
     <p class="card-text">Why_need_this_organ: {{$response->Why_need_this_organ}}</p>
-    
+    <!-- <a type="button" class="btn btn-primary" href="{{route('website.donor-post.details',$response->id)}}">Response</a> -->
     <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
   </div>
 </div>

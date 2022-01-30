@@ -32,10 +32,12 @@
 </ul>
     </form>
 </div>
-<h1 class="card-title">All Post</h1>
-
+<h1 class="card-title"><center>All Post</center></h1>
+<p  align="right" class="mt-4"> <a href="{{route('website.home')}}"  type='table' class="btn btn-secondary">Go Back</a>
+      </p>
 
 @foreach ($addposts as $addpost)
+<center>
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
@@ -61,5 +63,5 @@
     </div>
   </div>
 </div>
-
+</center>
 @endforeach 

@@ -8,7 +8,8 @@
 <div id="PrintTableArea">
 
 <h1>Donor Details</h1>
-
+<p  align="right" class="mt-4"> <a href="{{route('website.home')}}"  type='table' class="btn btn-secondary">Go Back</a>
+      </p>
 <p>
     <img style="border-radius: 4px;" width="200px;" src=" {{url('/uploads/'.$adpost->image)}}" alt="Donor_Post">
 </p>

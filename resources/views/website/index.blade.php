@@ -166,7 +166,7 @@
 							<div class="pad">
 							<a href="#"><img src="{{url('uploads/img81.jpg')}}" style="height: 150px; width: 150px;"
 							  alt=""/>Kidney<br>
-							 <div class="alright"><a href="" class="btn">Read More...</a></div>
+							 <div class="alright"><a href="{{route('website.kidney')}}" class="btn">Read More...</a></div>
 							</div>
 						</div>
 					</div>
@@ -175,7 +175,7 @@
 							<!-- <div class="title" style="background-color:#F5B7B1;">Motivation</div> -->
 							<div class="pad">
 							<a href="#"><img src="{{url('uploads/img82.jpg')}}"  style="height: 150px; width: 150px;"  alt="">Cornea<br>
-							<div class="alright"><a href="" class="btn">Read More...</a></div>
+							<div class="alright"><a href="{{route('website.cornea')}}" class="btn">Read More...</a></div>
 							</div>
 						</div>
 					</div>
@@ -184,7 +184,7 @@
 							<!-- <div class="title" style="background-color:#F5B7B1;">Motivation</div> -->
 							<div class="pad">
 							<a href="#"><img src="{{url('uploads/img83.jpg')}}"  style="height: 150px; width: 150px;"  alt="">Heart<br>
-							<div class="alright"><a href="" class="btn">Read More...</a></div>
+							<div class="alright"><a href="{{route('website.heart')}}" class="btn">Read More...</a></div>
 							</div>
 						</div>
 					</div>
@@ -193,7 +193,7 @@
 							<!-- <div class="title" style="background-color:#F5B7B1;">Motivation</div> -->
 							<div class="pad">
 							<a href="#"><img src="{{url('uploads/img84.jpg')}}"  style="height: 150px; width: 150px;" alt="">Liver<br>
-							<div class="alright"><a href="" class="btn">Read More...</a></div>
+							<div class="alright"><a href="{{route('website.liver')}}" class="btn">Read More...</a></div>
 							</div>
 						</div>
 					</div>
@@ -202,7 +202,7 @@
 							<!-- <div class="title" style="background-color:#F5B7B1;">Motivation</div> -->
 							<div class="pad">
 							<a href="#"><img src="{{url('uploads/img85.jpg')}}"  style="height: 150px; width: 150px;"  alt="">Lungs<br>
-							<div class="alright"><a href="" class="btn">Read More...</a></div>
+							<div class="alright"><a href="{{route('website.lung')}}" class="btn">Read More...</a></div>
 							</div>
 						</div>
 					</div>
@@ -299,14 +299,14 @@ Organ Donation is the gift of an organ to a person who needs a transplant to imp
 
 
 					<div class="grid_10 prefix_1">
-						<h3><center>About Us</center></h3>
+						<h3></h3>
 						<img src="#" alt="" class="img_inner fleft">
 						<div class="extra_wrapper">
-							<p>All you wanted to know about this website developed to help people to find donor on time and to save life, you can find <span class="col1"><a href=" http://blog.templatemonster.com/free-website-templates/" rel="dofollow">here</a></span>.</p>
-							Visit the category of <span class="col1"><a href="http://www.templatemonster.com/category/charity-website-templates" rel="nofollow ">Charity templates</a></span> to find more themes of this kind.
+							<p> <center>This website developed to help people to find donor on time and to save life.</center><span class="col1"><a href=" http://blog.templatemonster.com/free-website-templates/" rel="dofollow"></a></span>.</p>
+							<!-- Visit the category of <span class="col1"><a href="" rel="nofollow "></a></span> to find more themes of this kind. -->
 						</div>
 						<div class="clear"></div>
-						<div class="alright"><center><a href="#" class="btn btn-info">Read More</a></center></div>
+						<div class="alright"><center><a href="#" class=""></a></center></div>
 					</div>
 				</div>
 			</div>

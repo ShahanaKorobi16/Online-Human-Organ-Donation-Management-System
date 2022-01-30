@@ -35,9 +35,12 @@
 </div>
 
 	<center>
-<h1 class="card-title">All Post</h1>
-
+<h1 class="card-title"><center>All Post</center></h1>
+<p  align="right" class="mt-4"> <a href="{{route('website.home')}}"  type='table' class="btn btn-secondary">Go Back</a>
+      </p>
+	 
 @foreach ($adposts as $adpost)
+<center>
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
@@ -65,8 +68,9 @@
     </div>
   </div>
 </div>
-@endforeach 
 </center>
+@endforeach 
+
 	
  <!-- <div class="section products-block new-arrivals layout-3">
 					<div class="block-title">

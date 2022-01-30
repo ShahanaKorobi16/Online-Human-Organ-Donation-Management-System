@@ -22,6 +22,7 @@ use App\Http\Controllers\Website\AddPostController;
 use App\Http\Controllers\Website\WebsiteController;
 use App\Http\Controllers\Website\DonorPostController;
 use App\Http\Controllers\Website\RegistrationController;
+use App\Http\Controllers\Website\ImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,8 +58,14 @@ Route::group(['prefix'=>'home'],function()
     Route::get('/motivation',[WebsiteController::class,'motivation'])->name('website.motivation');
     Route::get('/objective',[WebsiteController::class,'objective'])->name('website.objective');
     Route::get('/show/details',[WebsiteController::class,'showdetails'])->name('website.post-details-show');
-    Route::get('/donate',[DonateController::class,'donate'])->name('website.donar-reg');
-    Route::get('/reg',[RegistrationController::class,'reg'])->name('website.patient-reg');
+    Route::get('/kidney',[ImageController::class,'kidney'])->name('website.kidney');
+    Route::get('/cornea',[ImageController::class,'cornea'])->name('website.cornea');
+    Route::get('/heart',[ImageController::class,'heart'])->name('website.heart');
+    Route::get('/lung',[ImageController::class,'lung'])->name('website.lung');
+    Route::get('/liver',[ImageController::class,'liver'])->name('website.liver');
+
+    // Route::get('/donate',[DonateController::class,'donate'])->name('website.donar-reg');
+    // Route::get('/reg',[RegistrationController::class,'reg'])->name('website.patient-reg');
 
 
     Route::group(['middleware'=>['user']],function (){
