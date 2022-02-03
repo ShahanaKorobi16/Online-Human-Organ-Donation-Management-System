@@ -83,7 +83,7 @@
 </head>
 <p  align="right" class="mt-4"> <a href="{{route('website.home')}}"  type='table' class="btn btn-secondary">Go Back</a>
       </p>
-<h1><center><span style="color:#2874A6">Vission of Organ Donation</span></center></h1>
+<h1><center><span style="color:#2874A6">Kidney Transplant</span></center></h1>
 
 
 <div class="col-md-2" style="width: 85%; margin: auto; margin-top: 20px;">

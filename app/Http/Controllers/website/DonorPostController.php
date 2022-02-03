@@ -153,6 +153,7 @@ public function message(){
 }
 public function mcreate($id){
   // dd($id);
+  //dd(request->all());
   $post_details=Donorpost::find($id);
     return view('website.layouts.create-message',compact('post_details'));
 
@@ -160,9 +161,9 @@ public function mcreate($id){
 
 public function mstore($id,Request $request)
 {
-  // dd($id);
+   //dd($id);
  
-// dd($request->all());
+//dd($request->all());
  $request->validate([
    //'Patient_Name'=>'required',
   
@@ -189,7 +190,7 @@ public function mstore($id,Request $request)
     
 
    ]);
-   return redirect()->route('website.response.comment')->with('success','Message created successfully.');
+   return redirect()->back()->with('success','Message created successfully.');
 }
 public function dpostSearch(){
   // dd(request()->all());
@@ -220,8 +221,9 @@ public function showComment($id){
 
 
 public function responsecomment($id){
- // dd($message_id);
-//  dd($id);
+  //dd($message_id);
+ //dd($id);
+ 
   $responses=Message::where('donorpost_id',$id)->get();
   $no_of_comments= $responses->count();
   // dd($no_of_comments);

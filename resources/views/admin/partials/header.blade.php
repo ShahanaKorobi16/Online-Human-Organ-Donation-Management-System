@@ -33,7 +33,7 @@
     <li class="navbar-nav"> -->
       <td>
         <div class="nav-item text-nowrap">
-            <a class="btn btn-info" href="{{route('admin.logout')}}">{{auth()->user()->username}} ({{auth()->user()->role}}) |Log out</a>
+            <a class="btn btn-info" href="{{route('admin.logout')}}"><i class="fas fa-user-shield"></i>  {{auth()->user()->username}} ({{auth()->user()->role}}) |Log out</a>
             <li class="login-form"><a href="{{route('website.profile')}}">Profile</a></li>
           </li>
 <!-- </li> -->

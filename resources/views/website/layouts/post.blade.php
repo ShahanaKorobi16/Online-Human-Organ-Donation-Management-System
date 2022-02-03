@@ -2,7 +2,7 @@
 <h1 style="background-color:#73C6B6;">
     <Center>Post List</Center>
 </h1>
-<p align="right"> <a href="{{route('admin.dashboard')}}"  type='table' class="btn btn-secondary">Go Back</a>
+<p align="right"> <a href="{{route('admin.dashboard')}}"  type='table' class="btn btn-secondary"><i class="fas fa-backward"></i></a>
       </p>
 <center>  <a href="#" class="btn btn-warning" onclick="printDiv('PrintTableArea')">Print</a>
 
@@ -16,6 +16,7 @@
         </p>
     @endif
 <!-- <table class="table table-dark table-striped"> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <div class="row">
@@ -67,14 +68,14 @@
                     <td><img src="{{url('/uploads/'.$addpost->image)}}" width="100px" alt="prescription image"></td>
                     <td>{{$addpost->Post_Date}}</td>
                     <td> 
-                    <a class="btn btn-primary"  href="{{route('website.post.details',$addpost->id)}}">View</a>
-                    <a class="btn btn-danger" href="{{route('website.post.delete',$addpost->id)}}">Delete</a>
-                    <a class="btn btn-info" href="{{route('website.post.edit',$addpost->id)}}">Update</a>
+                    <a class="btn btn-primary"  href="{{route('website.post.details',$addpost->id)}}"><i class="fas fa-eye"></i></a>
+                    <a class="btn btn-danger" href="{{route('website.post.delete',$addpost->id)}}"><i class="fas fa-trash-alt"></i></a>
+                    <a class="btn btn-info" href="{{route('website.post.edit',$addpost->id)}}"><i class="fas fa-edit"></i></a>
                     </td>
                     
                     <td>{{$addpost->status}}</td>                <td> 
           
-      <a class="btn btn-success" href="{{route('admin.post.approve',$addpost->id)}}">Approve</a>
+      <a class="btn btn-success" href="{{route('admin.post.approve',$addpost->id)}}"><i class="fas fa-thumbs-up"></i></a>
           
             </td>
                 </tr>

@@ -126,7 +126,8 @@
 						<input class="input100" type="number" name="NID" placeholder="NID">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-						<div class="sb-nav-link-icon"><i class="fas fa-mobile" aria-hidden="true"></i></div>
+						<div class="sb-nav-link-icon">
+						<i class="fas fa-id-card" aria-hidden="true"></i></div>
 						</span>
 					</div>
                     <div class="wrap-input100 validate-input" data-validate = "Contact is required: ex@abc.xyz">

@@ -5,9 +5,9 @@
 
 
 <h1 class="mt-4">Organ List</h1>
-<p align="right"> <a href="{{route('admin.dashboard')}}"  type='table' class="btn btn-secondary">Go Back</a>
+<p align="right"> <a href="{{route('admin.dashboard')}}"  type='table' class="btn btn-secondary"><i class="fas fa-backward"></i></a>
       </p>
-<p align="right"> <a href="{{route('category.form')}}"  type='table' class="btn btn-success">Add to Organ</a>
+<p align="right"> <a href="{{route('category.form')}}"  type='table' class="btn btn-success"><i class="fas fa-plus-square"></i>Add Organ</a>
       </p>
 
 
@@ -30,9 +30,9 @@
       <th>{{$category->Organ_name}}</th>
       <th>{{$category->Organ_details}}</th>
       <td> 
-                    <a class="btn btn-primary" href="{{route('admin.category.details',$category->id)}}">View Availability</a>
+                    <a class="btn btn-primary" href="{{route('admin.category.details',$category->id)}}"><i class="fas fa-eye"></i>View Availability</a>
                   
-                    <a class="btn btn-danger" href="{{route('admin.category.delete',$category->id)}}">Delete</a>
+                    <a class="btn btn-danger" href="{{route('admin.category.delete',$category->id)}}"><i class="fas fa-trash-alt"></i></a>
                     </td>
     </tr>
    

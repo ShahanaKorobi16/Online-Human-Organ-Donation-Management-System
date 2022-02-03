@@ -1,5 +1,5 @@
 <h1 style="background-color:#73C6B6;"><Center>Donation Post List</Center></h1>
-<p align="right"> <a href="{{route('admin.dashboard')}}"  type='table' class="btn btn-success">Go Back</a>
+<p align="right"> <a href="{{route('admin.dashboard')}}"  type='table' class="btn btn-success"><i class="fas fa-backward"></i></a>
       </p>
 <center>  <a href="#" class="btn btn-warning" onclick="printDiv('PrintTableArea')">Print</a>
 
@@ -12,6 +12,7 @@
         </p>
     @endif
 <!-- <table class="table table-dark table-striped"> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> 
 <div class="row">
  <div class="col-md-0"></div>
@@ -62,14 +63,14 @@
       <td>{{$adpost->Details}}</td>
       <td>{{$adpost->Post_Date}}</td>
       <td> 
-                <a class="btn btn-primary" href="{{route('website.donor-post.details',$adpost->id)}}">View</a>
-                    <a class="btn btn-danger" href="{{route('website.donor-post.delete',$adpost->id)}}">Delete</a>
-                    <a class="btn btn-info" href="{{route('website.donor-post.edit',$adpost->id)}}">Update</a>
+                <a class="btn btn-primary" href="{{route('website.donor-post.details',$adpost->id)}}"><i class="fas fa-eye"></i></a>
+                    <a class="btn btn-danger" href="{{route('website.donor-post.delete',$adpost->id)}}"><i class="fas fa-trash-alt"></i></a>
+                    <a class="btn btn-info" href="{{route('website.donor-post.edit',$adpost->id)}}"><i class="fas fa-edit"></i></a>
                     </td>
      
                     <td>{{$adpost->status}}</td>                <td> 
           
-      <a class="btn btn-success" href="{{route('admin.dopnorpost.approve',$adpost->id)}}">Approve</a>
+      <a class="btn btn-success" href="{{route('admin.dopnorpost.approve',$adpost->id)}}"><i class="fas fa-thumbs-up"></i></a>
           
             </td>
           <!-- <td>  <a class="btn btn-secondary" href="{{route('website.comment.approve',$adpost->id)}}">change</a></th> -->

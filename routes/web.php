@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Models\Message;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Donorpost;
@@ -101,7 +101,7 @@ Route::group(['prefix'=>'home'],function()
         Route::get('/message',[DonorPostController::class,'message'])->name('admin.message');
         Route::post('/mstore/{id}',[DonorPostController::class,'mstore'])->name('admin.mstore');
         Route::get('/show/comments/{id}',[DonorPostController::class,'showComment'])->name('website.show.comment');
-        Route::get('/response/comments/{id}',[DonorPostController::class,'responseComment'])->name('website.response.comment');
+        Route::get('/response/comments/{id}',[DonorPostController::class,'responsecomment'])->name('website.response.comment');
         
     });
 

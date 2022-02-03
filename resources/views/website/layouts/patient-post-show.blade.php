@@ -1,5 +1,6 @@
 <head>
     <!-- CSS only -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 		<!-- <JavaScript Bundle with Popper> -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -33,7 +34,7 @@
     </form>
 </div>
 <h1 class="card-title"><center>All Post</center></h1>
-<p  align="right" class="mt-4"> <a href="{{route('website.home')}}"  type='table' class="btn btn-secondary">Go Back</a>
+<p  align="right" class="mt-4"> <a href="{{route('website.home')}}"  type='table' class="btn btn-secondary"><i class="fas fa-backward"></i></a>
       </p>
 
 @foreach ($addposts as $addpost)
@@ -51,11 +52,11 @@
        <p class="card-text"><small class="text-muted"></small></p>
         <br>
         <br>
-		<a type="button" class="btn btn-primary" href="{{route('website.post.details',$addpost->id)}}"> View</a>
+		<a type="button" class="btn btn-primary" href="{{route('website.post.details',$addpost->id)}}"><i class="fas fa-eye"></i></a>
         
         @if(auth()->user()->id == $addpost->user_id)
-        <a type="button" class="btn btn-danger" href="{{route('website.post.delete',$addpost->id)}}"> Delete</a>
-        <a type="button" class="btn btn-info" href="{{route('website.post.edit',$addpost->id)}}"> Update</a>
+        <a type="button" class="btn btn-danger" href="{{route('website.post.delete',$addpost->id)}}"><i class="fas fa-trash-alt"></i></a>
+        <a type="button" class="btn btn-info" href="{{route('website.post.edit',$addpost->id)}}"><i class="fas fa-edit"></i></a>
         @endif
         <!-- <a type="button" class="btn btn-dark" href="{{route('website.create-message',$addpost->id)}}"> Response</a> -->
       </div>
